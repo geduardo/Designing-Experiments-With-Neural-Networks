@@ -186,7 +186,7 @@ class DQN(object):
         else:
             return self.random_action()
 
-    def online_train(self, old_state, old_action, reward, current_state):
+     def online_update(self, old_state, old_action, reward, current_state):
         """ Uses keras built in functions to estimate the values of the 
         previous state and the future state to calculate the temporal
         difference and use it to fit the model.
