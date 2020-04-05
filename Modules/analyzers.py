@@ -1,3 +1,14 @@
+import random
+import numpy as np
+import tensorflow as tf
+from collections import deque
+from tensorflow import keras
+from keras.layers import Input, Dense
+from keras.models import Model, Sequential
+from keras.optimizers import Adam
+from keras.utils import to_categorical
+from keras import layers
+from keras.models import load_model
 class Two_Layers_single_output(object):
     def __init__(self, input_size, learning_rate=0.001):
         """ This class is just a two-layer Keras neural network to process the
@@ -47,4 +58,4 @@ class Two_Layers_single_output(object):
         :return: Prediction of the target value
         :rtype: numpy array/float
         """        
-        return self.model.predict(X_test)0
+        return self.model.predict(X_test)

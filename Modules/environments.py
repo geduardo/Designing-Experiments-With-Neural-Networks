@@ -1,3 +1,9 @@
+# Declarations
+# Imports 
+import random
+import pandas as pd
+import numpy as np
+
 class Two_Sensors(object):
     def __init__(self, mu=0.1, m=2.5, g =9.8,v=1, max_reward = 1):
         """ This class contains the environment for the experiment II.
@@ -22,13 +28,9 @@ class Two_Sensors(object):
         self.v = v
         self.d_min = 0.8
         self.d_max = 8
-        # We calculate the maximum and minimum mass corresponding 
-        #to those limits
         self.M_max = self.v*self.m*np.sqrt(0.5*(1/(self.g*self.mu*self.d_min)))-self.m
         self.M_min = self.v*self.m*np.sqrt(0.5*(1/(self.g*self.mu*self.d_max)))-self.m
-
         self.M = random.uniform(self.M_min, self.M_max)
-
         self.position_exact = 0.5 * (self.v*self.m/(self.M+self.m))**2 * (1/(self.g*self.mu))
 
         if self.position_exact>0 and self.position_exact<2:
@@ -81,6 +83,7 @@ class Two_Sensors(object):
         """Restart the mass M of the box and rewrites the variables with the
         the new positions.
         """        
+
         self.M = random.uniform(self.M_min, self.M_max)
         self.position_exact = 0.5 * (self.v*self.m/(self.M+self.m))**2 * (1/(self.g*self.mu))
         if self.position_exact > 0 and self.position_exact < 2:
@@ -97,9 +100,11 @@ class Two_Sensors(object):
         [v-0.5*v,v+0.5*v], where v is the velocity of the bullets in the initial
         shooting. Then it calculates the position of the box after being shot 
         with the random velocity.
+
         :return: v_test (sampled velocity), d_test (corresponding distance)
         :rtype: float, float
         """        
+
         v_test = random.uniform(self.v-0.5*self.v, self.v+0.5*self.v) 
         d_test = 0.5*(v_test*self.m/(self.M+self.m))**2*1/(self.g*self.mu)
         return v_test, d_test
@@ -113,7 +118,7 @@ class Two_Sensors(object):
         :param observed: real observed value
         :type observed: float
         :param sigma: Width of the Gaussian. The smaller `sigma`, the higher the
-        needed precision to get a reward, defaults to 0.05
+                      needed precision to get a reward, defaults to 0.05
         :type sigma: float, optional
         :return: Obtained reward
         :rtype: float / numpy array
@@ -143,7 +148,7 @@ class Two_Sensors(object):
         return np.array([action1, outcome1, action2, outcome_2, V])
 
     def reshape_for_analyzer(self, measurements, target):
-        """ Reshapes the measurements and the observed value in a suitable
+        """ Reshapes the measurements and the target value in a suitable
         format for a Keras analyzer
         
         :param measurements: Measurements to give the Analyzer to make the 

@@ -1,3 +1,15 @@
+import random
+import numpy as np
+import tensorflow as tf
+from collections import deque
+from tensorflow import keras
+from keras.layers import Input, Dense
+from keras.models import Model, Sequential
+from keras.optimizers import Adam
+from keras.utils import to_categorical
+from keras import layers
+from keras.models import load_model
+
 class Q_Learning(object):
     def __init__(self, iterations, output_size, learning_rate=0.1, discount=0,
     exploration_rate=1):
@@ -186,7 +198,7 @@ class DQN(object):
         else:
             return self.random_action()
 
-     def online_update(self, old_state, old_action, reward, current_state):
+    def online_train(self, old_state, old_action, reward, current_state):
         """ Uses keras built in functions to estimate the values of the 
         previous state and the future state to calculate the temporal
         difference and use it to fit the model.
