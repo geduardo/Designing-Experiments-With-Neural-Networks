@@ -89,7 +89,7 @@ class Q_Learning(object):
         self.q_table[action] = new_value
         #Each train we update the exploration rate.
         if self.exploration_rate > 0:
-            self.exploration_rate = self.exploration_rate-2*self.exploration_delta
+            self.exploration_rate = self.exploration_rate-self.exploration_delta
 
 class DQN(object):
     def __init__(self, iterations, input_size, output_size, learning_rate=0.01,
@@ -192,7 +192,7 @@ class DQN(object):
         """        
 
         if self.exploration_rate>0:
-            self.exploration_rate = self.exploration_rate-2*self.exploration_delta
+            self.exploration_rate = self.exploration_rate-self.exploration_delta
         if random.random() > self.exploration_rate:
             return self.greedy_action(state)
         else:
