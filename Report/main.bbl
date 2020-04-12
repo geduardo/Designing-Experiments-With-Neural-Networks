@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{Alkhateeb}
+Ahmed Alkhateeb.
+\newblock Can scientific discovery be automated?
+\newblock {\em The Atlantic}.
+
+\bibitem{begley2012raise}
+C~Glenn Begley and Lee~M Ellis.
+\newblock Raise standards for preclinical cancer research.
+\newblock {\em Nature}, 483(7391):531--533, 2012.
+
+\bibitem{BornmannRudiger}
+Lutz Bornmann and Rudiger Mutz.
+\newblock Growth rates of modern science: A bibliometric analysis based on the
+  number of publications and cited references.
+\newblock {\em Journal of the Association for Information Science and
+  Technology}, 66(11):2215--2222, 2015.
+
+\bibitem{Carleo_2019}
+Giuseppe Carleo, Ignacio Cirac, Kyle Cranmer, Laurent Daudet, Maria Schuld,
+  Naftali Tishby, Leslie Vogt-Maranto, and Lenka Zdeborová.
+\newblock Machine learning and the physical sciences.
+\newblock {\em Reviews of Modern Physics}, 91(4), Dec 2019.
+
+\bibitem{Fanelli2628}
+Daniele Fanelli.
+\newblock Opinion: Is science really facing a reproducibility crisis, and do we
+  need it to?
+\newblock {\em Proceedings of the National Academy of Sciences},
+  115(11):2628--2631, 2018.
+
+\bibitem{Sabine}
+Sabine Hossenfelder.
+\newblock The crisis in physics is not only about physics.
+\newblock {\em BackReAction}.
+
+\bibitem{iten2020discovering}
+Raban Iten, Tony Metger, Henrik Wilming, L{\'\i}dia Del~Rio, and Renato Renner.
+\newblock Discovering physical concepts with neural networks.
+\newblock {\em Physical Review Letters}, 124(1):010508, 2020.
+
+\bibitem{owidlifeexpectancy}
+Esteban Ortiz-Ospina Max~Roser and Hannah Ritchie.
+\newblock Life expectancy.
+\newblock {\em Our World in Data}, 2020.
+\newblock https://ourworldindata.org/life-expectancy.
+
+\bibitem{Melnikov_2018}
+Alexey~A. Melnikov, Hendrik Poulsen~Nautrup, Mario Krenn, Vedran Dunjko, Markus
+  Tiersch, Anton Zeilinger, and Hans~J. Briegel.
+\newblock Active learning machine learns to create new quantum experiments.
+\newblock {\em Proceedings of the National Academy of Sciences}, 115(6), Jan
+  2018.
+
+\bibitem{nautrup2020operationally}
+Hendrik~Poulsen Nautrup, Tony Metger, Raban Iten, Sofiene Jerbi, Lea~M.
+  Trenkwalder, Henrik Wilming, Hans~J. Briegel, and Renato Renner.
+\newblock Operationally meaningful representations of physical systems in
+  neural networks, 2020.
+
+\bibitem{Saltelli}
+Andrea Saltelli and Silvio Funtowicz.
+\newblock What is science's crisis really about?
+\newblock {\em Futures}, 91:5 -- 11, 2017.
+\newblock Post-Normal science in practice.
+
+\bibitem{sinatra2015century}
+Roberta Sinatra, Pierre Deville, Michael Szell, Dashun Wang, and
+  Albert-L{\'a}szl{\'o} Barab{\'a}si.
+\newblock A century of physics.
+\newblock {\em Nature Physics}, 11(10):791--796, 2015.
+
+\bibitem{publications7010018}
+Carol Tenopir, Lisa Christian, and Jordan Kaufman.
+\newblock Seeking, reading, and use of scholarly articles: An international
+  study of perceptions and behavior of researchers.
+\newblock {\em Publications}, 7(1), 2019.
+
+\end{thebibliography}

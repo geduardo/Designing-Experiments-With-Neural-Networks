@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7350 64-bit)
+Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--I didn't find a database entry for "belavkin_optimal_1975"
+Warning--I didn't find a database entry for "hausladen_`pretty_1994"
+Warning--I didn't find a database entry for "tomamichel_quantum_2016"
+Warning--empty year in Alkhateeb
+Warning--empty year in Sabine
+You've used 13 entries,
+            2118 wiz_defined-function locations,
+            587 strings with 6476 characters,
+and the built_in function-call counts, 4364 in all, are:
+= -- 404
+> -- 271
+< -- 0
++ -- 109
+- -- 94
+* -- 346
+:= -- 779
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 86
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 133
+empty$ -- 291
+format.name$ -- 94
+if$ -- 855
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 12
+newline$ -- 69
+num.names$ -- 26
+pop$ -- 75
+preamble$ -- 1
+purify$ -- 73
+quote$ -- 0
+skip$ -- 96
+stack$ -- 0
+substring$ -- 211
+swap$ -- 13
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 2
+while$ -- 35
+width$ -- 15
+write$ -- 141
+(There were 5 warnings)

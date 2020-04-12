@@ -1,0 +1,1187 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FRAME-FILE
+%%
+%% Author        : Stefan M. Moser,
+%%
+%% Written       : January 1998, based on a file by Michael Semling
+%%
+%% Modifications : ongoing, used for semester project 1, semester
+%%                 project 2, master thesis, PPS, SADA @ ISI
+%%
+%% Last Modify.   : 21 May 2004, 24 Oct 2006 (Michèle Wigger)
+%%
+%% Version       : 3.4
+%%
+%% Copyright     : Free for distribution if 
+%%                     - you keep this header (you may add to it!)
+%%                     - you do not charge any fee
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HELP:
+%%
+%% Compilation of file:
+%%
+%%  latex frame; bibtex frame; latex frame; latex frame
+%%
+%%  dvips -Pcmz -Pamz -Psuper -o frame.ps frame.dvi
+%% 
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HELP ONLINE:
+%%
+%% http://computing.ee.ethz.ch/.soft/latex/tetex/     (tardis)
+%%
+%% file:/usr/pack/tetex-1.0.7-mo/texmf/doc/index.html (ISI)
+%%
+%% CTAN for any package: http://www.ucc.ie/cgi-bin/ctan
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Styles: article, book, report
+\documentclass[11pt,a4paper,twoside]{report}
+\pdfoutput=1
+%
+%% Draft:
+%
+%\documentclass[draft,11pt,a4paper,twoside,dvips]{report}
+                                    % On border a black ruler shows
+                                    % lines with problems
+%\usepackage[notref, notcite]{showkeys}
+                                    % All labels are printed on the
+                                    % side 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PACKAGES                         DESCRIPTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[ngerman,USenglish]{babel} % Different languages:
+                                    % Swap between the languages
+                                    % with \selectlanguage{sprache} 
+%\usepackage[latin1]{inputenc}      % acceptance of german Umlaute
+
+
+%\usepackage{bibtex/macros}  %for IEEE transaction submission it is not allowed to have a separate style-file :-( :-( :-(
+
+\usepackage{etex}				%mehr register etc.
+
+\usepackage{times}
+%\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{graphics}
+%\usepackage{pstricks,pst-node,pst-tree}
+\usepackage{epsfig}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{fancyhdr}
+%\PassOptionsToPackage{hyphens}{url}
+
+%Raban: Added Joe's style
+\usepackage[bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+\definecolor{dullmagenta}{rgb}{0.4,0,0.4}   % #660066
+\definecolor{darkblue}{rgb}{0,0,0.4}
+\hypersetup{linkcolor=red,citecolor=blue,filecolor=dullmagenta,urlcolor=darkblue} % coloured links
+
+
+
+%\usepackage[colorlinks,urlcolor=blue] {hyperref}    %change here colorlinks=false to remove the colored links (for print-version)
+\usepackage{url}
+%\usepackage[colorlinks, hyperindex,pagebackref] {hyperref}
+%\usepackage{backref}
+\urlstyle{tt}
+
+
+%zusaetzlich nicht standard
+%\usepackage{amsfonts}		%mathematisches Menge R, N
+%\usepackage{mathrsfs}
+%\usepackage[usenames]{color}
+%\usepackage{textcomp}
+%\usepackage{latexsym}		%fï¿½r Re(z) und Img(z)
+%\usepackage{amsthm}
+%\usepackage{wrapfig}
+%\usepackage{pdfpages}
+%\usepackage{caption}
+%\usepackage{subfig}
+
+%fuer TikZ zum Zeichnen von Graphiken
+\usepackage{tikz}
+\usetikzlibrary{chains}
+\usetikzlibrary{fit}
+\usepackage{pgflibraryarrows}		%optional
+\usepackage{pgflibrarysnakes}		%optional
+\usepackage{epsfig}
+
+% Added by Raban
+\usepackage{enumerate}  
+\usepackage{nicefrac} 
+\usepackage{braket}
+
+
+\usepackage{bm}  % Define \bm{} to use bold math fonts
+\usepackage{bbm}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{natbib}
+\makeatletter
+\makeatother
+
+\begin{comment}
+%-------------- start insert modified commands ------------------
+\makeatletter
+\def\blx@bblfile@bibtex{%
+ \blx@secinit
+ \begingroup
+ \blx@bblstart
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\input{biblio_MA.bbl}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \blx@bblend
+ \endgroup
+ \csnumgdef{blx@labelnumber@\the\c@refsection}{0}}
+\makeatother
+%-------------- end insert modified commands ------------------
+\end{comment}
+
+
+%\usetikzlibrary{external}
+%\usetikzlibrary{decorations.pathreplacing}
+%\tikzexternalize[prefix=ConfPaper-]
+
+
+%\include{psfig}
+
+\usepackage{listings}
+\usepackage{url}
+
+
+
+\usepackage[latin1]{inputenc}
+
+\usepackage{paralist} % for enumerate
+
+\usepackage{mathabx} % for nice math symbols
+%\usepackage{MnSymbol} % for nice math symbols
+
+\usepackage{footmisc} % for \footref
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Macros:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% for IEEE transaction submission it is not allowed to have a separate style-file. Therefore we have to copy the commands we used
+\def\Hb{\ensuremath{H_{\rm b}}}
+\def\S{\mathsf{S}}
+\def\D{\mathsf{D}}
+\def\C{\mathsf{C}}
+\def\T{\mathsf{T}}
+\def\E{\mathsf{E}}
+\def\F{\mathsf{F}}
+\def\R{\mathsf{R}}
+\def\Z{\mathsf{Z}}
+\DeclareMathOperator{\dec}{dec}
+\DeclareMathOperator{\decp}{dec'}
+\def\Rset{\mathcal{R}_\epsilon}
+\def\Dset{\mathcal{D}_\epsilon}
+\def\Bparam{Bhattacharyya parameter}
+
+\newcommand{\supp}{\textnormal{supp}}
+ \newcommand{\Mat}{\textnormal{Mat}}
+ \newcommand{\s}{\textnormal{s}}
+  \newcommand{\diag}{ \textnormal{diag}}
+\newcommand{\W}{\mathsf{W}} %for channel law.
+\newcommand{\Hh}[1]{H\!\left({#1}\right)} %Entropy
+\newcommand{\Hcond}[2]{H\!\left({#1}|{#2}\right)} %cond Entropy
+\newcommand{\Prvcond}[2]{\,{\rm Pr}\!\left[\left.#1\,\right|\,#2\right]} %cond. prob.
+\newcommand{\Prv}[1]{\,{\rm Pr}\!\left[#1\right]} %usage: Pr[X \leqslant 5]
+\newcommand{\SNR}{\textnormal{SNR}}
+\newcommand{\Bernoulli}[1]{\textnormal{Bernoulli}\left(#1\right)}  %Bernoulli dist.
+\newcommand{\pos}[2]{\textnormal{pos}_{{#1}}\left({#2}\right)} %pos function
+
+% Comments
+\newcommand{\RI}[1]{{\color[RGB]{0,128,0} *~*~*~ #1 *~*~*~}}
+
+% QRM notaion
+\newcommand{\ketbra}[1]{|#1\rangle\langle #1|}
+\newcommand{\cnot}{{\footnotesize \textnormal{CNOT}} }
+\newcommand{\RM}{\mathcal{RM} }
+\newcommand{\QRM}{\mathcal{QRM} }
+
+\newcommand*{\ee}{\mathrm{e}}
+
+
+%\DeclareMathOperator{\T}{T}
+\DeclareMathOperator{\enc}{enc}
+\DeclareMathOperator{\EC}{EC}
+\def\A{\mathsf{A}}
+\def\H{H}
+\def\P{P}
+\newcommand{\+}{\textnormal{+} }
+\newcommand{\bp}{\textbf{+} }
+\newcommand{\g}{\hspace{1mm}}
+\renewcommand{\d}{\textnormal{d}} %for integration measure
+\newcommand{\id}{\textnormal{id}}
+\def \I{\mathrm{i}}
+
+% Joe notaion
+\def\tr{{\rm tr}}
+\def\pr{{\rm Pr}}
+\def\Re{{\rm Re}}
+\def\cl{{\text{cl}}}
+\def\ker{{\text{ker}}}
+\def\fpg{F_{{\rm pg}}}
+\def\cC{\mathcal C}
+\def\cD{\mathcal D}
+\def\cE{\mathcal E}
+\def\spec{\text{spec}}
+
+
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\normT}[1]{\left\vert\kern-0.25ex\left\vert\kern-0.25ex\left\vert #1 
+    \right\vert\kern-0.25ex\right\vert\kern-0.25ex\right\vert}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor Spe-ci-fi-cally di-mensio-nal}
+\hyphenation{va-rie-ty}
+\hyphenation{the-sis}
+\hyphenation{opti-ma-li-ty}
+\hyphenation{dif-fe-rent}
+\hyphenation{ma-the-ma-ti-cal}
+\hyphenation{pa-ra-me-ter}
+\hyphenation{equali-ty}
+\hyphenation{in-tro-duc-tion}
+\hyphenation{anal-y-sis}
+\hyphenation{in-equa-li-ty}
+\hyphenation{using}
+\hyphenation{ge-ne-ra-lized}
+\hyphenation{ope-ra-tors}
+\hyphenation{the-ory}
+\hyphenation{pro-ba-bi-li-ty}
+\hyphenation{in-te-re-stin-gly}
+\hyphenation{multi-variate}
+\hyphenation{exact}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SYNTAX PACKAGE ``theorem'':
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Example:
+%%
+%% \newtheorem{name}{titel}
+%% \newtheorem{name}{titel}[counter] 
+%% \newtheorem{name}[othername]{titel}
+%%
+%% The first version defines a new type of "theorem" that is invoked by
+%%    \begin{name}
+%%      ...
+%%    \end{name}
+%% and that will be called "titel" in boldface. The numeration starts
+%% from 1 and goes up through the whole document.
+%% The second version does the same, but the numeration is restarted at
+%% each counter (where counter=chapter, section, subsection etc.),
+%% i.e., for example 1.1, 1.2, 1.3, 2.1, 2.2, 4.1 according to the
+%% chapters.
+%% The third version puts the numeration to the same counter as the one
+%% that has been defined for the "theorem" othername,
+%% e.g., Lemma 1.1, Definition 1.2, Definition 1.3, Lemma 1.4 etc.
+\newtheorem{mythm}{Theorem}[section]
+\newtheorem{myprop}[mythm]{Proposition}
+\newtheorem{mycor}[mythm]{Corollary}
+\newtheorem{mylem}[mythm]{Lemma}
+\newtheorem{myclaim}[mythm]{Claim}
+\newtheorem{mysubclaim}[mythm]{Subclaim}
+\newtheorem{myfact}[mythm]{Fact}
+\newtheorem{myconj}[mythm]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{mydef}[mythm]{Definition}
+\newtheorem{myex}[mythm]{Example}
+\newtheorem{myrmk}[mythm]{Remark}
+
+
+% %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SYNTAX HEADER AND FOOTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Attention: These headers and footers are only used if you use
+%% \pagestyle{fancyplain} 
+%%
+%% Header and footer have three parts:
+%% \lhead, \chead, \rhead bzw. \lfoot, \cfoot,\rfoot. 
+%% \lhead ist responsible for TOP LEFT, \chead for the TOP MIDDLE etc.
+%% Synopsis: \lhead[\fancyplain{1}{2}]{\fancyplain{3}{4}}
+%% 1: Start of chapter on even page
+%% 2. Normal even page
+%% 3. Start of chapter on odd page
+%% 4. Normal odd page 
+%%
+%% \leftmark = chapter
+%% \rightmark = section with number
+%% \thepage = page-number
+%% \thechapter = chapter-number
+%
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+%
+\lhead[\fancyplain{}
+{}]
+{\fancyplain{}
+  {}}
+%
+\chead[\fancyplain{}
+{}]
+{\fancyplain{}
+  {}}
+%
+\rhead[\fancyplain{}
+{}]
+{\fancyplain{}
+  {}}
+%
+\lfoot[\fancyplain{}
+{}]
+{\fancyplain{}
+  {}}
+%
+\cfoot[\fancyplain{\thepage}
+{\thepage}]
+{\fancyplain{\thepage}
+  {\thepage}}
+%
+\rfoot[\fancyplain{}
+{}]
+{\fancyplain{}
+  {}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PARTIAL COMPILATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% While working on a part of the document, compile only this 
+%% part: 
+%\includeonly{chapter1.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COUNTER OF FORMULAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Counter including section-number (for more information see 
+%% amsmath):
+\numberwithin{equation}{chapter}
+%\numberwithin{equation}{section}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FRENCH SPACING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Doesn't put any additional space after interpunction-characters
+%% like : , . 
+%\frenchspacing
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDENT OF PARAGRAPH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% After paragraph start sentence with indent:
+%\setlength{\parindent}{0cm}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLIFIED TYPESETTING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If you activate the simplified setting, then LaTeX uses less 
+%% strict rules for the layout (less 'overful hbox' warnings)
+%%
+%% Activate:
+%\sloppy
+%% Deactivate:
+\fussy
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGE-MARGINS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Left page more to the left, right page more to the right:
+\setlength{\oddsidemargin}{1.7cm}
+\setlength{\evensidemargin}{1.7cm}
+\addtolength{\textheight}{0.0cm}
+\addtolength{\textwidth}{0.0cm}
+\addtolength{\topmargin}{-0.0cm}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% STYLE OF HEADER AND FOOTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NB: Order of this command and the Page-Margins commands is 
+%% important!
+%
+\pagestyle{fancyplain}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SPACE BETWEEN LINES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Ph.D. should have 1.5 times bigger space between lines
+%% Vieweg Latex Buch p. 33
+\renewcommand{\baselinestretch}{1.2}
+\large \normalsize
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Automated index, needs 
+%% makeindex frame
+%
+%\makeindex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% START OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{document}
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LANGUAGE OF DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\selectlanguage{USenglish}
+%\selectlanguage{ngerman}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGENUMBERING PREFACE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Roman pagenumbering (arabic, roman,...)
+\pagenumbering{Roman}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TITEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% AUTOMATICAL:
+%
+%\title{Eidgen\"ossiche Technische Hochschule \\ Z\"urich \\ \vspace{20mm}
+ %Master's Thesis \\ at the Signal and Information Processing Laboratory \\
+ %\vspace{10mm} The Hypothesis of Fixed-Key Equivalence for the Group
+% Generalization of Linear Cryptanalysis \vspace{5mm}}
+%\author{Stefan M. Moser}
+%
+%
+%\maketitle
+%
+%% BY HAND:
+%
+\begin{titlepage}
+  \mbox{}
+
+  \vspace{-1.5cm}
+  \noindent
+  \begin{tabular}{@{} l @{} l @{}}
+    \begin{minipage}[c]{0.5\textwidth}
+      \hspace{-4mm}
+      \includegraphics[height=19mm]{figures/eth_logo.pdf}
+    \end{minipage} &
+    \begin{minipage}[c]{0.5\textwidth}
+       \hfill \large Quantum Information Theory Group
+    \end{minipage} \\
+  \end{tabular}
+  \rule{\textwidth}{0.5pt}
+  \begin{center}
+    {\Large 
+      Spring 2020 \hfill Prof.~Dr.~Renato Renner
+    }
+    
+    \vspace{\stretch{5}}
+    \LARGE
+    Master's Thesis
+ 
+    \vspace{\stretch{8}}
+    \Huge\textbf{
+    Designing experiments with neural networks
+          }
+    
+    \vspace{\stretch{10}}
+    \LARGE{
+      Eduardo Gonzalez Sanchez
+    }
+    
+    \vspace{\stretch{10}}
+    \rule{\textwidth}{0.5pt}
+   
+    \vspace{0.0cm}
+    \begin{flushleft}
+      \begin{tabular}{ll}
+        \Large Advisor: & \Large 
+        Raban Iten
+      \end{tabular}
+    \end{flushleft}
+  \end{center}
+\end{titlepage}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% OFFICIAL PROJECT-DESCRIPTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% I do not have one ....
+\thispagestyle{plain}
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACKNOWLEDGMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\include{preface}
+%
+%\renewcommand{\chaptername}{}
+\chapter*{Acknowledgments}
+%\addcontentsline{toc}{chapter}{\numberline{}Acknowledgments}
+%\label{cha:acknowledgments}
+Blah blah
+
+
+\vspace{1.1cm}
+\noindent
+Zurich,  April 14, 2020
+
+\vspace{2.4cm}
+\noindent
+Eduardo Gonzalez Sanchez
+%\renewcommand{\chaptername}{Chapter}
+\thispagestyle{plain}
+\clearpage
+
+\thispagestyle{plain}
+\cleardoublepage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ABSTRACTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ENGLISCH ABSTRACT:
+%
+%\include{englishabstract}
+\huge
+\begin{abstract}
+  \setcounter{page}{5}
+\thispagestyle{plain}
+%  \addcontentsline{toc}{chapter}{\numberline{}Abstract}
+  \normalsize
+  \vspace{0.5cm}
+
+
+\noindent In this work we propose a new model that mixes reinforcement learning 
+and deep learning to create agents able to design strategies for experiments, 
+using as feedback only the quality of the predictions about properties of the 
+physical system made exclusively from the data the agents collect. This is could
+be summarized as 'agents able to do science'; since science checks its validity 
+by making predictions over the physical world. In the thesis we also put the 
+first building blocks of a theoretical model for the scientific method in 
+machines. This last part is important in the long-term goal of developing a 
+variant of quantum theory that can consistently describe agents who are using 
+the theory. If the science of the future is done by machines, we must ensure 
+consistency in the underlying principles driving automated science.
+
+\vspace{3mm}
+
+\noindent 
+
+\vspace{10mm}
+\noindent{\bf{Keywords:}}
+Reinforcement learning, deep learning, automated science, feature representation, 
+experiment design, artificial intelligence
+\end{abstract}
+
+
+
+\normalsize
+
+
+%\renewcommand{\abstractname}{Abstract}
+\selectlanguage{USenglish}
+%
+
+%
+\thispagestyle{plain}
+\cleardoublepage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER TABLE OF CONTENTS ETC.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addcontentsline{toc}{chapter}{\numberline{}Table of Contents}
+\tableofcontents
+%\addtocontents{toc}{\protect\enlargethispage{1cm}}
+\clearpage
+%
+
+
+
+
+
+\thispagestyle{plain}
+\cleardoublepage
+
+
+
+\lhead[\fancyplain{\scshape \leftmark}
+{\scshape \leftmark}]
+{\fancyplain{\scshape Semester Project}
+  {\scshape Semester Project}}
+%
+\rhead[\fancyplain{\scshape Semester Project}
+{\scshape Semester Project}]
+{\fancyplain{\scshape \leftmark}
+  {\scshape \leftmark}}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MAIN PART
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESET NUMBERING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\setcounter{chapter}{0}
+\setcounter{figure}{0}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PAGE LAYOUT MAIN PART
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\pagenumbering{arabic}
+%
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+%\renewcommand{\thefootnote}{\arabic{footnote}}
+%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%
+\lhead[\fancyplain{\scshape Chapter \thechapter}
+{\scshape Chapter \thechapter}]
+{\fancyplain{\textsc{\leftmark}}
+  {\rightmark}}
+%
+\rhead[\fancyplain{\scshape \leftmark}
+{\textsc{\leftmark}}]
+{\fancyplain{\scshape Chapter \thechapter}
+  {\scshape Chapter \thechapter}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MAIN CHAPTERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\cleardoublepage
+%\include{chapters}
+
+
+
+\chapter{Preface} 
+
+Many of the limitations of humans at doing science come from their biological 
+condition:
+    \begin{itemize}
+        \item  Humans have a limited lifespan: 72.6 years on average 
+        \cite{owidlifeexpectancy}. When experienced scientists die their
+        knowledge and expertise die with them.
+        \item From the limited lifespan, humans can dedicate only a fraction to
+        do science. This is inevitable since humans need to eat, sleep and deal
+        with social interactions, among other things. Moreover, humans need
+        decades of study and training to start making contributions to the 
+        scientific knowledge.
+        \item Humans are susceptible to suffer from diseases and other limiting
+        biological conditions that hinder their scientific production.
+        \item Humans' understanding of the physical world is tightly linked to 
+        their limited sensorial perception and other inherited or acquired 
+        factors like the language or the cognitive capacity.
+    \end{itemize}
+    
+Other limitations are indirectly caused by the need to satisfy their biological
+necessities. For example, a person who wants to dedicate their life to science
+needs some type of financial support to satisfy the basic human necessities. 
+This support usually comes from a greater institution like a state, a company or
+a patron. This financial relationship ties infrangibly science to the economical
+structure of the society. Profitable discoveries are encouraged while resources
+for unprofitable science are scarce. It can be argued that any form of
+scientific research, human or not, will require an investment of energy and
+resources in a society in which those are limited. This can be true, but a more
+efficient way of doing science will increase science independence from the
+economy. 
+
+At the same time, scientific discoveries influence drastically modern society
+and its economical structure. They provide new knowledge that allows humanity to
+develop new tools and protocols to improve human well being. In the last
+centuries, science has changed society by setting the theoretical and
+experimental grounds of a technological transformation. It is of public
+interest to boost and improve scientific production.
+
+During the last century, the amount of available scientific literature has been 
+growing exponentially \cite{sinatra2015century,BornmannRudiger}, with a yearly
+growth rate of $ {\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}} 9\%$ in the 
+last decade. Scholars read on average almost 240 articles per year
+\cite{publications7010018}. Some authors \cite{Alkhateeb} suggest that science 
+is in the midst of a data crisis. Although the available literature grows
+exponentially the cognitive capacity of human beings remains constant. This
+forces scientists to derive hypotheses from an exponentially smaller fraction of
+the collective knowledge. This will lead to scientists increasingly asking
+questions that already been answered and reducing further the efficiency of
+scientific production. 
+
+Some areas of science are starting to suffer from a reproducibility crisis 
+\cite{Saltelli, begley2012raise} in which scientists are generally 
+unable to reproduce their peers' findings. Some voices in the physics 
+community \cite{Sabine} point out that foundational physics has been 
+stagnated during the last decades. However, some authors defend that there isn't
+such a crisis \cite{Fanelli2628}. Nonetheless, it's clear that to sustain an 
+exponential growth of reliable scientific production with no exponentially 
+increasing human effort is impossible, and the crisis is thus, unavoidable.
+ \par
+However, the lack of efficiency in scientific production is not the only 
+drawback produced by the biological limitations of human beings. Humans' 
+intuition and understanding of the physical world is conditioned by the
+percepts collected by their sensory system. This limitation becomes evident when
+trying to intuitively understand physical systems that show behaviors that differ
+from those susceptible to be collected by the sensory system. This is the case 
+of, for example, quantum theory. Humankind has developed tools to overcome 
+the limitations of the sensorial system to observe new properties of 
+physical systems that are out of reach for our biological receptors. For 
+instance, using infrared cameras to map infrared signals to a representation 
+in the visible spectrum, humans can detect infrared radiation. But these tools 
+don't allow to build an intuitive understanding of the phenomena without 
+analogies to the phenomena perceived by the sensory system. 
+For example, people that are blind from birth have never had any input to their
+visual cortex, so they have no visual intuition which limits their ability to 
+understand some physical concepts. Similarly, the lack of receptors for
+other arbitrary physical properties limits human understanding of the physical 
+world and likely hinders scientific advance.
+\\ 
+\par 
+Modern science requires from agents with complex cognitive abilities. So far 
+humans are the only known material structure able to perform it. It is true that
+some animals perform scientific behavior, like Crows or monkeys solving puzzles 
+by trial and error. But those anecdotal examples are far from the formalized 
+version of the scientific method employed by humans. However, humans are also 
+the living proof of the possibility of agents performing sophisticated science.
+There is no reason to think that there's anything special in humans that makes 
+them the best possible form of a scientific agent. Rather it is reasonable to 
+think that there is plenty of space for improvement, since the human brain was
+designed solely by millions of years of random mutations and natural selection.
+
+Recent advances in artificial intelligence, yet far from achieving an 
+artificial general intelligence, open the door to an automation of science. In 
+the recent years, a vast amount of effort has been dedicated to the development
+of machine learning techniques to help scientists of the physical sciences to
+process data to create new better models \cite{Carleo_2019}. However, these 
+machine learning based techniques are just tools to help human scientists to 
+interpret complex data to provide new predictions, and not efforts towards an 
+automation of science. Nonetheless, the potential role that artificial intelligence
+might play in the process of scientific production has been getting growing 
+awareness. In \cite{Melnikov_2018}, the authors use a projective simulation 
+model to design complex photonic experiments that produce high-dimensional 
+entangled multiphoton states. According the authors, the system autonomously 
+discovers experimental techniques which are a standard in modern quantum optical
+experiments. In \cite{iten2020discovering} the authors explore the use of 
+variational autoencoders to extract autonomously physically relevant parameters
+from physical data without prior assumptions about the physical system. In
+\cite{nautrup2020operationally} they expand the work to present an architecture
+based on communitcating agents that deal with different aspects of a physical 
+system and show that it can be combined with reinforcement learning techniques.
+More work on similar directions can be found in [citas articulo de Raban II].
+\par
+However, scientific agents need to be designed carefully to minimize the 
+inherited biases and limitations from their human creators. In this thesis we 
+present a minimal axiomatic model for science and a new model architecture that
+mixes reinforcement learning with deep learning to create agents capable to
+design strategies for experiments. Using as feedback only the quality of the 
+predictions about properties of the physical system made exclusively from the 
+data the agents collect from their sensorial available receptors. 
+
+\vspace{12mm}
+
+
+\chapter{Minimal model for science} \label{science}
+
+\section{Introduction} \label{sec:intro_science}
+In this section, we introduce a minimal set of definitions and assumptions 
+to define a scientific method. In the goal of achieving an independent automated
+science protocol, we must ensure consistency in the underlying principles to
+avoid unwanted biases and preconceptions inherited from humans.
+\subsection{First assumption: Dynamicality}
+We start with a universe $U$. Since the goal is to create agents
+able to decipher the properties of the universe $U$, we must make the minimal
+number of assumptions that allow us to set a scientific method. First, we need
+the universe to be dynamical. If the universe is static, nothing changes and 
+no science is possible. 
+This will give use the first assumption:
+
+\begin{itemize}
+  \item[\textbf{A1 (Dynamicality)}:] There exists a dynamical universe $U$.
+\end{itemize}
+
+We can represent the dynamical nature of the universe by
+parametrizing it with a real parameter $\tau \in (-\infty,\infty)$,
+so that the state of the universe is a function of $\tau$. Note that we are not 
+assuming any property of the universe function $U(\tau)\rightarrow S$, where $S$
+is the set of possible states of the universe. For example, it may look that by
+setting the parameter $\tau$ unbounded we may be forcing the universe $U$ to 
+have unbounded dynamics. However, we could have $U(\tau)$ so that:
+\begin{align*}
+  U(\tau \leq \tau_{\textnormal{initial}})&=s_\text{initial} \\
+  U(\tau \geq \tau_{\textnormal{terminal}})&=s_\text{terminal}
+\end{align*}
+where $s_\textnormal{initial}, s_\textnormal{terminal} \in S $ are the initial 
+and terminal states of the universe $U$. We aren't making any assumptions about
+the dynamical bounds on $U$. Also, we aren't making any assumptions on any other
+properties of $U(\tau)$ or even on what the elements of $S$ are. We aren't also
+making any assumption on the continuity of the dynamics, since we could have:
+$$U(\tau_{i} >\tau \geq \tau_{i+1})=s_{\tau_i},\;\;\forall i \in \mathbb{N}$$
+where $\{\tau_i\}_{i=0}^\infty$ is an arbitrary monotonically increasing
+sequence of real numbers. We aren't assuming as well anything about the 
+deterministic nature of $U$, since $U(\tau)$ could be a probabilistic function.
+The only assumption made by the statement \textbf{A1} is that the universe 
+evolves according some rule $U(\tau)$.
+
+Note that the parameter $\tau$ doesn't necessarily represent the time as 
+perceived by humans. It's just a parameter defined to convey the dynamical 
+nature of the universe.
+
+\begin{myex}
+  \label{example1}
+In this example we are going to define a universe that satisfies \textbf{A1}.
+The universe $U$ consists of $n^2$ elements $\{a_{jk}\}_{j,k=0}^{n-1}$. Each 
+element can exist in one of two substates: \{1, 0\}. The set of states $S$ is 
+then $\{0,1\}^{n^2}.$
+Now we need to equip
+the universe with a dynamical law $U(\tau)$. Assuming a discrete evolution, 
+it could be, for example, the laws of a deterministic cellular automata. Or 
+a probabilistic law so that each element changes its state with a 
+certain probability in each dynamical step. It could be any rule that associates
+a state of $S$ with each discrete value $\tau_i$. However, we could also have 
+continuous dynamics. For instance, we can set:
+
+\begin{equation}
+  P(a_{jk}=1,\tau)=e^{-\tau^2} ,\;\;\forall j,k 
+  \label{DynamicalLaw1}
+\end{equation}
+
+where $P(a_{jk}=1, \tau)$ is the probability of the element $a_{jk}$ being in 
+the state $1$ at the \textit{time} \footnote{For communicative convenience 
+we use the word time to design the value of $\tau$. However, it doesn't mean
+that $\tau$ represents the time as perceived by humans.} $\tau$. With this 
+dynamical law, the evolution of the universe is unbounded, although it has 
+terminal and initial states: all elements in the substate 0. One may ask what it 
+means that the universe is described by a probability function like 
+\eqref{DynamicalLaw1}. It means that at a given value of $\tau$ the state of 
+the universe is choosen randomly according to \eqref{DynamicalLaw1}.
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=100mm,scale=0.5]{figures/UniverseA1.pdf}
+   \caption{Graphical representation of the dynamical change of a universe
+   with $n=8$.}
+\end{figure} 
+\end{myex}
+
+From the assumption \textbf{A1} we can deduce some consequences.
+\begin{myclaim}
+Any universe that satisfies \textbf{A1} has at least one element that can exist
+in more than one substate.
+\end{myclaim}
+
+The proof of this claim is obvious: an empty set cannot change. A set in which 
+all elements can exists in only one substate also cannot change. Therefore, 
+the simplest universe in which \textbf{A1} holds is a universe with only one
+element that can exists in two substates, this is, a bit that changes its value
+according to a dynamical law.
+
+\subsection{The scientific method}
+
+Now we need to define what is science in this minimal context. First, let's 
+define what an agent is.
+
+\begin{mydef}
+  An agent $A$ is defined as a subset of the universe $U$. $A(\tau)$ is the
+  composition of $A$ at the dynamical value $\tau$. The dynamical evolution
+  of $A$ is determined by the dynamical evolution of $U$.
+\end{mydef}
+
+This is a very broad definition of an agent, since we define them just as subsets
+of the universe, so anything can be an agent. We can safely make this assumption 
+since humans and computers are subsets of the universe. The definition implies 
+that agents obey the same physical laws than the universe. Some philosophers 
+would call this implication a materialistic assumption.
+
+\par
+
+Another definition required for science is the definition of measurement or 
+observation. This definition is particularly delicate in the context of quantum
+theory, so we have to be very careful in its definition. 
+
+\begin{mydef}
+  An observation $\hat{O}_A$ is defined as the dynamical process in which the 
+  state of any subset of an agent $A$ gets correlated to the state of another
+  subset of $U$, the object $O$, that may or not be disjoint to $A$.  
+\end{mydef}
+
+This definition is also very broad, so let's explain it. When we talk about 
+observations in the context of humans, we usually understand them as information
+from an object acquired by our sensorial system, for example by observing with
+our visual system a bunch of photons emitted from a source of light. However, 
+these terms mean nothing in our minimal model so we need to be more specific.
+When we see an object, the process, as far as we know, happens because a 
+photon coming from the object hits some receptors in our retina producing a 
+chain reaction that triggers an specific state in some part of the brain. In 
+other words, an specific part of us (the agent $A$) gets correlated to the state
+of the object (a subset of $O$ the universe) as a result of the dynamical 
+evolution of the universe. The dynamical process that gets both states 
+correlated is an observation.
+
+\begin{myex}
+  In this example we are going to see how an observation translate to our
+  simple model of universe. With the same universe than in \ref{example1}, we 
+  can define a new dynamical law that consists on a 1 doing a random walk 
+  in a bidimensional grid of zeros. Each time an element $a_{jk}$ switches to 
+  1, it gets correlated to the rest of the elements of the universe since 
+  all of them must be zero. In this case, the agent $A$ is the subset of $U$ 
+  containing only $a_{jk}$ while the object $O$ can be any subset of $U$.
+  We say then that $A$ has made an observation $\hat{O}_{A}$.
+\end{myex}
+
+We need one more definition to define the scientific method. Science is about
+making predictions about the physical world, so we need to define what 
+a prediction is in our minimal context.
+
+
+
+\begin{mydef}
+  A prediction is... \textit{(I haven't come yet with a successful definition
+  for a prediction. I'm trying to formulate it with different agents trying 
+  communicating correlations about the "future" of some subsystem of U)}
+\end{mydef}
+
+\subsection{Second assumption: Emergency}
+\textit{I want to have a formal definition of predictions and the scientific
+method before writing this subsection. But it's just a corollary of the anthropic
+principle: if we are able to do science, then the dynamical law of the universe
+must allow for scientific agents to be generated. For example, a simple cellular
+automaton that converges to a stable state wouldn't fulfill this assumption.}
+
+\chapter{Machine Learning theory} 
+
+\chapter{Experimenter-Analyzer model}
+In this section, we are going to present our proposal for a basic model for a
+machine learning set up that designs an experiment applying the scientific 
+method. It is a model that mixes reinforcement learning and and deep learning to
+create agents apable to design strategies for experiments, using as feedback 
+only the quality of the predictions about properties of the physical system 
+made exclusively from the data the agents collect.
+% STOP DELETING!
+%
+\clearpage
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{appendix}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\lhead[\fancyplain{\scshape Appendix \thechapter}
+{\scshape Appendix \thechapter}]
+{\fancyplain{\scshape \leftmark}
+  {\rightmark}}
+%
+\rhead[\fancyplain{\scshape \leftmark}
+{\scshape \leftmark}]
+{\fancyplain{\scshape Appendix \thechapter}
+  {\scshape Appendix \thechapter}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% CHAPTERS APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\include{proof}
+
+\chapter{Pretty good measurement} \label{app:pgm}
+
+In this appendix, we give some additional information about the pretty good measurement, completing the discussion in the preface. Let us first formalize our goal: \\
+Fix a set of density operators $\{\rho_x\}$ on a quantum system $B$ and a discrete probability distribution $P_X$ with finite support. Alice chooses an $x$ with probability  $P_X(x)=:p_x$ and prepares the corresponding state $\rho_x$ on the system $B$. Bob has access to system $B$ and wants to find out which $x$ has been chosen by Alice. We can summarize the information from the point of view of Bob in the following cq state $\rho_{XB}=\sum_{x} p_x \ketbra{x}_X \otimes (\rho_x)_B$. The measurement preformed by Bob can be described by POVM elements $\Lambda:=\{\Lambda_x\}$ on the system $B$. Then, the probability that Bob guesses correctly in the case that Alice has chosen $x$ is given by $\tr \, \Lambda_x \rho_x$, and hence, the unconditioned success probability (using the POVM $\Lambda$) is $p^{\Lambda}_{\text{guess}}(X|B):=\sum_{x} P_X(x) \, \tr \, \Lambda_x \rho_x$. Therefore, our goal is to find the POVM elements $\Lambda_x$ that maximize $p^{\Lambda}_{\text{guess}}(X|B)$. We define
+\begin{align}
+p_{\text{guess}}(X|B):= \underset{\Lambda_x}{\max} \sum_{x} P_X(x) \, \tr \, \Lambda_x \rho_x \,.
+\end{align}
+Unfortunately, it turns out that this optimization problem is not easy to solve in general. However, a different approach was taken in~\cite{belavkin_optimal_1975, hausladen_`pretty_1994}. Indeed,  they defined the pretty good POVM elements 
+\begin{align}
+\Lambda^{\text{pg}}_x:=P_X(x) \, \hat{\rho}^{-\frac{1}{2}} \rho_x \hat{\rho}^{-\frac{1}{2}} \, ,
+\end{align}
+where we set $ \hat{\rho}:= \sum_{x} P_X(x) \, \rho_x\,$. Then, the pretty good success probability is given by 
+\begin{align}
+p^{\text{pg}}_{\text{guess}}(X|B):=\sum_{x} P_X(x) \, \tr \, \Lambda^{\text{pg}}_x \rho_x \, .  
+\end{align}
+It turns out that the choice $\Lambda_x=\Lambda^{\text{pg}}_x$ is indeed pretty good in that $p_{\text{guess}}(X|B)$ is bounded from below and above in terms of $p^{\text{pg}}_{\text{guess}}(X|B)$ (cf.~\eqref{eq:pgm_is_pg} for the exact statement). These bounds follow elegantly in the framework of this thesis as discussed in detail in Chapter~\ref{cha:pgm}.
+
+%=\tr \, \Lambda_{XB} \rho_{XB}$, where we defined $\Lambda_{XB}:= \sum_{x\in S} \ketbra{x}_X \otimes \left(\Lambda_x\right)_B\,$
+
+\chapter{Notation and abbreviations} \label{APPnoation}
+
+For an overview of the notation for quantum R\'enyi divergences and quantum conditional R\'enyi entropies used in this thesis, see Section~\ref{sec:important_divergences} and  Section~\ref{sec:cond_entropies}, respectively. Note also that our notation follows the one of~\cite{tomamichel_quantum_2016}. \\
+
+
+We use the terms "non-negative operators" and "positive operators" to refer to linear, non-negative or positive operators on a Hilbert space, respectively. For simplicity, we consider only finite dimensional Hilbert spaces throughout this thesis. Therefore, non-negative operators and positive operators can always be viewed as positive semi-definite and positive definite matrices (over the complex numbers), respectively. \\
+Throughout this thesis, taking the inverse of a non-negative operator $\rho$ should be viewed as taking the inverse evaluated only on the support of $\rho$.\\
+
+
+Note also that we do not use a specific basis for the logarithm in this thesis. However, the exponential function should be considered as the reverse function of the chosen logarithm.\\
+
+\vspace{5mm}
+
+\noindent A list of abbreviations we use is available at Table~\ref{TABabbrev} and a comprehensive list of symbols can be found in Table~\ref{TABsymbols}. Note that the notation for matrices is also used for operators on Hilbert spaces in this thesis. This causes no confusion, because we work with finite dimensional Hilbert spaces only. 
+
+\begin{table}[!ht]
+\renewcommand{\arraystretch}{1.3}
+\caption{List of abbreviations}
+\label{TABabbrev}
+\centering
+\begin{tabular}{l l}
+\hline
+CPTP & Completely positive, trace-preserving (linear map)\\
+POVM & Positive operator valued measure \\
+DPI & Data-processing inequality [cf.~\eqref{eq:DPI}]\\
+ALT & Araki-Lieb-Thirring (inequality) [cf. Theorem~\ref{thm:ALT}]\\
+GT & Golden-Thompson (inequality) [cf. Theorem~\ref{thm:GT}]\\
+cq & classical quantum \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!ht]
+\renewcommand{\arraystretch}{1.3}
+\caption{Notational conventions for mathematical expressions}
+\label{TABsymbols}
+\centering
+\begin{tabular}{l l}
+\hline
+Operators on Hilbert spaces &\\ \hline
+$\rho$, $\sigma$ & Typical elements of the set of non-negative operators\\
+$\ker(\rho)$& Kernel of a non-negative operator $\rho$ \\
+$\sigma \gg \rho$& $\ker( \sigma) \subseteq \ker(\rho)$ \\
+$\cD(A)$& Set of density operators on a quantum system A, \\
+&\quad i.e., non-negative operators $\rho$ with $\tr\rho=1$ \\
+$\rho_A$& Density operator on a quantum sytem $A$ \\
+$|A|$& Dimension of the Hilbert space $A$ \\ \hline
+Matrices&\\ \hline
+$\textnormal{Mat}(m,n)$ & Complex $m \times n$ matrices\\
+$\textnormal{U}(n)$ & Unitary $n \times n$ matrices\\
+$A^{*}$ & Conjugate transpose of a matrix $A \in \textnormal{Mat}(n,n)$ \\
+$A\geqslant 0$&The matrix $A$ is positive semi-definite \\
+$A> 0$&The matrix $A$ is positive definite \\
+$A \#_{\alpha} B $&$= A^{\frac{1}{2}} \left(A^{-\frac{1}{2}}BA^{-\frac{1}{2}} \right)^{\alpha} A^{\frac{1}{2}}$ \quad (for $A,B>0$)\\
+& \quad [$\alpha$-\emph{weighted geometric mean}]\\
+$[A,B] $&$=AB-BA$ \quad [\emph{Commutator}]\\ \hline
+Norms&\\ \hline
+$|A|$&$= \sqrt{AA^{*}}$  for any $A \in \textnormal{Mat}(n,n)$\\
+$\norm{\cdot}_p$&Schatten $p$-quasi-norm (cf. Section~\ref{sec:Schatten}) \\
+$\normT{\cdot}$&Any unitarily invariant norm (cf. Definition~\ref{def:unitarily_inv_norm}) \\
+\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+
+
+
+%
+%
+%\include{derivations}
+% \chapter{Another Chapter in the Appendix}
+% \label{cha:anotherchapterintheappendix}
+% 
+% Each chapter of the appendix is better included by the command 
+% \emph{$\backslash$include\{file\}}.
+% %
+
+
+
+\clearpage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\lhead[\fancyplain{\scshape Appendix}
+{\scshape Appendix}]
+{\fancyplain{\scshape \leftmark}
+  {\scshape \leftmark}}
+%
+\rhead[\fancyplain{\scshape \leftmark}
+{\scshape \leftmark}]
+{\fancyplain{\scshape Appendix}
+  {\scshape Appendix}}
+  
+  
+  
+  
+  
+  
+  
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LIST OF FIGURES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+% \listoffigures
+%\clearpage
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LIST OF TABLES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+% \listoftables
+%\clearpage
+%
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+\bibliography{references}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END OF APPENDIX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\end{appendix}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INDEX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\printindex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% END FRAME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\end{document}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
