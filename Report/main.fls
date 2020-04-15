@@ -1,7 +1,7 @@
-PWD c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report
+PWD c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.tex
-OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.log
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.tex
+OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.log
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
@@ -258,9 +258,9 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\footmisc\footmi
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux
-OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux
+OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr7t.tfm
@@ -274,14 +274,14 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\refcount\refcou
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
@@ -321,10 +321,10 @@ INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathb6.tf
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\eth_logo.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\eth_logo.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\eth_logo.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\eth_logo.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\eth_logo.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\eth_logo.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\eth_logo.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\eth_logo.pdf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr7t.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr7t.tfm
@@ -379,9 +379,9 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmb7t.vf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb8r.tfm
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.toc
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.toc
-OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.toc
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc
+OUTPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8c.tfm
@@ -429,10 +429,10 @@ INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathb9.tf
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathb5.tfm
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathx10.tfm
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\tfm\public\mathabx\mathx10.tfm
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\UniverseA1.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\UniverseA1.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\UniverseA1.pdf
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\figures\UniverseA1.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\UniverseA1.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\UniverseA1.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\UniverseA1.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\UniverseA1.pdf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmbi7t.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmri7t.vf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmri8r.tfm
@@ -442,11 +442,19 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmr
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\vf\adobe\times\ptmr7t.vf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmr8r.tfm
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.bbl
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.bbl
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
-INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp.pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
+INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi657\mathx10.pk
 INPUT C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\mathabx\dpi657\mathx10.pk
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\base\8r.enc

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  3 APR 2020 00:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  14 APR 2020 05:53
 entering extended mode
-**"c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Report/main.tex"
-("c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Report/main.tex"
+**"c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
+("c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
 Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
@@ -865,7 +865,7 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count315
 \l__pdf_internal_box=\box60
-) ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux")
+) ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 443.
@@ -918,7 +918,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 443.
 LaTeX Info: Redefining \pageref on input line 443.
 LaTeX Info: Redefining \nameref on input line 443.
- ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out") ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.out")
+ ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out") ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out")
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -932,14 +932,14 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 480.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/eth_logo.pdf, id=46, 186.76776pt x 68.28511pt>
+<figures/eth_logo.pdf, id=50, 186.76776pt x 68.28511pt>
 File: figures/eth_logo.pdf Graphic file (type pdf)
 <use figures/eth_logo.pdf>
 Package pdftex.def Info: figures/eth_logo.pdf  used on input line 483.
 (pdftex.def)             Requested size: 147.86693pt x 54.06023pt.
  [1
 
-{C:/Users/eduar/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Report/figures/eth_logo.pdf>]
+{C:/Users/eduar/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/eth_logo.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
 Make it at least 13.59999pt.
@@ -955,7 +955,7 @@ This may cause the page layout to be inconsistent, however.
 
 ] [5] [6
 
-] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.toc")
+] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc")
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -973,7 +973,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 749--768
+Underfull \hbox (badness 10000) in paragraph at lines 749--767
 
  []
 
@@ -988,125 +988,146 @@ Chapter 2.
 [5
 
 ]
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 862.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 860.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 862.
-<figures/UniverseA1.pdf, id=151, 633.36626pt x 301.125pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 860.
+<figures/UniverseA1.pdf, id=156, 633.36626pt x 301.125pt>
 File: figures/UniverseA1.pdf Graphic file (type pdf)
 <use figures/UniverseA1.pdf>
-Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 888.
+Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 884.
 (pdftex.def)             Requested size: 316.68236pt x 150.56212pt.
- [6] [7 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Report/figures/UniverseA1.pdf>] [8]
+ [6] [7 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/UniverseA1.pdf>] [8]
 Chapter 3.
 [9
 
 ]
 Chapter 4.
+<figures/SimpleSetUp.pdf, id=204, 271.99208pt x 140.73273pt>
+File: figures/SimpleSetUp.pdf Graphic file (type pdf)
+<use figures/SimpleSetUp.pdf>
+Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1020.
+(pdftex.def)             Requested size: 271.9914pt x 140.73238pt.
 [10
 
-]
+] [11 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+<figures/SimpleSetUp(Buffer).pdf, id=226, 271.99208pt x 161.01198pt>
+File: figures/SimpleSetUp(Buffer).pdf Graphic file (type pdf)
+<use figures/SimpleSetUp(Buffer).pdf>
+Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1111.
+(pdftex.def)             Requested size: 271.9914pt x 161.01158pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp(Buffer).pdf>] [14] [15]
 Appendix A.
 
-Package natbib Warning: Citation `belavkin_optimal_1975' on page 11 undefined on input line 1027.
+Package natbib Warning: Citation `belavkin_optimal_1975' on page 16 undefined on input line 1266.
 
 
-Package natbib Warning: Citation `hausladen_`pretty_1994' on page 11 undefined on input line 1027.
+Package natbib Warning: Citation `hausladen_`pretty_1994' on page 16 undefined on input line 1266.
 
 
-LaTeX Warning: Reference `eq:pgm_is_pg' on page 11 undefined on input line 1035.
+LaTeX Warning: Reference `eq:pgm_is_pg' on page 16 undefined on input line 1274.
 
 
-LaTeX Warning: Reference `cha:pgm' on page 11 undefined on input line 1035.
+LaTeX Warning: Reference `cha:pgm' on page 16 undefined on input line 1274.
 
-[11
+[16
 
 
-] [12]
+] [17]
 Appendix B.
 
-LaTeX Warning: Reference `sec:important_divergences' on page 13 undefined on input line 1041.
+LaTeX Warning: Reference `sec:important_divergences' on page 18 undefined on input line 1280.
 
 
-LaTeX Warning: Reference `sec:cond_entropies' on page 13 undefined on input line 1041.
+LaTeX Warning: Reference `sec:cond_entropies' on page 18 undefined on input line 1280.
 
 
-Package natbib Warning: Citation `tomamichel_quantum_2016' on page 13 undefined on input line 1041.
+Package natbib Warning: Citation `tomamichel_quantum_2016' on page 18 undefined on input line 1280.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1041--1042
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1044--1046
+Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1048--1049
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1285
 
  []
 
 
-LaTeX Warning: Reference `eq:DPI' on page 13 undefined on input line 1063.
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+
+ []
 
 
-LaTeX Warning: Reference `thm:ALT' on page 13 undefined on input line 1064.
+LaTeX Warning: Reference `eq:DPI' on page 18 undefined on input line 1302.
 
 
-LaTeX Warning: Reference `thm:GT' on page 13 undefined on input line 1065.
+LaTeX Warning: Reference `thm:ALT' on page 18 undefined on input line 1303.
 
 
-LaTeX Warning: Reference `sec:Schatten' on page 13 undefined on input line 1097.
+LaTeX Warning: Reference `thm:GT' on page 18 undefined on input line 1304.
 
 
-LaTeX Warning: Reference `def:unitarily_inv_norm' on page 13 undefined on input line 1098.
+LaTeX Warning: Reference `sec:Schatten' on page 18 undefined on input line 1336.
 
 
-Overfull \hbox (17.64807pt too wide) in paragraph at lines 1076--1101
+LaTeX Warning: Reference `def:unitarily_inv_norm' on page 18 undefined on input line 1337.
+
+
+Overfull \hbox (17.64807pt too wide) in paragraph at lines 1315--1340
  [][] 
  []
 
-[13
+[18
 
-] [14] [15] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.bbl" [16
+] [19] [20] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl" [21
 
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1183.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1183.
- ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1183.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1183.
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1422.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1422.
+ ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1422.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1422.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D340F485084D82A0A11E857197434A7D;640.
+(rerunfilecheck)             Checksum: D1A9564C38BB6B82D483D2AA2A7C570C;719.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1183.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1422.
  ) 
 Here is how much of TeX's memory you used:
- 21886 strings out of 480934
- 411938 string characters out of 2899917
- 641021 words of memory out of 3000000
- 37121 multiletter control sequences out of 15000+200000
+ 21913 strings out of 480934
+ 413313 string characters out of 2899917
+ 641861 words of memory out of 3000000
+ 37134 multiletter control sequences out of 15000+200000
  584843 words of font info for 151 fonts, out of 3000000 for 9000
  1164 hyphenation exceptions out of 8191
- 60i,13n,60p,1092b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,13n,60p,1135b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Report\main.pdf" (25 pages, 222469 bytes).
+Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (30 pages, 347261 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 394 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
