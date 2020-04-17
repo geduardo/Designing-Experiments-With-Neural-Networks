@@ -22,6 +22,10 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\U
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\english.ldf
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etex-pkg\etex.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etex-pkg\etex.sty
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithmicx\algorithmicx.sty
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphicx.sty
@@ -226,8 +230,6 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\units\nicefrac.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\units\nicefrac.sty
-INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
-INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\braket\braket.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\braket\braket.sty
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\bm.sty
@@ -450,6 +452,8 @@ INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\figures\SimpleSetUp(Buffer).pdf
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb7t.tfm
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\adobe\times\ptmb7t.tfm
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl
 INPUT c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux
@@ -478,6 +482,8 @@ INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfon
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\urw\times\utmb8a.pfb

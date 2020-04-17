@@ -65,7 +65,7 @@
 %\usepackage{bibtex/macros}  %for IEEE transaction submission it is not allowed to have a separate style-file :-( :-( :-(
 
 \usepackage{etex}				%mehr register etc.
-
+\usepackage{algorithmicx}
 \usepackage{times}
 %\usepackage{psfrag}
 \usepackage{graphicx}
@@ -190,18 +190,7 @@
 \def\Dset{\mathcal{D}_\epsilon}
 \def\Bparam{Bhattacharyya parameter}
 
-\newcommand{\supp}{\textnormal{supp}}
- \newcommand{\Mat}{\textnormal{Mat}}
- \newcommand{\s}{\textnormal{s}}
-  \newcommand{\diag}{ \textnormal{diag}}
-\newcommand{\W}{\mathsf{W}} %for channel law.
-\newcommand{\Hh}[1]{H\!\left({#1}\right)} %Entropy
-\newcommand{\Hcond}[2]{H\!\left({#1}|{#2}\right)} %cond Entropy
-\newcommand{\Prvcond}[2]{\,{\rm Pr}\!\left[\left.#1\,\right|\,#2\right]} %cond. prob.
-\newcommand{\Prv}[1]{\,{\rm Pr}\!\left[#1\right]} %usage: Pr[X \leqslant 5]
-\newcommand{\SNR}{\textnormal{SNR}}
-\newcommand{\Bernoulli}[1]{\textnormal{Bernoulli}\left(#1\right)}  %Bernoulli dist.
-\newcommand{\pos}[2]{\textnormal{pos}_{{#1}}\left({#2}\right)} %pos function
+\DeclareMathOperator*{\argmax}{arg\,max}
 
 % Comments
 \newcommand{\RI}[1]{{\color[RGB]{0,128,0} *~*~*~ #1 *~*~*~}}
@@ -1081,80 +1070,79 @@ optimal prediction would be the random guess that minimizes the loss). In
 practice, unless the distributions where $M$ and $L$ are generated from are the
 same, the Analyzer learns to differentiate them with high confidence just by
 value of the outcome. However, in other set-ups this may not be the case and the
-information about what actions were taken is useful for the Analyzer to make
-the predictions. In this case, we should also feed the actions as inputs to the
+information about what actions were taken is useful for the Analyzer to make the
+predictions. In this case, we should also feed the actions as inputs to the
 Analyzer. As we will see, these Experiment-Analyzer loops can grow very quickly
-in complexity when several sub-agents are involved. This is why we
-introduce the concept of \textit{buffer}.
+in complexity when several sub-agents are involved. This is why we introduce the
+concept of \textit{buffer}.
 
 In our model we can use a buffer to store everything that we might want to feed
 to the agents. Usually this will be the actions taken and the outcomes obtained
 in every observation of the environment, although we have the freedom to add
-whatever we might need. It is just a variable to store information.
-This variable is not strictly needed, since we could establish directly the 
+whatever we might need. It is just a variable to store information. This
+variable is not strictly needed, since we could establish directly the
 connections between the different subagents and environment outcomes. However,
-when we have a few sub-agents with several outcomes it becomes very difficult
-to keep track of each connection and to represent them. In these cases, the 
-concept of buffer becomes highly useful from an illustrative point of view. 
-Usually, the buffer is emptied at the end of each episode or iteration of the 
-learning loop. We could not do so, but in practice, 
-keeping the data in the buffer doesn't provide any easy advantage since to use 
-it we should solve many challenges, for example an increase on the number of 
-features feeded to the agents each episode. We won't refer the buffer as 
-\textit{memory} in this work, since the word \textit{memory} is reserved for an 
-element of some versions of sub-agents that doesn't restart in 
-each iteration. 
+when we have a few sub-agents with several outcomes it becomes very difficult to
+keep track of each connection and to represent them. In these cases, the concept
+of buffer becomes highly useful from an illustrative point of view. Usually, the
+buffer is emptied at the end of each episode or iteration of the learning loop.
+We could not do so, but in practice, keeping the data in the buffer doesn't
+provide any easy advantage since to use it we should solve many challenges, for
+example an increase on the number of features feeded to the agents each episode.
+We won't refer the buffer as \textit{memory} in this work, since the word
+\textit{memory} is reserved for an element of some versions of sub-agents that
+doesn't restart in each iteration. 
 
 
 \begin{figure}
   \centering
   \includegraphics{figures/SimpleSetUp(Buffer).pdf}
-  \caption{Diagram of a simple learning loop with buffer. In this case, the process
-  is identical to the process depicted in Fig. \ref{fig:simplesetup} with
-  the difference that the values of the action and the outcome are stored in 
-  the buffer, and then passed to the analyzer. In this case the information
+  \caption{Diagram of a simple learning loop with buffer. In this case, the
+  process is identical to the process depicted in Fig. \ref{fig:simplesetup}
+  with the difference that the values of the action and the outcome are stored
+  in the buffer, and then passed to the analyzer. In this case the information
   about which action was taken is available to the Analyzer.} 
   \label{fig:simplesetupbuffer}
 \end{figure}
 
 \section{General elements and definitions}
-In this section let's define more formally some of the elements and concepts of 
+In this section let's define more formally some of the elements and concepts of
 our model.
 \begin{itemize}
     \item \textbf{Simulated physical environment (SPE): } it represents the
     physical world that determines the outcomes of all the measurements realized
     by the agent. It is completely represented by a state $ s \in S $, where $S$
-    is the set of all possible states in which the SPE can be. For
-    this particular model we assume that the evolution of the system is assumed
-    to be given by a Markovian function $f: S \rightarrow S$ such that
+    is the set of all possible states in which the SPE can be. For this
+    particular model we assume that the evolution of the system is assumed to be
+    given by a Markovian function $f: S \rightarrow S$ such that
     $f(s_\tau)=s_{\tau+1}$. This function maybe deterministic or not.
-    \item \textbf{Agent:} the agent is formed by the composition of two kind 
-    of different subagents:
+    \item \textbf{Agent:} the agent is formed by the composition of two kind of
+    different subagents:
     \begin{itemize}
-        \item \textbf{Experimenter:} this part has the task of making decisions that
-        will have an effect on the observations. This effect could be due to the
-        influence of the decisions in the evolution of the system (for example,
-        if the agent decides to shoot a bullet to a box with a certain velocity)
-        or due to the fact that the decisions themselves could be what
+        \item \textbf{Experimenter:} this part has the task of making decisions
+        that will have an effect on the observations. This effect could be due
+        to the influence of the decisions in the evolution of the system (for
+        example, if the agent decides to shoot a bullet to a box with a certain
+        velocity) or due to the fact that the decisions themselves could be what
         observations to make (for example, choosing to measure the position of a
         box within a spatial range). This agent will be implemented using
         reinforcement learning techniques. Mathematically it can be represented
         by a trainable function $E:\mathcal{X}\rightarrow\mathcal{A}$ where
         $\mathcal{A}$ represents the space of possible actions and $\mathcal{X}$
         is an arbitrary space that can represent any accessible information that
-        might be useful to make a choice of action. In the context of 
+        might be useful to make a choice of action. In the context of
         reinforcement learning, $\mathcal{X}$ is the set of states of the
         sub-agent's environment\footnote{Not to be confused with the SPE.}.
         \item \textbf{Analyzer:} the goal of this part of the agent is to
         process the data collected in the observations after the action of the
         Experimenter to predict a physical property of the SPE. This property
         could be a physical parameter of the system or a prediction of the
-        dynamics of the environment. It will usally consist of a regular 
-        regression neural network or an autoencoder, depending on the 
-        specific set-up. But we could use any trainable function like SVMs or
-        any kind of regression. Mathematically it can be represented by a 
-        trainable function $ A :\mathcal{M} \rightarrow \mathcal{P}$, where $\mathcal{M}$ is the space
-        of measurements and $\mathcal{P}$ is the space of predictions.
+        dynamics of the environment. It will usally consist of a regular
+        regression neural network or an autoencoder, depending on the specific
+        set-up. But we could use any trainable function like SVMs or any kind of
+        regression. Mathematically it can be represented by a trainable function
+        $ A :\mathcal{M} \rightarrow \mathcal{P}$, where $\mathcal{M}$ is the
+        space of measurements and $\mathcal{P}$ is the space of predictions.
   \end{itemize}
     \item \textbf{Orchestration:} when coding we will call Orchestration
     everything that connects the different parts to complete a feedback loop.
@@ -1169,30 +1157,87 @@ our model.
 \begin{myex}
 Let's complete the example of the pendulum. First, we define the SPE. Let's
 assume that the mass of the pendulum and the length of the string are sampled
-uniformly at random from the intervals $0.1$ kg $< M < 1$ kg and \break $ 0.1$ cm $<L<10
-$ cm. The space of states of the SPE is then:
+uniformly at random from the intervals $0.1$ kg $< M < 1$ kg and \break $ 0.1$
+cm $<L<10 $ cm. The space of states of the SPE is then:
  \begin{equation}
   S\equiv \{(m,l):m \in \left[0.1, 1\right],l \in [0.1,10]\}
  \end{equation}
-Now, let's define an experimenter. In this case, the experimenter's environment
-space $\mathcal{X}$
-is the empty set $\emptyset$, since there is no input. This means that the agent
-takes the action based solely on the rewards obtained. The action space 
-$\mathcal{A}$ is just $\{0,1\}$, with 0 representing the action of measuring the
-mass and 1 the action of measuring the length.
+Now, let's define an Experimenter. In this case, the Experimenter's environment
+space $\mathcal{X}$ is the empty set $\emptyset$, since there is no input. This
+means that the agent takes the action based solely on the rewards obtained. The
+action space $\mathcal{A}$ is just $\{0,1\}$, with 0 representing the action of
+measuring the mass and 1 the action of measuring the length.
 
-We can therefore a very easy decision rule for our reinforcement learning agent:
-
+We can therefore set a very easy decision rule for our experimenter
+reinforcement learning agent:
 \begin{itemize}
-  \item if $i=0$, take random action.
-  \item if $i>0$, take $argmax(Q(0), Q(1))$ 
+  \item Let $\textbf{Q}=(q_0,q_1)$ be the value table, where $q_0$ and $q_1$ are
+  the values associated with the actions 0 and 1 respectively. The initial value
+  of $q_0$ and $q_1$ is set to 0.
+  \item  Every episode, the agent takes an action $a$ and receives a reward $r$
+  after taking the action. The update rule for $\textbf{Q}$ is the following:
+  \begin{equation}
+    q_a\leftarrow q_a + \alpha r
+  \end{equation}
+  where $\alpha$ is the learning rate. We store in $q_a$ the cumulative reward
+  obtained by the action $a$ weighted with a learning rate.
+  \item The agent's policy or decision rule is:
+  \begin{equation}
+    a = \argmax_{x \in \mathcal{A}} \textbf{Q}
+    \label{argmax_policy}
+  \end{equation}
+  This is, the Experimenter takes the action $a$ with the highest $q_a$.
 \end{itemize}
 
+This rule is still flawed, since the first action that gets a reward would
+always be elected afterward independently of its optimality. To solve this we
+can force the agent to initially explore different options ignoring the decision
+rule, and slowly, when the values $q_a$ are more reliable, let the agent choose
+according to \eqref{argmax_policy}. The easiest way to achieve that is with an
+$\epsilon$-greedy decision algorithm: we set an exploration rate $\epsilon$ that
+decreases in each episode until it reaches a minimum value
+$\epsilon_\text{min}\geq 0$. The Experimenter is set to take the
+\eqref{argmax_policy} policy with probability of $P_{\text{greedy}}=1-\epsilon$
+and a random action with a probability of $P_{\text{random}}=\epsilon$. We have
+the freedom to choose how to decrease the value of $\epsilon$, and it may have a
+crucial impact on the training. A very popular rule is to decrease the value
+constantly by subtracting $\delta_\epsilon = 1/N$, where $N$ is the number
+iterations of the training. So in each episode:
+\begin{align}
+  &\text{if}\; \; \epsilon > \epsilon_\text{min} \;\;\; &\epsilon&\leftarrow\epsilon - \delta_\epsilon \\
+  &\text{else} \; \;  &\epsilon &\leftarrow \epsilon_\text{min}
+\end{align} 
+
+
+For the Analyzer, we set a trainable real function $A: S \rightarrow
+\mathbb{R}$. We can use any trainable function, but to keep it simple let's use
+a regular feed-forward neural network with one hidden layer of two neurons,
+trained with the Stochastic Gradient Descent (SGD) algorithm and a the Mean
+Squared Error (MSE) loss.
+
+We need now to define how to calculate the reward.  In our case we want the
+reward function to be high when the Analyzer predicts a period $T_\text{pred}$
+close to the real period of the pendulum and low when the period prediction is
+far. So, ideally we would like a function that:
+\begin{align}
+       r(T_{\text{pred}} \approx T) &\approx 1\\
+       r(T_{\text{pred}}>> T \text{ or } T_{\text{pred}} << T) & \approx 0
+\end{align}
+One natural way to achieve this is using a Gaussian distribution over the
+relative error $\Delta=(T-T_{\text{pred}})/T$. This is:
+\begin{equation}
+   r(\Delta)=\exp\left(-\frac{1}{2}\left( \frac{\Delta}{\sigma} \right) ^2\right)
+\end{equation}
+and $\sigma$ allows us to modify the precision we want in order to achieve a 
+reward.
+
+Now we have every element defined. Let's outline the full algorithm in 
+pseudocode:
 
 
 \end{myex}
 
-% STOP DELETING!
+  % STOP DELETING!
 %
 
 

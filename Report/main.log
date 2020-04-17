@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  14 APR 2020 05:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  16 APR 2020 05:00
 entering extended mode
 **"c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
 ("c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
@@ -56,6 +56,22 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 ))) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etex-pkg\etex.sty"
 Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
 \et@xins=\count178
+) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/algorithmicx\algorithmicx.sty"
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+ ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count179
+\c@ALG@rem=\count180
+\c@ALG@nested=\count181
+\ALG@tlm=\skip49
+\ALG@thistlm=\skip50
+\c@ALG@Lnr=\count182
+\c@ALG@blocknr=\count183
+\c@ALG@storecount=\count184
+\c@ALG@tmpcounter=\count185
+\ALG@tmplength=\skip51
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty"
@@ -92,7 +108,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.sty"
 Package: amsmath 2020/01/20 v2.17e AMS math features
-\@mathmargin=\skip49
+\@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.sty"
@@ -107,13 +123,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count179
+\inf@bad=\count186
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count180
-\leftroot@=\count181
+\uproot@=\count187
+\leftroot@=\count188
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count182
-\DOTSCASE@=\count183
+\classnum@=\count189
+\DOTSCASE@=\count190
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -122,15 +138,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen142
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count184
-\c@MaxMatrixCols=\count185
+\macc@depth=\count191
+\c@MaxMatrixCols=\count192
 \dotsspace@=\muskip16
-\c@parentequation=\count186
-\dspbrk@lvl=\count187
+\c@parentequation=\count193
+\dspbrk@lvl=\count194
 \tag@help=\toks18
-\row@=\count188
-\column@=\count189
-\maxfields@=\count190
+\row@=\count195
+\column@=\count196
+\maxfields@=\count197
 \andhelp@=\toks19
 \eqnshift@=\dimen143
 \alignsep@=\dimen144
@@ -139,8 +155,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \totwidth@=\dimen147
 \lineht@=\dimen148
 \@envbody=\toks20
-\multlinegap=\skip50
-\multlinetaggap=\skip51
+\multlinegap=\skip53
+\multlinetaggap=\skip54
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
@@ -151,9 +167,9 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headfont=\toks24
 \thm@notefont=\toks25
 \thm@headpunct=\toks26
-\thm@preskip=\skip52
-\thm@postskip=\skip53
-\thm@headsep=\skip54
+\thm@preskip=\skip55
+\thm@postskip=\skip56
+\thm@headsep=\skip57
 \dth@everypar=\toks27
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\color.sty"
 Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
@@ -163,15 +179,15 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
-\f@nch@headwidth=\skip55
-\f@nch@O@elh=\skip56
-\f@nch@O@erh=\skip57
-\f@nch@O@olh=\skip58
-\f@nch@O@orh=\skip59
-\f@nch@O@elf=\skip60
-\f@nch@O@erf=\skip61
-\f@nch@O@olf=\skip62
-\f@nch@O@orf=\skip63
+\f@nch@headwidth=\skip58
+\f@nch@O@elh=\skip59
+\f@nch@O@erh=\skip60
+\f@nch@O@olh=\skip61
+\f@nch@O@orh=\skip62
+\f@nch@O@elf=\skip63
+\f@nch@O@erf=\skip64
+\f@nch@O@olf=\skip65
+\f@nch@O@orf=\skip66
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperref.sty"
 Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.sty"
@@ -202,8 +218,8 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
 \@linkdim=\dimen149
-\Hy@linkcounter=\count191
-\Hy@pagecounter=\count192
+\Hy@linkcounter=\count198
+\Hy@pagecounter=\count199
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def"
 File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -213,7 +229,8 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/etexcmds\etexcmds.sty"
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count193
+Normal \count register pool exhausted, switching to extended pool.
+\Hy@SavedSpaceFactor=\count277
 Package hyperref Info: Option `bookmarks' set `true' on input line 4421.
 Package hyperref Info: Option `colorlinks' set `true' on input line 4421.
 Package hyperref Info: Option `breaklinks' set `true' on input line 4421.
@@ -224,7 +241,7 @@ Package hyperref Info: Plain pages OFF on input line 4562.
 Package hyperref Info: Backreferencing OFF on input line 4567.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count194
+\c@Hy@tempcnt=\count278
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -236,7 +253,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/bigintcalc\bigintcalc.sty"
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count195
+\Fld@menulength=\count279
 \Field@Width=\dimen151
 \Fld@charsize=\dimen152
 Package hyperref Info: Hyper figures OFF on input line 6430.
@@ -251,9 +268,9 @@ LaTeX Info: Redefining \pageref on input line 6504.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegshi.sty"
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\Hy@abspage=\count196
-\c@Item=\count197
-\c@Hfootnote=\count198
+\Hy@abspage=\count280
+\c@Item=\count281
+\c@Hfootnote=\count282
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdftex.def"
@@ -262,9 +279,8 @@ File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 )
-\Fld@listcount=\count199
-Normal \count register pool exhausted, switching to extended pool.
-\c@bookmark@seq@number=\count277
+\Fld@listcount=\count283
+\c@bookmark@seq@number=\count284
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty"
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/uniquecounter\uniquecounter.sty"
@@ -272,7 +288,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
-\Hy@SectionHShift=\skip64
+\Hy@SectionHShift=\skip67
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/frontendlayer\tikz.sty" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/basiclayer\pgf.sty" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex"
 \pgfutil@everybye=\toks28
 \pgfutil@tempdima=\dimen153
@@ -305,14 +321,14 @@ Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@yd=\dimen164
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count278
-\c@pgf@countb=\count279
-\c@pgf@countc=\count280
-\c@pgf@countd=\count281
+\c@pgf@counta=\count285
+\c@pgf@countb=\count286
+\c@pgf@countc=\count287
+\c@pgf@countd=\count288
 \t@pgf@toka=\toks32
 \t@pgf@tokb=\toks33
 \t@pgf@tokc=\toks34
-\pgf@sys@id@count=\count282
+\pgf@sys@id@count=\count289
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg"
 File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
 )
@@ -323,8 +339,8 @@ File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
 File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfsyssoftpath@smallbuffer@items=\count283
-\pgfsyssoftpath@bigbuffer@items=\count284
+\pgfsyssoftpath@smallbuffer@items=\count290
+\pgfsyssoftpath@bigbuffer@items=\count291
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
@@ -347,13 +363,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 Package: pgfcore 2020/01/08 v3.1.5b (3.1.5b)
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex"
 \pgfmath@dimen=\dimen165
-\pgfmath@count=\count285
+\pgfmath@count=\count292
 \pgfmath@box=\box48
 \pgfmath@toks=\toks35
 \pgfmath@stack@operand=\toks36
 \pgfmath@stack@operation=\toks37
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.code.tex" ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.random.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.base.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.round.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex"))) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count286
+\c@pgfmathroundto@lastzeros=\count293
 )) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@picminx=\dimen166
@@ -383,7 +399,7 @@ File: pgfcorescopes.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgfpic=\box49
 \pgf@hbox=\box50
 \pgf@layerbox@main=\box51
-\pgf@picture@serial@count=\count287
+\pgf@picture@serial@count=\count294
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgflinewidth=\dimen184
@@ -404,8 +420,8 @@ File: pgfcorearrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \pgf@max=\dimen189
-\pgf@sys@shading@range@num=\count288
-\pgf@shadingcount=\count289
+\pgf@sys@shading@range@num=\count295
+\pgf@shadingcount=\count296
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2020/01/08 v3.1.5b (3.1.5b)
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex"
@@ -441,7 +457,7 @@ Package: pgffor 2020/01/08 v3.1.5b (3.1.5b)
 Package: tikz 2020/01/08 v3.1.5b (3.1.5b)
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgf@plot@mark@count=\count290
+\pgf@plot@mark@count=\count297
 \pgfplotmarksize=\dimen194
 )
 \tikz@lastx=\dimen195
@@ -457,17 +473,17 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \tikz@figbox@bg=\box55
 \tikz@tempbox=\box56
 \tikz@tempbox@bg=\box57
-\tikztreelevel=\count291
-\tikznumberofchildren=\count292
-\tikznumberofcurrentchild=\count293
-\tikz@fig@count=\count294
+\tikztreelevel=\count298
+\tikznumberofchildren=\count299
+\tikznumberofcurrentchild=\count300
+\tikz@fig@count=\count301
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\pgfmatrixcurrentrow=\count295
-\pgfmatrixcurrentcolumn=\count296
-\pgf@matrix@numberofcolumns=\count297
+\pgfmatrixcurrentrow=\count302
+\pgfmatrixcurrentcolumn=\count303
+\pgf@matrix@numberofcolumns=\count304
 )
-\tikz@expandcount=\count298
+\tikz@expandcount=\count305
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarychains.code.tex"
@@ -500,7 +516,7 @@ Package pgf Warning: Snakes have been superseded by decorations. Use the decorat
 \pgfdecoratedinputsegmentcompleteddistance=\dimen262
 \pgfdecoratedinputsegmentremainingdistance=\dimen263
 \pgf@decorate@distancetomove=\dimen264
-\pgf@decorate@repeatstate=\count299
+\pgf@decorate@repeatstate=\count306
 \pgfdecorationsegmentamplitude=\dimen265
 \pgfdecorationsegmentlength=\dimen266
 )) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.shapes.code.tex"))) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\enumerate.sty"
@@ -508,12 +524,10 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks40
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/units\nicefrac.sty"
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
-\L@UnitsRaiseDisplaystyle=\skip65
-\L@UnitsRaiseTextstyle=\skip66
-\L@UnitsRaiseScriptstyle=\skip67
- ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/braket\braket.sty") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\bm.sty"
+\L@UnitsRaiseDisplaystyle=\skip68
+\L@UnitsRaiseTextstyle=\skip69
+\L@UnitsRaiseScriptstyle=\skip70
+) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/braket\braket.sty") ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\bm.sty"
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
@@ -533,27 +547,27 @@ Package: verbatim 2019/11/10 v1.5r LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read4
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip68
-\bibsep=\skip69
+\bibhang=\skip71
+\bibsep=\skip72
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count300
+\c@NAT@ctr=\count307
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.sty"
-\lst@mode=\count301
+\lst@mode=\count308
 \lst@gtempboxa=\box58
 \lst@token=\toks43
-\lst@length=\count302
+\lst@length=\count309
 \lst@currlwidth=\dimen267
-\lst@column=\count303
-\lst@pos=\count304
+\lst@column=\count310
+\lst@pos=\count311
 \lst@lostspace=\dimen268
 \lst@width=\dimen269
-\lst@newlines=\count305
-\lst@lineno=\count306
+\lst@newlines=\count312
+\lst@lineno=\count313
 \lst@maxwidth=\dimen270
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count307
-\lst@skipnumbers=\count308
+\c@lstnumber=\count314
+\lst@skipnumbers=\count315
 \lst@framebox=\box59
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\listings.cfg"
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -567,10 +581,10 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 File: latin1.def 2018/08/11 v1.3c Input encoding file
 )) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\paralist.sty"
 Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip70
-\plpartopsep=\skip71
-\plitemsep=\skip72
-\plparsep=\skip73
+\pltopsep=\skip73
+\plpartopsep=\skip74
+\plitemsep=\skip75
+\plparsep=\skip76
 \pl@lab=\toks46
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathabx\mathabx.sty"
 Package: mathabx 2003/07/29 v0.0 Non-standard LaTeX package mathabx
@@ -815,10 +829,10 @@ LaTeX Font Info:    Redeclaring math symbol \boxplus on input line 683.
 LaTeX Font Info:    Redeclaring math symbol \boxminus on input line 684.
 LaTeX Font Info:    Redeclaring math symbol \boxtimes on input line 686.
 LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 688.
-\mayacnter=\count309
-\mayacnta=\count310
-\mayacntb=\count311
-\mayacntc=\count312
+\mayacnter=\count316
+\mayacnta=\count317
+\mayacntb=\count318
+\mayacntc=\count319
 \mayawidth=\dimen271
 LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
 LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
@@ -852,7 +866,7 @@ LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks47
 \footnotemargin=\dimen272
-\c@pp@next@reset=\count313
+\c@pp@next@reset=\count320
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -860,52 +874,52 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
 )
-\c@mythm=\count314
+\c@mythm=\count321
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count315
+\l__kernel_color_stack_int=\count322
 \l__pdf_internal_box=\box60
 ) ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 443.
-LaTeX Font Info:    ... okay on input line 443.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 443.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 432.
+LaTeX Font Info:    ... okay on input line 432.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 432.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
+\scratchcounter=\count323
 \scratchdimen=\dimen273
 \scratchbox=\box61
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\nofMPsegments=\count324
+\nofMParguments=\count325
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count319
+\MPscratchCnt=\count326
 \MPscratchDim=\dimen274
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
 \everyMPtoPDFconversion=\toks49
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 443.
+Package hyperref Info: Link coloring ON on input line 432.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -913,29 +927,29 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 443.
-LaTeX Info: Redefining \pageref on input line 443.
-LaTeX Info: Redefining \nameref on input line 443.
+LaTeX Info: Redefining \ref on input line 432.
+LaTeX Info: Redefining \pageref on input line 432.
+LaTeX Info: Redefining \nameref on input line 432.
  ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out") ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out")
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
  ABD: EveryShipout initializing macros
-\c@lstlisting=\count323
-LaTeX Font Info:    Trying to load font information for U+msa on input line 480.
+\c@lstlisting=\count330
+LaTeX Font Info:    Trying to load font information for U+msa on input line 469.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 480.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 469.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <figures/eth_logo.pdf, id=50, 186.76776pt x 68.28511pt>
 File: figures/eth_logo.pdf Graphic file (type pdf)
 <use figures/eth_logo.pdf>
-Package pdftex.def Info: figures/eth_logo.pdf  used on input line 483.
+Package pdftex.def Info: figures/eth_logo.pdf  used on input line 472.
 (pdftex.def)             Requested size: 147.86693pt x 54.06023pt.
  [1
 
@@ -966,14 +980,14 @@ This may cause the page layout to be inconsistent, however.
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 694.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 683.
 ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 749--767
+Underfull \hbox (badness 10000) in paragraph at lines 738--756
 
  []
 
@@ -988,16 +1002,16 @@ Chapter 2.
 [5
 
 ]
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 860.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 849.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 860.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 849.
 <figures/UniverseA1.pdf, id=156, 633.36626pt x 301.125pt>
 File: figures/UniverseA1.pdf Graphic file (type pdf)
 <use figures/UniverseA1.pdf>
-Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 884.
+Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 873.
 (pdftex.def)             Requested size: 316.68236pt x 150.56212pt.
  [6] [7 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/UniverseA1.pdf>] [8]
 Chapter 3.
@@ -1008,7 +1022,7 @@ Chapter 4.
 <figures/SimpleSetUp.pdf, id=204, 271.99208pt x 140.73273pt>
 File: figures/SimpleSetUp.pdf Graphic file (type pdf)
 <use figures/SimpleSetUp.pdf>
-Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1020.
+Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1009.
 (pdftex.def)             Requested size: 271.9914pt x 140.73238pt.
 [10
 
@@ -1019,103 +1033,103 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figures/SimpleSetUp(Buffer).pdf, id=226, 271.99208pt x 161.01198pt>
 File: figures/SimpleSetUp(Buffer).pdf Graphic file (type pdf)
 <use figures/SimpleSetUp(Buffer).pdf>
-Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1111.
+Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1099.
 (pdftex.def)             Requested size: 271.9914pt x 161.01158pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp(Buffer).pdf>] [14] [15]
+ [13 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp(Buffer).pdf>] [14] [15] [16]
 Appendix A.
 
-Package natbib Warning: Citation `belavkin_optimal_1975' on page 16 undefined on input line 1266.
+Package natbib Warning: Citation `belavkin_optimal_1975' on page 17 undefined on input line 1311.
 
 
-Package natbib Warning: Citation `hausladen_`pretty_1994' on page 16 undefined on input line 1266.
+Package natbib Warning: Citation `hausladen_`pretty_1994' on page 17 undefined on input line 1311.
 
 
-LaTeX Warning: Reference `eq:pgm_is_pg' on page 16 undefined on input line 1274.
+LaTeX Warning: Reference `eq:pgm_is_pg' on page 17 undefined on input line 1319.
 
 
-LaTeX Warning: Reference `cha:pgm' on page 16 undefined on input line 1274.
+LaTeX Warning: Reference `cha:pgm' on page 17 undefined on input line 1319.
 
-[16
+[17
 
 
-] [17]
+] [18]
 Appendix B.
 
-LaTeX Warning: Reference `sec:important_divergences' on page 18 undefined on input line 1280.
+LaTeX Warning: Reference `sec:important_divergences' on page 19 undefined on input line 1325.
 
 
-LaTeX Warning: Reference `sec:cond_entropies' on page 18 undefined on input line 1280.
+LaTeX Warning: Reference `sec:cond_entropies' on page 19 undefined on input line 1325.
 
 
-Package natbib Warning: Citation `tomamichel_quantum_2016' on page 18 undefined on input line 1280.
+Package natbib Warning: Citation `tomamichel_quantum_2016' on page 19 undefined on input line 1325.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1285
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
+Underfull \hbox (badness 10000) in paragraph at lines 1328--1330
 
  []
 
 
-LaTeX Warning: Reference `eq:DPI' on page 18 undefined on input line 1302.
+Underfull \hbox (badness 10000) in paragraph at lines 1332--1333
+
+ []
 
 
-LaTeX Warning: Reference `thm:ALT' on page 18 undefined on input line 1303.
+LaTeX Warning: Reference `eq:DPI' on page 19 undefined on input line 1347.
 
 
-LaTeX Warning: Reference `thm:GT' on page 18 undefined on input line 1304.
+LaTeX Warning: Reference `thm:ALT' on page 19 undefined on input line 1348.
 
 
-LaTeX Warning: Reference `sec:Schatten' on page 18 undefined on input line 1336.
+LaTeX Warning: Reference `thm:GT' on page 19 undefined on input line 1349.
 
 
-LaTeX Warning: Reference `def:unitarily_inv_norm' on page 18 undefined on input line 1337.
+LaTeX Warning: Reference `sec:Schatten' on page 19 undefined on input line 1381.
 
 
-Overfull \hbox (17.64807pt too wide) in paragraph at lines 1315--1340
+LaTeX Warning: Reference `def:unitarily_inv_norm' on page 19 undefined on input line 1382.
+
+
+Overfull \hbox (17.64807pt too wide) in paragraph at lines 1360--1385
  [][] 
  []
 
-[18
+[19
 
-] [19] [20] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl" [21
+] [20] [21] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl" [22
 
 
 ])
 
 Package natbib Warning: There were undefined citations.
 
-[22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1422.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1422.
+[23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1467.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1467.
  ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1422.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1422.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1467.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D1A9564C38BB6B82D483D2AA2A7C570C;719.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1422.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1467.
  ) 
 Here is how much of TeX's memory you used:
- 21913 strings out of 480934
- 413313 string characters out of 2899917
- 641861 words of memory out of 3000000
- 37134 multiletter control sequences out of 15000+200000
- 584843 words of font info for 151 fonts, out of 3000000 for 9000
+ 22184 strings out of 480934
+ 417077 string characters out of 2899917
+ 647615 words of memory out of 3000000
+ 37393 multiletter control sequences out of 15000+200000
+ 585881 words of font info for 153 fonts, out of 3000000 for 9000
  1164 hyphenation exceptions out of 8191
  60i,13n,60p,1135b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
@@ -1124,10 +1138,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (30 pages, 347261 bytes).
+ <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (31 pages, 365188 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
