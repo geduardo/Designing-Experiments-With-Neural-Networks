@@ -33,8 +33,7 @@ class Two_Layers_single_output(object):
         :rtype: keras model
         """        
         model = Sequential([
-        layers.Dense(4,activation = 'relu', input_shape=[self.input_size]),
-        layers.Dense(4,activation = 'relu'),
+        layers.Dense(2,activation = 'sigmoid', input_shape=[self.input_size]),
         layers.Dense(1)
         ])
         optimizer = Adam(self.learning_rate)
