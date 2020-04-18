@@ -10,4 +10,5 @@
 \contentsline {chapter}{\numberline {3}Machine Learning theory}{9}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Experimenter-Analyzer model}{10}{chapter.4}%
 \contentsline {section}{\numberline {4.1}General elements and definitions}{14}{section.4.1}%
-\contentsline {chapter}{\numberline {A}Appendix ?}{18}{appendix.A}%
+\contentsline {chapter}{\numberline {5}Experimenter-Analyzer architecture in different scenarios}{19}{chapter.5}%
+\contentsline {chapter}{\numberline {A}Appendix ?}{20}{appendix.A}%

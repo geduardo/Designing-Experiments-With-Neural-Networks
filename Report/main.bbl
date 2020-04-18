@@ -23,6 +23,12 @@ Giuseppe Carleo, Ignacio Cirac, Kyle Cranmer, Laurent Daudet, Maria Schuld,
 \newblock Machine learning and the physical sciences.
 \newblock {\em Reviews of Modern Physics}, 91(4), Dec 2019.
 
+\bibitem{cybenko1989approximation}
+George Cybenko.
+\newblock Approximation by superpositions of a sigmoidal function.
+\newblock {\em Mathematics of control, signals and systems}, 2(4):303--314,
+  1989.
+
 \bibitem{Fanelli2628}
 Daniele Fanelli.
 \newblock Opinion: Is science really facing a reproducibility crisis, and do we

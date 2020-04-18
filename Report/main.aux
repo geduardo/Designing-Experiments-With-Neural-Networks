@@ -61,31 +61,43 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}General elements and definitions}{14}{section.4.1}\protected@file@percent }
 \newlabel{update_rule1}{{4.2}{15}{}{equation.4.2}{}}
 \newlabel{argmax_policy}{{4.3}{15}{}{equation.4.3}{}}
-\newlabel{fig:sub1}{{4.3a}{17}{A subfigure\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:sub1}{{a}{17}{A subfigure\relax }{figure.caption.6}{}}
-\newlabel{fig:sub2}{{4.3b}{17}{A subfigure\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:sub2}{{b}{17}{A subfigure\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces A figure with two subfigures\relax }}{17}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:test}{{4.3}{17}{A figure with two subfigures\relax }{figure.caption.6}{}}
+\citation{cybenko1989approximation}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Simple learning loop\relax }}{17}{algorithm.1}\protected@file@percent }
 \newlabel{pendulum}{{1}{17}{Simple learning loop\relax }{algorithm.1}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix ?}{18}{appendix.A}\protected@file@percent }
+\newlabel{fig:ActionAveragePendulum}{{4.3a}{18}{Moving average of the actions\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:ActionAveragePendulum}{{a}{18}{Moving average of the actions\relax }{figure.caption.6}{}}
+\newlabel{fig:RewardAveragePendulum}{{4.3b}{18}{Moving average of the reward\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:RewardAveragePendulum}{{b}{18}{Moving average of the reward\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces (a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the Experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the Analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the Analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {Analyzer}=0.01$, Optimizer = Adam\relax }}{18}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:PendulumTraining}{{4.3}{18}{(a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the Experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the Analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the Analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {Analyzer}=0.01$, Optimizer = Adam\relax }{figure.caption.6}{}}
+\newlabel{fig:RealvsPredictedPendulum}{{4.4a}{18}{Real T vs Predicted T\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:RealvsPredictedPendulum}{{a}{18}{Real T vs Predicted T\relax }{figure.caption.7}{}}
+\newlabel{fig:ErrorAveragePendulum}{{4.4b}{18}{Moving average of the error\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:ErrorAveragePendulum}{{b}{18}{Moving average of the error\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces (a) A sample of the predictions made by trained agent. We can see how it fits the $y=x$ line, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {Analyzer}=0.01$, Optimizer = Adam \relax }}{18}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:PendulumError}{{4.4}{18}{(a) A sample of the predictions made by trained agent. We can see how it fits the $y=x$ line, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {Analyzer}=0.01$, Optimizer = Adam \relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Experimenter-Analyzer architecture in different scenarios}{19}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:pgm}{{A}{18}{Appendix ?}{appendix.A}{}}
+\newlabel{Scenarios}{{5}{19}{Experimenter-Analyzer architecture in different scenarios}{chapter.5}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix ?}{20}{appendix.A}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{app:pgm}{{A}{20}{Appendix ?}{appendix.A}{}}
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{Alkhateeb}{{1}{}{{}}{{}}}
 \bibcite{begley2012raise}{{2}{}{{}}{{}}}
 \bibcite{BornmannRudiger}{{3}{}{{}}{{}}}
 \bibcite{Carleo_2019}{{4}{}{{}}{{}}}
-\bibcite{Fanelli2628}{{5}{}{{}}{{}}}
-\bibcite{Sabine}{{6}{}{{}}{{}}}
-\bibcite{iten2020discovering}{{7}{}{{}}{{}}}
-\bibcite{owidlifeexpectancy}{{8}{}{{}}{{}}}
-\bibcite{Melnikov_2018}{{9}{}{{}}{{}}}
-\bibcite{nautrup2020operationally}{{10}{}{{}}{{}}}
-\bibcite{Saltelli}{{11}{}{{}}{{}}}
-\bibcite{sinatra2015century}{{12}{}{{}}{{}}}
-\bibcite{publications7010018}{{13}{}{{}}{{}}}
+\bibcite{cybenko1989approximation}{{5}{}{{}}{{}}}
+\bibcite{Fanelli2628}{{6}{}{{}}{{}}}
+\bibcite{Sabine}{{7}{}{{}}{{}}}
+\bibcite{iten2020discovering}{{8}{}{{}}{{}}}
+\bibcite{owidlifeexpectancy}{{9}{}{{}}{{}}}
+\bibcite{Melnikov_2018}{{10}{}{{}}{{}}}
+\bibcite{nautrup2020operationally}{{11}{}{{}}{{}}}
+\bibcite{Saltelli}{{12}{}{{}}{{}}}
+\bibcite{sinatra2015century}{{13}{}{{}}{{}}}
+\bibcite{publications7010018}{{14}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

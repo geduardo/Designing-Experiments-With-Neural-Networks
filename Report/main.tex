@@ -1264,7 +1264,6 @@ pseudocode:
     \caption{Simple learning loop}\label{pendulum}
     \begin{algorithmic}[1]
     \Procedure{Pendulum}{}
-    \BState Q = [0, 0]
     \BState count = 0
     \BState $\textbf{while } \text{count} < N:$
     \State $ M, L \gets \text{random sample }  M, L$
@@ -1285,28 +1284,84 @@ pseudocode:
 Let's see how this simple algorithm performs in the task. Ideally, the
 Experimenter would find the optimal policy which consists in choosing always to
 measure the length and the Analyzer would learn to estimate accurately $T$ from
-the data obtained by the Experimenter.
+the data obtained by the Experimenter. In our experiments, with this simple
+structure of only two neurons and the very naive reinforcement learning policy
+the agent consistently finds the optimal action (to measure $L$). It also
+accurately predicts the value of $T$ in less than 10,000 episodes. With less
+episodes it is less consistent in finding the optimal policy.
 
-
-
-
-\begin{figure}
+\begin{figure}[h]
   \centering
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{figures/Avg-Action-Pendulum.pdf}
-    \caption{A subfigure}
-    \label{fig:sub1}
+    \caption{Moving average of the actions}
+    \label{fig:ActionAveragePendulum}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{figures/Reward-Pendulum.pdf}
-    \caption{A subfigure}
-    \label{fig:sub2}
+    \caption{Moving average of the reward}
+    \label{fig:RewardAveragePendulum}
   \end{subfigure}
-  \caption{A figure with two subfigures}
-  \label{fig:test}
+
+
+  \caption{(a) The moving average of the actions taken in each episode. We can
+  see how it starts taking both actions evenly with an average of 0.5. This is
+  expected since at the beginning $\epsilon \approx 1$. As $\epsilon$ decreases
+  the Experimenter starts to take more greedy actions and gets biased towards
+  the action 1 (measure $L$). This bias appears as a result of the existing
+  correlation between $L$ and $T$, but not between $M$ and $T$. This correlation
+  is exploited by the SGD algorithm for the neural network of the Analyzer. (b)
+  The moving average of the reward obtained in each episode. At the beginning
+  the reward obtained is low and similar to those obtained with random guesses.
+  However, it increases slowly, apparently because the Analyzer starts to
+  exploit slightly the correlation between $L$ and $T$. This slight improvement
+  over the prediction for the outcomes of Action 1, creates the bias that starts
+  the feedback loop. Values: $\sigma=0.05$, $N=10000$,
+  $\text{lr}_\text{Analyzer}=0.01$, Optimizer = Adam}
+  \label{fig:PendulumTraining}
   \end{figure}
+
+  In the figures Fig. \ref{fig:PendulumTraining} and Fig.
+  \ref{fig:PendulumError} we can observe the evolution of different parameters
+  during the training. All the parameters show successful learning of both, the
+  optimal policy and the prediction of the period. More complex neural network
+  structures and longer trainings can achieve much lower errors. However, this
+  is not a surprise since once the optimal policy is obtained the process just
+  consists on fitting a continuous single variable function. A task that can be
+  solved optimally by a single layered sigmoidal neural network
+  \cite{cybenko1989approximation}. This pendulum example, although trivial, is
+  useful to appreciate the working principle behind the Experimenter-Analyzer
+  architecture and how the feedback loop is formed. In the next section we are
+  going to explore less trivial examples with more complex learning loops.
+
+  
+\begin{figure}[t]
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Real-vs-Pred-Pendulum.pdf}
+    \caption{Real T vs Predicted T}
+    \label{fig:RealvsPredictedPendulum}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Error-Pendulum.pdf}
+    \caption{Moving average of the error}
+    \label{fig:ErrorAveragePendulum}
+  \end{subfigure}
+  \caption{(a) A sample of the predictions made by trained agent. We can see
+  how it fits the $y=x$ line, showing that it learned the relation between
+  $L$ an $T$. (b) In this figure we can see how the error decreases to almost 
+  zero with very low deviation.Values: $\sigma=0.05$, $N=10000$,
+  $\text{lr}_\text{Analyzer}=0.01$, Optimizer = Adam
+  }
+  \label{fig:PendulumError}
+  \end{figure}
+
+\chapter{Experimenter-Analyzer architecture in different scenarios} 
+\label{Scenarios}
 
 
 

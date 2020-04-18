@@ -5,45 +5,45 @@ The style file: plain.bst
 Database file #1: references.bib
 Warning--empty year in Alkhateeb
 Warning--empty year in Sabine
-You've used 13 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            584 strings with 6410 characters,
-and the built_in function-call counts, 4364 in all, are:
-= -- 404
-> -- 271
+            591 strings with 6567 characters,
+and the built_in function-call counts, 4661 in all, are:
+= -- 436
+> -- 278
 < -- 0
-+ -- 109
-- -- 94
-* -- 346
-:= -- 779
-add.period$ -- 40
-call.type$ -- 13
-change.case$ -- 86
++ -- 112
+- -- 96
+* -- 368
+:= -- 828
+add.period$ -- 43
+call.type$ -- 14
+change.case$ -- 90
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 133
-empty$ -- 291
-format.name$ -- 94
-if$ -- 855
+cite$ -- 16
+duplicate$ -- 144
+empty$ -- 318
+format.name$ -- 96
+if$ -- 916
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 12
-newline$ -- 69
-num.names$ -- 26
-pop$ -- 75
+int.to.str$ -- 14
+missing$ -- 13
+newline$ -- 74
+num.names$ -- 28
+pop$ -- 77
 preamble$ -- 1
-purify$ -- 73
+purify$ -- 76
 quote$ -- 0
-skip$ -- 96
+skip$ -- 103
 stack$ -- 0
-substring$ -- 211
-swap$ -- 13
+substring$ -- 241
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 52
+type$ -- 56
 warning$ -- 2
-while$ -- 35
-width$ -- 15
-write$ -- 141
+while$ -- 39
+width$ -- 16
+write$ -- 152
 (There were 2 warnings)
