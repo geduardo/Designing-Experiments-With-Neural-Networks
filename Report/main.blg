@@ -3,14 +3,11 @@ Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "belavkin_optimal_1975"
-Warning--I didn't find a database entry for "hausladen_`pretty_1994"
-Warning--I didn't find a database entry for "tomamichel_quantum_2016"
 Warning--empty year in Alkhateeb
 Warning--empty year in Sabine
 You've used 13 entries,
             2118 wiz_defined-function locations,
-            587 strings with 6476 characters,
+            584 strings with 6410 characters,
 and the built_in function-call counts, 4364 in all, are:
 = -- 404
 > -- 271
@@ -49,4 +46,4 @@ warning$ -- 2
 while$ -- 35
 width$ -- 15
 write$ -- 141
-(There were 5 warnings)
+(There were 2 warnings)

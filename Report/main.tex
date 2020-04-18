@@ -63,7 +63,7 @@
 
 
 %\usepackage{bibtex/macros}  %for IEEE transaction submission it is not allowed to have a separate style-file :-( :-( :-(
-
+\usepackage{blindtext}
 \usepackage{etex}				%mehr register etc.
 \usepackage{algorithmicx}
 \usepackage{times}
@@ -105,6 +105,7 @@
 %\usepackage{pdfpages}
 %\usepackage{caption}
 %\usepackage{subfig}
+\usepackage{listings}
 
 %fuer TikZ zum Zeichnen von Graphiken
 \usepackage{tikz}
@@ -118,7 +119,8 @@
 \usepackage{enumerate}  
 \usepackage{nicefrac} 
 \usepackage{braket}
-
+\usepackage{caption}
+\usepackage{subcaption}
 
 \usepackage{bm}  % Define \bm{} to use bold math fonts
 \usepackage{bbm}
@@ -158,6 +160,8 @@
 \usepackage{listings}
 \usepackage{url}
 
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
 
 
 \usepackage[latin1]{inputenc}
@@ -319,6 +323,7 @@
 %
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+
 %
 \lhead[\fancyplain{}
 {}]
@@ -526,7 +531,7 @@
 \chapter*{Acknowledgments}
 %\addcontentsline{toc}{chapter}{\numberline{}Acknowledgments}
 %\label{cha:acknowledgments}
-Blah blah
+\blindtext
 
 
 \vspace{1.1cm}
@@ -558,17 +563,18 @@ Eduardo Gonzalez Sanchez
   \vspace{0.5cm}
 
 
-\noindent In this work we propose a new model that mixes reinforcement learning 
-and deep learning to create agents able to design strategies for experiments, 
-using as feedback only the quality of the predictions about properties of the 
-physical system made exclusively from the data the agents collect. This is could
-be summarized as 'agents able to do science'; since science checks its validity 
-by making predictions over the physical world. In the thesis we also put the 
-first building blocks of a theoretical model for the scientific method in 
-machines. This last part is important in the long-term goal of developing a 
-variant of quantum theory that can consistently describe agents who are using 
-the theory. If the science of the future is done by machines, we must ensure 
-consistency in the underlying principles driving automated science.
+\noindent (\textit{Mock version, not definitive}) In this work we propose a new
+model that mixes reinforcement learning and deep learning to create agents able
+to design strategies for experiments, using as feedback only the quality of the
+predictions about properties of the physical system made exclusively from the
+data the agents collect. This is could be summarized as 'agents able to do
+science'; since science checks its validity by making predictions over the
+physical world. In the thesis we also put the first building blocks of a
+theoretical model for the scientific method in machines. This last part is
+important in the long-term goal of developing a variant of quantum theory that
+can consistently describe agents who are using the theory. If the science of the
+future is done by machines, we must ensure consistency in the underlying
+principles driving automated science.
 
 \vspace{3mm}
 
@@ -793,6 +799,10 @@ mixes reinforcement learning with deep learning to create agents capable to
 design strategies for experiments. Using as feedback only the quality of the
 predictions about properties of the physical system made exclusively from the
 data the agents collect from their sensorial available receptors. 
+\\
+\\
+\textit{Here I will write a couple of paragraphs explaining the structure of the 
+thesis and pointing out to the repository, where to find the code, etc.}
 
 \vspace{12mm}
 
@@ -963,6 +973,8 @@ assumption.}
 
 \chapter{Machine Learning theory} 
 
+TO BE WRITTEN.
+
 \chapter{Experimenter-Analyzer model}
 
 In this section, we are going to present our proposal for a basic model for a
@@ -997,7 +1009,7 @@ composed by two different kinds of sub-agents that complement each other:
   the work presented here we assume that the real values needed to check the
   validity of the prediction are always accessible with unlimited accuracy to
   the agent. In the context of this modular framework we could assume that we
-  have an Experimenter that it's only possible action is to measure the real
+  have an Experimenter that its only possible action is to measure the real
   value of the target property.} of the environment a reward is generated to
   train all the sub-agents. 
 
@@ -1155,12 +1167,13 @@ our model.
 \end{itemize}
 
 \begin{myex}
-Let's complete the example of the pendulum. First, we define the SPE. Let's
-assume that the mass of the pendulum and the length of the string are sampled
-uniformly at random from the intervals $0.1$ kg $< M < 1$ kg and \break $ 0.1$
-cm $<L<10 $ cm. The space of states of the SPE is then:
+Let's complete the example of the pendulum to fully illustrate the architecture.
+First, we define the SPE. Let's assume that the mass of the pendulum and the
+length of the string are sampled uniformly at random from the intervals \break
+$0.1$ kg $< M < 1$ kg and $ 0.1$ m $<L<1 $ m. The space of states of the SPE
+is then:
  \begin{equation}
-  S\equiv \{(m,l):m \in \left[0.1, 1\right],l \in [0.1,10]\}
+  S\equiv \{(m,l):m \in \left[0.1, 1\right],l \in [0.1,1]\}
  \end{equation}
 Now, let's define an Experimenter. In this case, the Experimenter's environment
 space $\mathcal{X}$ is the empty set $\emptyset$, since there is no input. This
@@ -1168,34 +1181,44 @@ means that the agent takes the action based solely on the rewards obtained. The
 action space $\mathcal{A}$ is just $\{0,1\}$, with 0 representing the action of
 measuring the mass and 1 the action of measuring the length.
 
-We can therefore set a very easy decision rule for our experimenter
-reinforcement learning agent:
+We can therefore set a very basic decision rule for our Experimenter agent:
+
 \begin{itemize}
   \item Let $\textbf{Q}=(q_0,q_1)$ be the value table, where $q_0$ and $q_1$ are
-  the values associated with the actions 0 and 1 respectively. The initial value
-  of $q_0$ and $q_1$ is set to 0.
+  the values associated with the actions 0 and 1 respectively.  $Q$ can be also
+  understood as a trainable function $Q:\mathcal{X}\times\mathcal{A} \rightarrow
+  \mathbb{R}$. Initially $Q(a)=0 \; \forall a \in \mathcal{A}$. 
   \item  Every episode, the agent takes an action $a$ and receives a reward $r$
-  after taking the action. The update rule for $\textbf{Q}$ is the following:
+  after taking the action.
+  The update rule for $\textbf{Q}$ is the following:
   \begin{equation}
-    q_a\leftarrow q_a + \alpha r
+    q_a\leftarrow q_a + r
+    \label{update_rule1}
   \end{equation}
-  where $\alpha$ is the learning rate. We store in $q_a$ the cumulative reward
-  obtained by the action $a$ weighted with a learning rate.
-  \item The agent's policy or decision rule is:
+  This is, the value $q_a$ is just the cumulative reward obtained by the 
+  action $a$. 
+  \item The agent's policy $E:\emptyset  \rightarrow \mathcal{A}$ or 
+  decision rule is:
   \begin{equation}
-    a = \argmax_{x \in \mathcal{A}} \textbf{Q}
+    a = \argmax_{x \in \mathcal{A}} Q(x)
     \label{argmax_policy}
   \end{equation}
-  This is, the Experimenter takes the action $a$ with the highest $q_a$.
+  This is, the Experimenter takes the action $a$ with the highest $q_a$, and 
+  $E$ is trained by updating $\textbf{Q}$ each episode.
 \end{itemize}
 
-This rule is still flawed, since the first action that gets a reward would
-always be elected afterward independently of its optimality. To solve this we
-can force the agent to initially explore different options ignoring the decision
-rule, and slowly, when the values $q_a$ are more reliable, let the agent choose
-according to \eqref{argmax_policy}. The easiest way to achieve that is with an
-$\epsilon$-greedy decision algorithm: we set an exploration rate $\epsilon$ that
-decreases in each episode until it reaches a minimum value
+Note that the choice of \eqref{update_rule1} is just to illustrate that we can
+build Reinforcement Learning agents with very simple rules. We could have
+chosen instead of the cumulative reward the average reward obtained with the 
+action, but the working principle would be identical.
+
+However, our policy is still flawed, since the first action that gets a reward
+would always be elected afterward independently of its optimality. To solve this
+we can force the agent to initially explore different options ignoring the
+decision rule, and slowly, when the values $q_a$ are more reliable, let the
+agent choose according to \eqref{argmax_policy}. The easiest way to achieve that
+is with an $\epsilon$-greedy decision algorithm: we set an exploration rate
+$\epsilon$ that decreases in each episode until it reaches a minimum value
 $\epsilon_\text{min}\geq 0$. The Experimenter is set to take the
 \eqref{argmax_policy} policy with probability of $P_{\text{greedy}}=1-\epsilon$
 and a random action with a probability of $P_{\text{random}}=\epsilon$. We have
@@ -1234,13 +1257,56 @@ reward.
 Now we have every element defined. Let's outline the full algorithm in 
 pseudocode:
 
-
+  \makeatletter
+  \def\BState{\State\hskip-\ALG@thistlm}
+  \makeatother
+  \begin{algorithm}
+    \caption{Simple learning loop}\label{pendulum}
+    \begin{algorithmic}[1]
+    \Procedure{Pendulum}{}
+    \BState Q = [0, 0]
+    \BState count = 0
+    \BState $\textbf{while } \text{count} < N:$
+    \State $ M, L \gets \text{random sample }  M, L$
+    \State $ T \gets T(L)$
+    \State $ \text{pendulum} \gets [M,L,T]$
+    \State $ \text{action} \gets \argmax Q $
+    \State $ \text{measurement} \gets \text{pendulum[action]}$
+    \State $ \text{prediction} \gets \text{analyzer(measurement)}$
+    \State $ \text{Apply SGD to Analyzer with data point } (\text{measurement},T)$
+    \State $ \text{reward} \gets \text{reward}(\text{prediction}, T)$
+    \State $ Q[\text{action}] \gets Q[\text{action}]+ \text{reward}$ 
+    \State $ \text{count }\gets \text{count} + 1$
+    \EndProcedure
+    \end{algorithmic}
+    \end{algorithm}
 \end{myex}
 
-  % STOP DELETING!
-%
+Let's see how this simple algorithm performs in the task. Ideally, the
+Experimenter would find the optimal policy which consists in choosing always to
+measure the length and the Analyzer would learn to estimate accurately $T$ from
+the data obtained by the Experimenter.
 
 
+
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Avg-Action-Pendulum.pdf}
+    \caption{A subfigure}
+    \label{fig:sub1}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=1\linewidth]{figures/Reward-Pendulum.pdf}
+    \caption{A subfigure}
+    \label{fig:sub2}
+  \end{subfigure}
+  \caption{A figure with two subfigures}
+  \label{fig:test}
+  \end{figure}
 
 
 
@@ -1301,90 +1367,9 @@ pseudocode:
 
 
 
-\chapter{Pretty good measurement} \label{app:pgm}
+\chapter{Appendix ?} \label{app:pgm}
 
-In this appendix, we give some additional information about the pretty good measurement, completing the discussion in the preface. Let us first formalize our goal: \\
-Fix a set of density operators $\{\rho_x\}$ on a quantum system $B$ and a discrete probability distribution $P_X$ with finite support. Alice chooses an $x$ with probability  $P_X(x)=:p_x$ and prepares the corresponding state $\rho_x$ on the system $B$. Bob has access to system $B$ and wants to find out which $x$ has been chosen by Alice. We can summarize the information from the point of view of Bob in the following cq state $\rho_{XB}=\sum_{x} p_x \ketbra{x}_X \otimes (\rho_x)_B$. The measurement preformed by Bob can be described by POVM elements $\Lambda:=\{\Lambda_x\}$ on the system $B$. Then, the probability that Bob guesses correctly in the case that Alice has chosen $x$ is given by $\tr \, \Lambda_x \rho_x$, and hence, the unconditioned success probability (using the POVM $\Lambda$) is $p^{\Lambda}_{\text{guess}}(X|B):=\sum_{x} P_X(x) \, \tr \, \Lambda_x \rho_x$. Therefore, our goal is to find the POVM elements $\Lambda_x$ that maximize $p^{\Lambda}_{\text{guess}}(X|B)$. We define
-\begin{align}
-p_{\text{guess}}(X|B):= \underset{\Lambda_x}{\max} \sum_{x} P_X(x) \, \tr \, \Lambda_x \rho_x \,.
-\end{align}
-Unfortunately, it turns out that this optimization problem is not easy to solve in general. However, a different approach was taken in~\cite{belavkin_optimal_1975, hausladen_`pretty_1994}. Indeed,  they defined the pretty good POVM elements 
-\begin{align}
-\Lambda^{\text{pg}}_x:=P_X(x) \, \hat{\rho}^{-\frac{1}{2}} \rho_x \hat{\rho}^{-\frac{1}{2}} \, ,
-\end{align}
-where we set $ \hat{\rho}:= \sum_{x} P_X(x) \, \rho_x\,$. Then, the pretty good success probability is given by 
-\begin{align}
-p^{\text{pg}}_{\text{guess}}(X|B):=\sum_{x} P_X(x) \, \tr \, \Lambda^{\text{pg}}_x \rho_x \, .  
-\end{align}
-It turns out that the choice $\Lambda_x=\Lambda^{\text{pg}}_x$ is indeed pretty good in that $p_{\text{guess}}(X|B)$ is bounded from below and above in terms of $p^{\text{pg}}_{\text{guess}}(X|B)$ (cf.~\eqref{eq:pgm_is_pg} for the exact statement). These bounds follow elegantly in the framework of this thesis as discussed in detail in Chapter~\ref{cha:pgm}.
-
-%=\tr \, \Lambda_{XB} \rho_{XB}$, where we defined $\Lambda_{XB}:= \sum_{x\in S} \ketbra{x}_X \otimes \left(\Lambda_x\right)_B\,$
-
-\chapter{Notation and abbreviations} \label{APPnoation}
-
-For an overview of the notation for quantum R\'enyi divergences and quantum conditional R\'enyi entropies used in this thesis, see Section~\ref{sec:important_divergences} and  Section~\ref{sec:cond_entropies}, respectively. Note also that our notation follows the one of~\cite{tomamichel_quantum_2016}. \\
-
-
-We use the terms "non-negative operators" and "positive operators" to refer to linear, non-negative or positive operators on a Hilbert space, respectively. For simplicity, we consider only finite dimensional Hilbert spaces throughout this thesis. Therefore, non-negative operators and positive operators can always be viewed as positive semi-definite and positive definite matrices (over the complex numbers), respectively. \\
-Throughout this thesis, taking the inverse of a non-negative operator $\rho$ should be viewed as taking the inverse evaluated only on the support of $\rho$.\\
-
-
-Note also that we do not use a specific basis for the logarithm in this thesis. However, the exponential function should be considered as the reverse function of the chosen logarithm.\\
-
-\vspace{5mm}
-
-\noindent A list of abbreviations we use is available at Table~\ref{TABabbrev} and a comprehensive list of symbols can be found in Table~\ref{TABsymbols}. Note that the notation for matrices is also used for operators on Hilbert spaces in this thesis. This causes no confusion, because we work with finite dimensional Hilbert spaces only. 
-
-\begin{table}[!ht]
-\renewcommand{\arraystretch}{1.3}
-\caption{List of abbreviations}
-\label{TABabbrev}
-\centering
-\begin{tabular}{l l}
-\hline
-CPTP & Completely positive, trace-preserving (linear map)\\
-POVM & Positive operator valued measure \\
-DPI & Data-processing inequality [cf.~\eqref{eq:DPI}]\\
-ALT & Araki-Lieb-Thirring (inequality) [cf. Theorem~\ref{thm:ALT}]\\
-GT & Golden-Thompson (inequality) [cf. Theorem~\ref{thm:GT}]\\
-cq & classical quantum \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[!ht]
-\renewcommand{\arraystretch}{1.3}
-\caption{Notational conventions for mathematical expressions}
-\label{TABsymbols}
-\centering
-\begin{tabular}{l l}
-\hline
-Operators on Hilbert spaces &\\ \hline
-$\rho$, $\sigma$ & Typical elements of the set of non-negative operators\\
-$\ker(\rho)$& Kernel of a non-negative operator $\rho$ \\
-$\sigma \gg \rho$& $\ker( \sigma) \subseteq \ker(\rho)$ \\
-$\cD(A)$& Set of density operators on a quantum system A, \\
-&\quad i.e., non-negative operators $\rho$ with $\tr\rho=1$ \\
-$\rho_A$& Density operator on a quantum sytem $A$ \\
-$|A|$& Dimension of the Hilbert space $A$ \\ \hline
-Matrices&\\ \hline
-$\textnormal{Mat}(m,n)$ & Complex $m \times n$ matrices\\
-$\textnormal{U}(n)$ & Unitary $n \times n$ matrices\\
-$A^{*}$ & Conjugate transpose of a matrix $A \in \textnormal{Mat}(n,n)$ \\
-$A\geqslant 0$&The matrix $A$ is positive semi-definite \\
-$A> 0$&The matrix $A$ is positive definite \\
-$A \#_{\alpha} B $&$= A^{\frac{1}{2}} \left(A^{-\frac{1}{2}}BA^{-\frac{1}{2}} \right)^{\alpha} A^{\frac{1}{2}}$ \quad (for $A,B>0$)\\
-& \quad [$\alpha$-\emph{weighted geometric mean}]\\
-$[A,B] $&$=AB-BA$ \quad [\emph{Commutator}]\\ \hline
-Norms&\\ \hline
-$|A|$&$= \sqrt{AA^{*}}$  for any $A \in \textnormal{Mat}(n,n)$\\
-$\norm{\cdot}_p$&Schatten $p$-quasi-norm (cf. Section~\ref{sec:Schatten}) \\
-$\normT{\cdot}$&Any unitarily invariant norm (cf. Definition~\ref{def:unitarily_inv_norm}) \\
-\hline
-\end{tabular}
-\end{table}
-
-
+\blindtext
 
 
 
