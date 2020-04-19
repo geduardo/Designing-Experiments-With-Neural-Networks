@@ -1227,8 +1227,7 @@ crucial impact on the training. A very popular rule is to decrease the value
 constantly by subtracting $\delta_\epsilon = 1/N$, where $N$ is the number
 iterations of the training. So in each episode:
 \begin{align}
-  &\text{if}\; \; \epsilon > \epsilon_\text{min} \;\;\;
-  &\epsilon&\leftarrow\epsilon - \delta_\epsilon \\
+  &\text{if}\; \; \epsilon > \epsilon_\text{min} \;\;\; &\epsilon&\leftarrow\epsilon - \delta_\epsilon \\
   &\text{else} \; \;  &\epsilon &\leftarrow \epsilon_\text{min}
 \end{align} 
 
@@ -1363,10 +1362,8 @@ episodes it is less consistent in finding the optimal policy.
 
 \chapter{Experimenter-Analyzer architecture in different scenarios} 
 \label{Scenarios}
-\section{Scenario 1: Multi-armed bandit}
-\section{Scenario 2: Spring-Shooting experiment}
-\section{Scenario 3: Shooting with two position sensors}
-In this section, we are going to show how we can combine several 
+
+
 
 
 
