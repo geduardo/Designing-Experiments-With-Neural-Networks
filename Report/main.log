@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  18 APR 2020 06:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  20 APR 2020 01:21
 entering extended mode
 **"c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
 ("c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
@@ -1010,7 +1010,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 474.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/eth_logo.pdf, id=50, 186.76776pt x 68.28511pt>
+<figures/eth_logo.pdf, id=62, 186.76776pt x 68.28511pt>
 File: figures/eth_logo.pdf Graphic file (type pdf)
 <use figures/eth_logo.pdf>
 Package pdftex.def Info: figures/eth_logo.pdf  used on input line 477.
@@ -1082,7 +1082,7 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 859.
-<figures/UniverseA1.pdf, id=157, 633.36626pt x 301.125pt>
+<figures/UniverseA1.pdf, id=172, 633.36626pt x 301.125pt>
 File: figures/UniverseA1.pdf Graphic file (type pdf)
 <use figures/UniverseA1.pdf>
 Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 883.
@@ -1093,7 +1093,7 @@ Chapter 3.
 
 ]
 Chapter 4.
-<figures/SimpleSetUp.pdf, id=204, 271.99208pt x 140.73273pt>
+<figures/SimpleSetUp.pdf, id=219, 271.99208pt x 140.73273pt>
 File: figures/SimpleSetUp.pdf Graphic file (type pdf)
 <use figures/SimpleSetUp.pdf>
 Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1021.
@@ -1107,7 +1107,7 @@ Underfull \vbox (badness 1496) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-<figures/SimpleSetUp(Buffer).pdf, id=226, 271.99208pt x 161.01198pt>
+<figures/SimpleSetUp(Buffer).pdf, id=241, 271.99208pt x 161.01198pt>
 File: figures/SimpleSetUp(Buffer).pdf Graphic file (type pdf)
 <use figures/SimpleSetUp(Buffer).pdf>
 Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1111.
@@ -1116,31 +1116,31 @@ Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 111
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp(Buffer).pdf>] [14] [15]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 1264.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 1265.
  [16]
-<figures/Avg-Action-Pendulum.pdf, id=263, 433.62pt x 289.08pt>
+<figures/Avg-Action-Pendulum.pdf, id=278, 433.62pt x 289.08pt>
 File: figures/Avg-Action-Pendulum.pdf Graphic file (type pdf)
 <use figures/Avg-Action-Pendulum.pdf>
-Package pdftex.def Info: figures/Avg-Action-Pendulum.pdf  used on input line 1297.
+Package pdftex.def Info: figures/Avg-Action-Pendulum.pdf  used on input line 1298.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
-<figures/Reward-Pendulum.pdf, id=264, 433.62pt x 289.08pt>
+<figures/Reward-Pendulum.pdf, id=279, 433.62pt x 289.08pt>
 File: figures/Reward-Pendulum.pdf Graphic file (type pdf)
 <use figures/Reward-Pendulum.pdf>
-Package pdftex.def Info: figures/Reward-Pendulum.pdf  used on input line 1303.
+Package pdftex.def Info: figures/Reward-Pendulum.pdf  used on input line 1304.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Real-vs-Pred-Pendulum.pdf, id=268, 433.62pt x 289.08pt>
+<figures/Real-vs-Pred-Pendulum.pdf, id=283, 433.62pt x 289.08pt>
 File: figures/Real-vs-Pred-Pendulum.pdf Graphic file (type pdf)
 <use figures/Real-vs-Pred-Pendulum.pdf>
-Package pdftex.def Info: figures/Real-vs-Pred-Pendulum.pdf  used on input line 1344.
+Package pdftex.def Info: figures/Real-vs-Pred-Pendulum.pdf  used on input line 1345.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
-<figures/Error-Pendulum.pdf, id=269, 433.62pt x 289.08pt>
+<figures/Error-Pendulum.pdf, id=284, 433.62pt x 289.08pt>
 File: figures/Error-Pendulum.pdf Graphic file (type pdf)
 <use figures/Error-Pendulum.pdf>
-Package pdftex.def Info: figures/Error-Pendulum.pdf  used on input line 1350.
+Package pdftex.def Info: figures/Error-Pendulum.pdf  used on input line 1351.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
 [17] [18 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Avg-Action-Pendulum.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Reward-Pendulum.pdf
 
@@ -1159,7 +1159,7 @@ Chapter 5.
 Appendix A.
 
 Package blindtext Warning: USenglish not defined, using English instead.
-(blindtext)                 on input line 1428.
+(blindtext)                 on input line 1434.
 
 [20
 
@@ -1168,20 +1168,20 @@ Package blindtext Warning: USenglish not defined, using English instead.
 
 
 ]) [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1507.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1507.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1513.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1513.
  ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1507.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1507.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1513.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 824669B03BFF9A1879EBA70AD3499CE5;736.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1507.
+(rerunfilecheck)             Checksum: 8C90F5D7A5DF6B74DBDFC8A8E270D7F8;973.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1513.
  ) 
 Here is how much of TeX's memory you used:
- 23807 strings out of 480934
- 446624 string characters out of 2899917
- 686970 words of memory out of 3000000
- 38987 multiletter control sequences out of 15000+200000
+ 23813 strings out of 480934
+ 446696 string characters out of 2899917
+ 686955 words of memory out of 3000000
+ 38990 multiletter control sequences out of 15000+200000
  587466 words of font info for 155 fonts, out of 3000000 for 9000
  1164 hyphenation exceptions out of 8191
  60i,12n,60p,1288b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1192,9 +1192,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
  <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (30 pages, 902674 bytes).
+Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (30 pages, 904759 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
