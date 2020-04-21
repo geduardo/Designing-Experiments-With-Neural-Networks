@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1587338476 "main.aux" "main.bbl" "main" 1587338480
+["bibtex main"] 1587432576 "main.aux" "main.bbl" "main" 1587432580
   "C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/bibtex/bst/bibtex/plain.bst" 1291868336 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1587338479 10956 7cbb303c6f9de187d5b9f5087b219ab2 "pdflatex"
+  "main.aux" 1587432579 10956 7cbb303c6f9de187d5b9f5087b219ab2 "pdflatex"
   "references.bib" 1587185003 7556 9627a3c104ffe3e3133651999b756694 ""
   (generated)
-  "main.blg"
   "main.bbl"
-["pdflatex"] 1587338476 "c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex" "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.pdf" "main" 1587338480
+  "main.blg"
+["pdflatex"] 1587432576 "c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex" "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.pdf" "main" 1587432580
   "C:/Users/eduar/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/public/mathabx/dpi600/matha8.pk" 1585165188 20784 1aa0a531c32110d0b53fa83b5a5118fa ""
   "C:/Users/eduar/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/public/mathabx/dpi657/matha10.pk" 1585165190 27196 d7857d002a0db917ff8fae8d5a0d6441 ""
   "C:/Users/eduar/AppData/Local/MiKTeX/2.9/fonts/pk/ljfour/public/mathabx/dpi657/mathx10.pk" 1585165189 34072 077f0c4dd3042931526699cc37ecff80 ""
@@ -267,8 +267,8 @@
   "C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/tex/latex/units/nicefrac.sty" 1469029150 4163 0462ee5ab265cf59dc15a41a3b883101 ""
   "C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
-  "c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex" 1587338469 61068 69f541080b8449fce180ee1ee5762b5c ""
-  "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.aux" 1587338479 10956 7cbb303c6f9de187d5b9f5087b219ab2 ""
+  "c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex" 1587432565 62699 66cf7d593f1dc48fa2dda6f2aaca2d0b ""
+  "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.aux" 1587432579 10956 7cbb303c6f9de187d5b9f5087b219ab2 ""
   "figures/Avg-Action-Pendulum.pdf" 1587179940 127446 3b75d8405e5d09dcf93317aee4205c79 ""
   "figures/Error-Pendulum.pdf" 1587183585 215783 16a88a9dc2c4f4c91a49d721eb68458c ""
   "figures/Real-vs-Pred-Pendulum.pdf" 1587180013 13449 e0fc8c2d7c67c99edf4c6c337b164c3c ""
@@ -277,16 +277,16 @@
   "figures/SimpleSetUp.pdf" 1586670203 45216 439b1661979b8a1c995535b2f1e9364f ""
   "figures/UniverseA1.pdf" 1585449470 15272 bae0d689a74dfa153b9b4bb3a4ae76a1 ""
   "figures/eth_logo.pdf" 1585161268 2062 2f80b3d7cc86ad1edab673f1e6982787 ""
-  "main.aux" 1587338479 10956 7cbb303c6f9de187d5b9f5087b219ab2 "pdflatex"
-  "main.bbl" 1587338476 3241 c2b45d69d72c50ed3ed0fd7b57963be8 "bibtex main"
-  "main.out" 1587338479 973 8c90f5d7a5df6b74dbdfc8a8e270d7f8 "pdflatex"
-  "main.tex" 1587338469 61068 69f541080b8449fce180ee1ee5762b5c ""
-  "main.toc" 1587338479 1297 09e479f92e50359a7024b4abc4a5c3e9 "pdflatex"
+  "main.aux" 1587432579 10956 7cbb303c6f9de187d5b9f5087b219ab2 "pdflatex"
+  "main.bbl" 1587432576 3241 c2b45d69d72c50ed3ed0fd7b57963be8 "bibtex main"
+  "main.out" 1587432579 973 8c90f5d7a5df6b74dbdfc8a8e270d7f8 "pdflatex"
+  "main.tex" 1587432565 62699 66cf7d593f1dc48fa2dda6f2aaca2d0b ""
+  "main.toc" 1587432579 1297 09e479f92e50359a7024b4abc4a5c3e9 "pdflatex"
   (generated)
-  "main.out"
-  "main.aux"
-  "main.log"
-  "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.pdf"
   "main.pdf"
+  "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.pdf"
   "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report/main.log"
   "main.toc"
+  "main.aux"
+  "main.out"
+  "main.log"
