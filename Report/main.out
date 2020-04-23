@@ -7,5 +7,10 @@
 \BOOKMARK [0][-]{chapter.3}{Machine Learning theory}{}% 7
 \BOOKMARK [0][-]{chapter.4}{Experimenter-Analyzer model}{}% 8
 \BOOKMARK [1][-]{section.4.1}{General elements and definitions}{chapter.4}% 9
-\BOOKMARK [0][-]{chapter.5}{Experimenter-Analyzer architecture in different scenarios}{}% 10
-\BOOKMARK [0][-]{appendix.A}{Appendix ?}{}% 11
+\BOOKMARK [0][-]{chapter.5}{E-A architecture in different scenarios}{}% 10
+\BOOKMARK [1][-]{section.5.1}{Scenario 1: Modified multi-armed bandit}{chapter.5}% 11
+\BOOKMARK [2][-]{subsection.5.1.1}{General multi-armed bandit problem}{section.5.1}% 12
+\BOOKMARK [2][-]{subsection.5.1.2}{Simple Reinforcement Learning algorithm for nonstationary multi-armed bandit}{section.5.1}% 13
+\BOOKMARK [1][-]{section.5.2}{Scenario 2: Spring-Shooting experiment}{chapter.5}% 14
+\BOOKMARK [1][-]{section.5.3}{Scenario 3: Shooting with two position sensors}{chapter.5}% 15
+\BOOKMARK [0][-]{appendix.A}{Appendix ?}{}% 16

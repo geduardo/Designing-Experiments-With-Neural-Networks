@@ -765,7 +765,7 @@ humans are the only known material structure able to perform it. It is true that
 some animals perform scientific behavior, like Crows or monkeys solving puzzles
 by trial and error. But those anecdotal examples are far from the formalized
 version of the scientific method employed by humans. However, humans are also
-the living proof of the possibility of agents performing sophisticated science.
+the living f of the possibility of agents performing sophisticated science.
 There is no reason to think that there's anything special in humans that makes
 them the best possible form of a scientific agent. Rather it is reasonable to
 think that there is plenty of space for improvement, since the human brain was
@@ -892,7 +892,7 @@ Any universe that satisfies \textbf{A1} has at least one element that can exist
 in more than one substate.
 \end{myclaim}
 
-The proof of this claim is obvious: an empty set cannot change. A set in which
+The f of this claim is obvious: an empty set cannot change. A set in which
 all elements can exists in only one substate also cannot change. Therefore, the
 simplest universe in which \textbf{A1} holds is a universe with only one element
 that can exists in two substates, this is, a bit that changes its value
@@ -1360,14 +1360,171 @@ episodes it is less consistent in finding the optimal policy.
   \label{fig:PendulumError}
   \end{figure}
 
-\chapter{Experimenter-Analyzer architecture in different scenarios} 
+\chapter{E-A architecture in different scenarios} 
 \label{Scenarios}
+\section{Scenario 1: Modified multi-armed bandit}
+In the first section of this chapter we are going to study a modified version of
+the classical Multi-armed bandit problem, a classical problem of Reinforcement 
+Learning and Probablity Theory. We will show that we can map any experiment 
+consisting of a non-interactive discrete choice measurements to our modified
+multi-armed bandit. 
+
+\subsection{General multi-armed bandit problem}
+
+Suppose that we have an agent that has access to a k-armed bandit. Each time the agent pulls
+one of the $k$ levers the bandit produces a reward. The objective
+of the agent is to maximize the obtained reward in a determined number of 
+trials or episodes $N$, but the agent doesn't know how the bandit produces 
+the rewards. Its only way of getting information about the reward system is 
+by trial and error by pulling the levers and obtaining rewards.
+
+Mathematically we can model our agent as an Experimenter 
+$E:\mathcal{X}\rightarrow\mathcal{A}$, where the action space is 
+$\mathcal{A}=\{0,1,...,k\}$ and the state space $\mathcal{X}$ is again the 
+empty set $\emptyset$. The bandit can be modelled as a probabilistic
+function $R:A\times ... \rightarrow \mathbb{R}$, with "$...$" meaning that
+in principle the generated reward can depend on anything, for example, the
+previous actions, the previous rewards, the number of trials, the number
+of times a lever has been pulled, etc. This is an extremely general problem,
+so often authors make assumptions on $R$. For example, $R$ being Markovian if
+depends only on the last rewards and/or actions. Or stationary if 
+$R$ can be modeled as a set of immutable distributions $R=\{R_1,... , R_k\}$, 
+each distribution being associated with the rewards delivered by each of the 
+arms of the bandit.
+
+We define the value $Q^*(a)=q^*_a$ of an action $a \in \mathcal{A}$ as the true
+expected or mean reward associated to the action. We denote by $a_n$ the action
+taken in the $n^\text{th}$ episode, and $r_n$ the reward obtained. This is:
+\begin{equation}
+  Q^*(a) = \mathbb{E}[r_n|a_n = a]
+\end{equation}
+Note that, although we don't write it explicitly, $Q^*(a)$ can also depend on 
+any of the subsets of the domain of $R$.
+The optimal strategy for the k-armed bandit problem is to always choose 
+$a*=\argmax Q^*(x)$.
+
+Most reinforcement learning approaches to this problem look for an estimate of
+$Q^*(a)$, $Q(a)$, and base their choice on $a=\argmax Q(x)$. In general, the
+best algorithm depends deeply on the characteristics of $R$, e.g., an algorithm
+that works well for stationary bandits can perform very poorly on non-stationary
+bandits. The interested reader can read a gentle introduction to the multi armed
+bandit problem in the Chapter 2 of \cite{sutton2018reinforcement}. We are not
+going to discuss here many of the approaches to solve the mult-armed bandit
+problem. However, let us outline a very simple algorithm that works particularly
+well for non-stationary bandits. 
+
+\subsection{Simple Reinforcement Learning algorithm for nonstationary
+multi-armed bandit}
+
+Let us outline a simple algorithm that we will use later in this section. This
+algorithm can be understood as a particular case of the Q-Learning algorithm,
+where the state space of the experimenter $\mathcal{X}$ is the empty set
+$\emptyset$ and the discount factor $\gamma$ is set to zero. The update rule for
+the estimate $Q(a)$ each time the action $a$ is taken is:
+
+\begin{equation}
+  Q(a) \leftarrow Q(a) + \alpha \left( r - Q(a) \right)
+  \label{simpleQ}
+\end{equation}
+
+where $\alpha \in (0,1]$ is the called the learning rate, $Q_{a}$ is the
+estimate value for the action $a$ and $r$ is the reward obtained after taking
+the action $a$.
+
+If we name by $Q_n$ the estimate of $Q^*(a)$ for an arbitrary action $a$ at the
+ $(n)^\text{th}$ time the action $a$ was taken, then due to \eqref{simpleQ} we
+ have that:
+
+ \begin{align}
+  Q_{n+1} &=Q_{n}+\alpha\left(r_{n}-Q_{n}\right) \\
+  &=\alpha r_{n}+(1-\alpha) Q_{n} \\
+  &=\alpha r_{n}+(1-\alpha)\left[\alpha r_{n-1}+(1-\alpha) Q_{n-1}\right] \\
+  &=\alpha r_{n}+(1-\alpha) \alpha r_{n-1}+(1-\alpha)^{2} Q_{n-1} \\
+  &=(1-\alpha)^{n} Q_{1}+\sum_{i=1}^{n} \alpha(1-\alpha)^{n-i} r_{i}
+  \label{weighted_sum}
+  \end{align}
+The last equation, \eqref{weighted_sum}, is just a weighted average of the
+rewards obtained, where the weights give exponentially less importance to 
+rewards coming from distant actions in the past. Sometimes is known as \textit{
+  exponential recency-weighted average}.
+
+\begin{myclaim}
+  If $\alpha$ is constant on $n$, the exponential recency-weighted average is
+  also a convex sum of the rewards obtained.\\
+\end{myclaim}
+  \textit{f:} Since $\alpha \in (0,1]$ all the coefficients are no greater
+  than 1. We just need to prove that $\forall n$ they sum to one. If we write 
+  the sum $S_n$ of the coefficients at the time $n$:
+  \begin{equation}
+    S_n=(1-\alpha)^{n} + \sum_{i=1}^{n} \alpha(1-\alpha)^{n-i}
+    \label{eq:sum}
+  \end{equation}
+  We also have that: 
+  \begin{align}
+    (1-\alpha)^n &= (1-\alpha)(1-\alpha)^{n-1} \\
+    &=(1-\alpha)^{n-1}-\alpha(1-\alpha)^{n-1}
+    \label{eq:aux}
+  \end{align}
+  Inserting \eqref{eq:aux} in \eqref{eq:sum} we get:
+  \begin{align}
+    S_n&=(1-\alpha)^{n-1}-\alpha(1-\alpha)^{n-1}+\sum_{i=1}^{n} \alpha(1-\alpha)^{n-i}\\
+    &=(1-\alpha)^{n-1} + \alpha \sum_{i=1}^{n-1} \alpha(1-\alpha)^{n-1-i}
+  \end{align}
+  If we call $l=n-1$ we obtain exactly \eqref{eq:sum} but with $l$ instead of 
+  $n$. We can repeat this process until the new index happens to be $1$. Then
+  we have:
+  \begin{equation}
+  S_n = (1-\alpha) + \alpha = 1 \qed 
+\end{equation}
+
+Lets outline with pseudo-code how this agent would work:
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+\begin{algorithm}
+  \caption{}\label{Non-stationary multiarmed-bandit}
+  \begin{algorithmic}[1]
+  \Procedure{Non-stationary multiarmed-bandit agent}{} \BState count = 0 \BState
+  $\textbf{while } \text{count} < N:$ \State action $\gets$ $\argmax Q$ \State
+  reward $\gets$ bandit(action) \State Q[action] $\gets$ Q[action] + $\alpha$
+  (reward - Q[action]) \State count $\gets$ count + 1 \EndProcedure
+  \end{algorithmic}
+  \end{algorithm}
+
+  If we pay attention to the pseudo-code we see that for taking the first action
+  we must have an initial estimate $Q_1$ for each action. These initial
+  estimates aren't irrelevant. They play an important role in the convergence of
+  the algorithm. For example, if we set $Q_1=0 \; \; \forall a \in \mathcal{A}$,
+  the $\argmax Q_1$ will output a random action. Therefore, the training can be
+  biased towards that action depending on the initial reward. Sometimes a good
+  strategy is to set high values of $Q_1$ for all actions. This will make the
+  agent overoptimistic in the estimate, forcing it to explore all options until
+  getting a more realistic estimate of the reward.
+
+  It can be shown that choosing the following learning rate give us an
+  exponential recency-weighted average without initial bias:
+  \begin{equation}
+    \alpha_n = \beta/o_n
+  \end{equation}
+  where $\beta$ is a constant parameter and $o_n$ is a constant step size
+  updating parameter so that:
+  \begin{equation}
+    o \gets o + \beta(1-o) 
+  \end{equation}
+  with an initial value of $o_1=0$ for all actions.
 
 
+  
+\section{Scenario 2: Spring-Shooting experiment}
 
+\section{Scenario 3: Shooting with two position sensors}
 
-
-
+So far we have used always the same architecture with a Q-table that chooses
+a predefined experimenter to optimize the reward obtained by the Analyzers 
+prediction. However, it may be the case in which we have experiments with 
+several measurements or actions that depends on the outcomes of the previous
+observations.
 
 \clearpage
 %
@@ -1415,7 +1572,7 @@ episodes it is less consistent in finding the optimal policy.
 %% CHAPTERS APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%\include{proof}
+%\include{f}
 
 
 
