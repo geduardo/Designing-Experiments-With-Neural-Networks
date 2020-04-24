@@ -734,7 +734,7 @@ Some areas of science are starting to suffer from a reproducibility crisis
 reproduce their peers' findings. Some voices in the physics community
 \cite{Sabine} point out that foundational physics has been stagnated during the
 last decades. However, some authors defend that there isn't such a crisis
-\cite{Fanelli2628}. Nonetheless, it's clear that to sustain an exponential
+\cite{Fanelli2628}. Nonetheless, it is clear that to sustain an exponential
 growth of reliable scientific production with no exponentially increasing human
 effort is impossible, and the crisis is thus, unavoidable.
  \par
@@ -1025,9 +1025,9 @@ composed by two different kinds of sub-agents that complement each other:
   \label{fig:simplesetup}
 \end{figure}
 
-To get a better understanding of the purpose of each part of the model let's
+To get a better understanding of the purpose of each part of the model let us
 take a look to the simplest structure that can be formed with the model (Fig.
-\ref{fig:simplesetup}). To illustrate it let's imagine a simple physical set-up.
+\ref{fig:simplesetup}). To illustrate it let us imagine a simple physical set-up.
 Suppose we have a simple gravity pendulum of length $L$ and mass $M$ and the
 goal is to find the oscillation period on Earth's surface. We know the period is
 a function only of the length $L$ and the value of the Earth's gravity (which we
@@ -1115,7 +1115,7 @@ doesn't restart in each iteration.
 \end{figure}
 
 \section{General elements and definitions}
-In this section let's define more formally some of the elements and concepts of
+In this section let us define more formally some of the elements and concepts of
 our model.
 \begin{itemize}
     \item \textbf{Simulated physical environment (SPE): } it represents the
@@ -1164,15 +1164,15 @@ our model.
 \end{itemize}
 
 \begin{myex}
-Let's complete the example of the pendulum to fully illustrate the architecture.
-First, we define the SPE. Let's assume that the mass of the pendulum and the
+Let us complete the example of the pendulum to fully illustrate the architecture.
+First, we define the SPE. Let us assume that the mass of the pendulum and the
 length of the string are sampled uniformly at random from the intervals \break
 $0.1$ kg $< M < 1$ kg and $ 0.1$ m $<L<1 $ m. The space of states of the SPE
 is then:
  \begin{equation}
   S\equiv \{(m,l):m \in \left[0.1, 1\right],l \in [0.1,1]\}
  \end{equation}
-Now, let's define an Experimenter. In this case, the Experimenter's environment
+Now, let us define an Experimenter. In this case, the Experimenter's environment
 space $\mathcal{X}$ is the empty set $\emptyset$, since there is no input. This
 means that the agent takes the action based solely on the rewards obtained. The
 action space $\mathcal{A}$ is just $\{0,1\}$, with 0 representing the action of
@@ -1221,8 +1221,8 @@ $\epsilon_\text{min}\geq 0$. The Experimenter is set to take the
 and a random action with a probability of $P_{\text{random}}=\epsilon$. We have
 the freedom to choose how to decrease the value of $\epsilon$, and it may have a
 crucial impact on the training. A very popular rule is to decrease the value
-constantly by subtracting $_\epsilon = 1/N$, where $N$ is the number
-iterations of the training. So in each episode:
+constantly by subtracting $_\epsilon = 1/N$, where $N$ is the number iterations
+of the training. So in each episode:
 \begin{align}
   &\text{if}\; \; \epsilon > \epsilon_\text{min} \;\;\; &\epsilon&\leftarrow\epsilon - _\epsilon \\
   &\text{else} \; \;  &\epsilon &\leftarrow \epsilon_\text{min}
@@ -1252,7 +1252,7 @@ relative error $\Delta=(T-T_{\text{pred}})/T$. This is:
 and $\sigma$ allows us to modify the precision we want in order to achieve a 
 reward.
 
-Now we have every element defined. Let's outline the full algorithm in 
+Now we have every element defined. Let us outline the full algorithm in 
 pseudocode:
 
   \makeatletter
@@ -1279,7 +1279,7 @@ pseudocode:
     \end{algorithm}
 \end{myex}
 
-Let's see how this simple algorithm performs in the task. Ideally, the
+Let us see how this simple algorithm performs in the task. Ideally, the
 Experimenter would find the optimal policy which consists in choosing always to
 measure the length and the Analyzer would learn to estimate accurately $T$ from
 the data obtained by the Experimenter. In our experiments, with this simple
@@ -1362,11 +1362,11 @@ episodes it is less consistent in finding the optimal policy.
 \label{Scenarios}
 \section{Scenario 1: Modified multi-armed bandit}
 In the first section of this chapter we are going to study a modified version of
-the classical Multi-armed bandit problem, a classical problem of Reinforcement 
-Learning and Probablity Theory. We will show that we can map any experiment 
-consisting of a non-interactive discrete choice measurements to our modified
-multi-armed bandit. 
-
+the classical Multi-armed bandit problem, a classical problem of Reinforcement
+Learning and Probablity Theory. Let us start by introducing the general problem.
+% We will show that we can map any experiment 
+% consisting of a non-interactive discrete choice measurements to our modified
+% multi-armed bandit. 
 \subsection{General multi-armed bandit problem}
 \begin{figure}[t]
   \centering
@@ -1383,26 +1383,25 @@ multi-armed bandit.
   \caption{Multi-armed bandit problem}
   \end{figure}
 
-Suppose that we have an agent that has access to a k-armed bandit. Each time the agent pulls
-one of the $k$ levers the bandit produces a reward. The objective
-of the agent is to maximize the obtained reward in a determined number of 
-trials or episodes $N$, but the agent doesn't know how the bandit produces 
-the rewards. Its only way of getting information about the reward system is 
-by trial and error by pulling the levers and obtaining rewards.
+Suppose that we have an agent that has access to a k-armed bandit. Each time the
+agent pulls one of the $k$ levers, the bandit produces a reward. The objective
+of the agent is to maximize the obtained reward in a determined number of trials
+or episodes $N$. The agent doesn't know how the bandit produces the rewards. Its
+only way of getting information about the reward system is by trial and error by
+pulling the levers and obtaining rewards.
 
-Mathematically we can model our agent as an Experimenter 
-$E:\mathcal{X}\rightarrow\mathcal{A}$, where the action space is 
-$\mathcal{A}=\{0,1,...,k\}$ and the state space $\mathcal{X}$ is again the 
-empty set $\emptyset$. The bandit can be modelled as a probabilistic
-function $R:A\times ... \rightarrow \mathbb{R}$, with "$...$" meaning that
-in principle the generated reward can depend on anything, for example, the
-previous actions, the previous rewards, the number of trials, the number
-of times a lever has been pulled, etc. This is an extremely general problem,
-so often authors make assumptions on $R$. For example, $R$ being Markovian if
-depends only on the last rewards and/or actions. Or stationary if 
-$R$ can be modeled as a set of immutable distributions $R=\{R_1,... , R_k\}$, 
-each distribution being associated with the rewards delivered by each of the 
-arms of the bandit.
+Mathematically we can model our agent as an Experimenter
+$E:\mathcal{X}\rightarrow\mathcal{A}$, where the action space is
+$\mathcal{A}=\{0,1,...,k\}$ and the state space $\mathcal{X}$ is again the empty
+set $\emptyset$. The bandit can be modelled as a probabilistic function
+$R:A\times ... \rightarrow \mathbb{R}$, with "$...$" meaning that in principle
+the generated reward can depend on anything: the previous actions, the previous
+rewards, the number of trials, the number of times a lever has been pulled, etc.
+This is an extremely general problem. Often authors make assumptions on $R$. For
+example, $R$ being Markovian if depends only on the last rewards and/or actions.
+Or stationary if $R$ can be modeled as a set of immutable distributions
+$R=\{R_1,... , R_k\}$, with each distribution being associated with the rewards
+delivered by each of the arms of the bandit.
 
 We define the value $Q^*(a)=q^*_a$ of an action $a \in \mathcal{A}$ as the true
 expected or mean reward associated to the action. We denote by $a_n$ the action
@@ -1413,7 +1412,7 @@ taken in the $n^\text{th}$ episode, and $r_n$ the reward obtained. This is:
 Note that, although we don't write it explicitly, $Q^*(a)$ can also depend on 
 any of the subsets of the domain of $R$.
 The optimal strategy for the k-armed bandit problem is to always choose 
-$a*=\argmax Q^*(x)$.
+$a^*=\argmax Q^*(x)$.
 
 Most reinforcement learning approaches to this problem look for an estimate of
 $Q^*(a)$, $Q(a)$, and base their choice on $a=\argmax Q(x)$. In general, the
@@ -1421,7 +1420,7 @@ best algorithm depends deeply on the characteristics of $R$, e.g., an algorithm
 that works well for stationary bandits can perform very poorly on non-stationary
 bandits. The interested reader can read a gentle introduction to the multi armed
 bandit problem in the Chapter 2 of \cite{sutton2018reinforcement}. We are not
-going to discuss here many of the approaches to solve the mult-armed bandit
+going to discuss here many of the approaches to solve the multi-armed bandit
 problem. However, let us outline a very simple algorithm that works particularly
 well for non-stationary bandits. 
 
@@ -1439,7 +1438,7 @@ the estimate $Q(a)$ each time the action $a$ is taken is:
   \label{simpleQ}
 \end{equation}
 
-where $\alpha \in (0,1]$ is the called the learning rate, $Q_{a}$ is the
+where $\alpha \in (0,1]$ is the called the learning rate, $Q(a)$ is the
 estimate value for the action $a$ and $r$ is the reward obtained after taking
 the action $a$.
 
@@ -1456,9 +1455,9 @@ If we name by $Q_n$ the estimate of $Q^*(a)$ for an arbitrary action $a$ at the
   \label{weighted_sum}
   \end{align}
 The last equation, \eqref{weighted_sum}, is just a weighted average of the
-rewards obtained, where the weights give exponentially less importance to 
-rewards coming from distant actions in the past. Sometimes is known as \textit{
-  exponential recency-weighted average}.
+rewards obtained, where the weights give exponentially less importance to
+rewards coming from distant actions in the past. Sometimes it is known as the
+\textit{exponential recency-weighted average}.
 
 \begin{myclaim}
 
@@ -1466,7 +1465,7 @@ rewards coming from distant actions in the past. Sometimes is known as \textit{
   also a convex sum of the rewards obtained.
   \\
 \end{myclaim}
-  \textit{f:} Since $\alpha \in (0,1]$ all the coefficients are no greater
+  \textit{Proof:} Since $\alpha \in (0,1]$ all the coefficients are no greater
   than 1. We just need to prove that $\forall n$ they sum to one. If we write 
   the sum $S_n$ of the coefficients at the time $n$:
   \begin{equation}
@@ -1506,15 +1505,15 @@ Lets outline with pseudo-code how this agent would work:
   \end{algorithmic}
   \end{algorithm}
 
-  If we pay attention to the pseudo-code we see that for taking the first action
-  we must have an initial estimate $Q_1$ for each action. These initial
-  estimates aren't irrelevant. They play an important role in the convergence of
-  the algorithm. For example, if we set $Q_1=0 \; \; \forall a \in \mathcal{A}$,
-  the $\argmax Q_1$ will output a random action. Therefore, the training can be
-  biased towards that action depending on the initial reward. Sometimes a good
-  strategy is to set high values of $Q_1$ for all actions. This will make the
-  agent overoptimistic in the estimate, forcing it to explore all options until
-  getting a more realistic estimate of the reward.
+  If we pay attention to the pseudo-code, we see that to take the first action
+  we need an initial estimate $Q_1$ for each action. These initial estimates
+  aren't irrelevant. They play an important role on the convergence of the
+  algorithm. For example, if we set $Q_1=0 \; \; \forall a \in \mathcal{A}$, the
+  $\argmax Q_1$ will output a random action. Therefore, the training can be
+  biased towards that random action depending on the initial reward. Sometimes a
+  good strategy is to set high values of $Q_1$ for all actions. This will make
+  the agent overoptimistic in the estimate, forcing it to explore all options
+  until getting a more realistic estimate of the reward.
 
   It can be shown that choosing the following learning rate give us an
   exponential recency-weighted average without initial bias:
@@ -1535,14 +1534,14 @@ physical set up to a 2-armed bandit problem. We just need to assign the action
 of  measuring $L$ to one of the arms and measuring $M$ to the other. Then we set
 the function $R$ of the bandit to be $R:\mathcal{A}\times S\rightarrow
 \mathbb{R}$ as a composition of Gaussian reward function $r$ with the Analyzer
-predicting the period from the outcome. Basically we assume that the bandit is
+predicting the period from the outcome. Basically, we assume that the bandit is
 the result of the interaction between the Environment, the Analyzer and the
 Gaussian comparator (Fig. \ref{fig:Bandit-EA}). \par Note that this multi-armed
-bandit problem is quite difficult: it's non-stationary since the Analyzer and
-the Environment change each episode and it's non-Markovian since the performance
-of the Analyzer depends on the training over all the previous episodes.
-However, as we have seen, even very simple agents perform surprisingly well for
-this simple case.
+bandit problem is quite difficult: it is non-stationary since the Analyzer and
+the Environment change each episode and it is non-Markovian since the
+performance of the Analyzer depends on the training over all the previous
+episodes. However, as we have seen, even very simple agents perform surprisingly
+well for this simple case.
 
 
 \begin{figure}
@@ -1555,25 +1554,25 @@ this simple case.
 
 
 
-\par If we can map the simple pendulum example to a multi-armed
-bandit, it's evident that many other physical set-ups can be mapped too. So
-instead of transforming physical examples to a multi-armed bandit problem, 
-we can design a customizable multi-armed bandit to represent an infinite
-variety of physical situations. This bandit is only useful to represent those
-situations in which a discrete set of actions is chosen at the beginning of 
-the experiment without further intervention until the end of the experiment.
+\par If we can map the simple pendulum example to a multi-armed bandit, it is
+evident that many other physical set-ups can be mapped too. So instead of
+transforming physical examples to a multi-armed bandit problem, we can design a
+customizable multi-armed bandit to represent an infinite variety of physical
+situations. However, this bandit is only useful to represent those situations
+in which a discrete set of actions is chosen at the beginning of the experiment
+without further intervention until the end of the experiment.
 
 In this kind of set up we only have a single experimenter at the beginning of
 the learning loop. This means that the state space $\mathcal{X}$  of the
 Experimenter's environment is again the empty set $\emptyset$. The action space
 $\mathcal{A}$ is finite and discrete with $k \in \mathbb{N}$ possible actions.
 The SPE, in the state $s \in S$, after the action $a$ of the Experimenter,
-generates an outcome $\textbf{O}(a,s) \in \mathbb{R}^m$ and the value of the
+generates an outcome $\textbf{O}(a,s) \in \mathbb{R}^m$, and the value of the
 target physical property $\textbf{f}(s') \in \mathbb{R}^l$, where $s' \in S$ is
 the state of the SPE after the action $a$. Then, the Analyzer $A$ is asked to
 guess $\textbf{f}(s')$ using the value of $\textbf{O}(a,s)$ and potentially the
-action $a$ and some additional testing information $I \in  \mathbb{R}^{p}$. The
-prediction $\textbf{P} \in \mathbb{R}^l$ of the Analyzer is compared to the
+action $a$ and some additional auxiliary information $I \in  \mathbb{R}^{p}$.
+The prediction $\textbf{P} \in \mathbb{R}^l$ of the Analyzer is compared to the
 actual value of the physical property $\textbf{f}(s')$ by means of a reward
 generating function $r:\mathbb{R}^l\times\mathbb{R}^l\rightarrow\mathbb{R}$. The
 output of $r(\textbf{f}(s'),\textbf{P})$ is the output reward of the bandit.
@@ -1599,12 +1598,13 @@ output of $r(\textbf{f}(s'),\textbf{P})$ is the output reward of the bandit.
     \item $O(a=0,s=(L,M))=M$ and $O(a=1, s=(L,M))=L$. Therefore $m=1$, since 
     the outcome is just a real number.
     \item $r$ is defined by \eqref{gaussian_reward}
-    \item There's no testing information $I$.
+    \item There's no auxiliary information $I$.
   \end{itemize}
   
 \end{myex}
 
-Now let's explore different versions of this general multi-armed bandit.
+Now let us explore different versions of this modified multi-armed bandit.
+
 \subsubsection{Modified multi-armed bandit I}
 
   In this example, the multi-armed bandit is going to be very simple. There are
@@ -1620,16 +1620,16 @@ Now let's explore different versions of this general multi-armed bandit.
   \end{align}
   Each time a lever $a$ is pulled, the outcome $O(a,s)$ is just the the value
   $v_a$ associated to the arm $a$. We choose the function $f(s)$ to be any real
-  function of only the value of the target arm $f(v_t)$, e.g. $f(v_t)=v_t^2$.
+  function of only the value of the target arm. For instance, $f(v_t)=v_t^2$.
   Then the Analyzer is fed the outcome $O(a,s)=v_a$ to try to predict $f(v_t)$.
   It produces a prediction $A(v_a)=p$ that is used to generate a reward
   $r(p,v_t)$ according to \eqref{gaussian_reward}. Then the Analyzer and the
   Experimenters are trained with their respective algorithms.
 
-  \par It's clear that the Analyzer would be able to make a prediction of $f(s)$
-  better than random guessing only if the Experimenter chooses the target arm
-  $t$. Note also that the pendulum example is just a particular case of this
-  example. We just need to set $t$ as the arm that outputs $L$ and
+  \par It is clear that the Analyzer would be able to make a prediction of
+  $f(s)$ better than random guessing only if the Experimenter chooses the target
+  arm $t$. Note also that the pendulum example is just a particular case of this
+  example. We just need to set $t$ as the arm that outputs $L$, and
   $f(v_t)=T(L)$.
 
   Let's run a few different cases to see how does it perform with different
@@ -1663,30 +1663,31 @@ Now let's explore different versions of this general multi-armed bandit.
       \caption{Training of example \ref{MAB1ex}. These two figures shows us how
       the agent realizes that in order to get reward it needs to take the target
       action (the lever 6 in this case). In a) we can see the average value of
-      the action taken and how it converges to the target lever. In b) we can
-      see the cumulative number of actions taken by the agent and how around the
-      $600^\text{th}$ episode the agent finds the target arm and chooses it
-      whenever a greedy action is taken. Information: $N=5000$,
+      the action taken in each episode how it converges to the target lever.
+      In (b) we can see the cumulative number of actions taken by the agent and
+      how around the $600^\text{th}$ episode the agent finds the target arm and
+      chooses it whenever a greedy action is taken. Information: $N=5000$,
       $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure}  
 
 
 
-    In this example let's set:
+    In this example let us set:
 
     \begin{itemize}
       \item The number of arms to $k=8$.
       \item The function $f(v_t)$ to be the identity $f(v_t)=v_t$
       \item The Experimenter is based on the algorithm described in
-      \ref{SimpleRL}, equipped with an $\epsilon$-greedy exploration with
+      \ref{SimpleRL}, equipped with an $\epsilon$-greedy exploration phase with
       exponential decrease of the exploration rate. 
       \item The Analyzer is a two hidden layer feed-forward neural network, with
       each layer consisting in 16 fully connected neurons activated with the
-      sigmoidal function (Fig. \ref{Analyzer1} ). The optimizer is just the
+      ReLU function (Fig. \ref{Analyzer1} ). The optimizer is just t qhe
       gradient descent algorithm. This Analyzer is of unnecessary complexity for
-      this task, but will be useful later for more complex functions $f(v_t)$.
-      \item The reward generating function $r$ is defined as in
+      this task, but it will be useful later for more complex functions
+      $f(v_t)$.
+      \item The reward generating function $r$ is defined as in q
       \eqref{gaussian_reward}.
     \end{itemize}
 
@@ -1702,7 +1703,7 @@ Now let's explore different versions of this general multi-armed bandit.
     the Experimenter chooses random levers and the Analyzer tries to fit the
     function with most of the times useless inputs but $1/8^{\text{th}}$ of the
     times a useful value. Then the Gradient Descent algorithm is applied and
-    results is surprisingly robust to the noise produced by the useless inputs.
+    results to be surprisingly robust to the noise produced by the useless inputs.
     \begin{figure}[]
       \centering
       \begin{subfigure}{.5\textwidth}
@@ -1728,8 +1729,8 @@ Now let's explore different versions of this general multi-armed bandit.
     \end{figure} 
   \end{myex}
   \begin{myex} \label{MAB2ex}
-    In this example let's keep the exact same configuration than in the previous
-    example but changing only the function $f(s')$ to be predicted. Instead of 
+    In this example we keep the exact same configuration than in the previous
+    example but changing only the function $f(s')$. Instead of 
     the identity we are going to ask for a complicated function and test if the
     agent finds the lever. The chosen function is:
     \begin{equation}
@@ -1738,9 +1739,9 @@ Now let's explore different versions of this general multi-armed bandit.
     Keeping the same hyper-parameters we observe that 5,000 episodes are not
     enough for the agent to succeed. However, trying with 50,000 episodes we
     observe that the agent finds without problems the correct lever (Fig.
-    \ref{fig:ActionAverageMAB2}) and successfully learns the function $f(v_t)$ (Fig. 
-    \ref{performanceMBA2}). This reveals that non-trivial correlations can
-    proportionate enough bias to initiate the feedback loop, although the 
+    \ref{fig:ActionAverageMAB2}) and successfully learns the function $f(v_t)$
+    (Fig. \ref{performanceMBA2}). This reveals that non-trivial correlations can
+    proportionate enough bias to initiate the feedback loop, although the
     duration of the exploration phase for it to start increases 
     with the complexity of the correlation.
 
@@ -1773,10 +1774,10 @@ Now let's explore different versions of this general multi-armed bandit.
       \caption{Training of example \ref{MAB2ex}. These two figures shows us how
       the agent realizes that in order to get reward it needs to take the target
       action (the lever 6 in this case). In (a) we can see the average value of
-      the action taken and how it converges to the target lever. In b) we can
-      see the cumulative number of actions taken by the agent and how around the
-      $7000^\text{th}$ episode the agent finds the target arm and chooses it
-      whenever a greedy action is taken. Information: $N=5000$,
+      the action taken in each episode and how it converges to the target lever.
+      In (b) we can see the cumulative number of actions taken by the agent and
+      how around the $2000^\text{th}$ episode the agent finds the target arm and
+      chooses it whenever a greedy action is taken. Information: $N=5000$,
       $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure}
@@ -1810,10 +1811,10 @@ Now let's explore different versions of this general multi-armed bandit.
 
   \begin{myex} \label{MAB3ex}
     In this example we are going to see what happens if instead of a small
-    number of arms, we have a large number of arms in which only one gives
-    the relevant value. If we set $k=100$ and a simple but not trivial
-    polynomial function $f(v_t)=v_t^2-v_t$ we find that the agent finds the
-    correct lever also in less than 50,000 episodes (Fig. \ref{fig:ActionAverageMAB3}). The
+    number of arms, we have a large number of arms in which only one gives the
+    relevant value. If we set $k=100$ and a simple but not trivial polynomial
+    function $f(v_t)=v_t^2-v_t$ we find that the agent finds the correct lever
+    also in less than 50,000 episodes (Fig. \ref{fig:ActionAverageMAB3}). The
     predictions of the analyzer after the training are nearly perfect due to
     the simplicity of the function and the high number of training steps.
 
@@ -1834,32 +1835,31 @@ Now let's explore different versions of this general multi-armed bandit.
       \caption{Training of example \ref{MAB3ex} . These two figures shows us how
       the agent realizes that in order to get reward it needs to take the target
       action (the lever 2 in this case). In a) we can see the average value of
-      the action taken and how it converges to the target lever, despite of the
-      large number of levers. In (b) we can
-      see the cumulative number of actions taken by the agent and how around the
-      $40,000^\text{th}$ episode the agent finds the target arm and chooses it
-      whenever a greedy action is taken. Information: $N=10^5$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
-      $Q_1=0$, $\sigma=0.05$}
+      the action taken in each episode and how it converges to the target lever,
+      despite of the large number of levers. In (b) we can see the cumulative
+      number of actions taken by the agent and how around the $40,000^\text{th}$
+      episode the agent finds the target arm and chooses it whenever a greedy
+      action is taken. Information: $N=10^5$, $\beta_\text{Experimenter}=0.01$,
+      $\text{lr}_\text{Analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
     \end{figure}
   \end{myex}
 
-  These last two simple examples show us that the agent performs well for both, 
-  complex functions and large action spaces. There's no reason to think that 
-  larger action spaces or more complex correlations would impose any 
-  limitations besides an increase on the number of episodes or the need of a
-  more flexible Analyzer. As we will see in another example later, even 
-  with more complex configuration and 2,000 different levers the agent is able
-  to find the correct lever (although the training took around 5h in an
-  average laptop processor).
+  These last two simple examples show us that the agent performs well for both,
+  complex functions and large action spaces. There is no reason to think that
+  larger action spaces or more complex correlations would impose any limitations
+  besides an increase on the number of episodes required or the need of a more
+  flexible Analyzer. As we will see in another example later, even with a more
+  complex configuration and 2,000 different levers the agent is able to find the
+  correct lever (although the training took around 5h in an average laptop
+  processor).
 
   \par In the next examples we will try different configurations in which the
-  outcome and the predictions are multidimensional. We will also introduce the 
-  concept of testing, would be very useful for more complex configurations of 
-  the E-A architecture.
+  outcome are multidimensional. We will also introduce the concept of auxiliary
+  parameters, that would be very useful for more complex configurations of the
+  E-A architecture.
 
   \subsubsection{Modified multi-armed bandit II}
-    In this example we are going to set $k=8$ again and in this case, each
+    In this example we are going to set $k=8$ again. In this case, each
     lever is going to have three values associated instead of only one. But 
     we keep only a valid target lever $t$ and the rest output useless
     values. At the beginning of each episode, the
@@ -1880,17 +1880,16 @@ Now let's explore different versions of this general multi-armed bandit.
     \end{equation}
 
     Note that in this case at the input of the Analyzer we will feed three
-    parameters instead of one, but we maintain the same hidden layers. Keeping
-    the rest of the agent settings like in the previous examples we find that
-    it discovers the correct action and learns to predict $f(s')$ in less than 10,000
-    episodes. This behavior is almost as good as for the single variable case
-    (Fig. \ref{fig:ActionAverageMAB4} ).
-    This means that adding more elements to the outcomes doesn't affect
-    significantly the performance of the algorithm. This was to be expected,
-    since the addition of more parameters s more tools to recognize the
-    correlations at the expense of a maybe more complicated computation of the
-    function. However, the used Analyzer has enough flexibility to fit to those
-    kind of functions.
+    parameters instead of one, maintaining the same hidden layers. Keeping the
+    rest of the agent settings like in the previous examples we find that it
+    discovers the correct action and learns to predict $f(s')$ in less than
+    10,000 episodes. This behavior is almost as good as for the single variable
+    case (Fig. \ref{fig:ActionAverageMAB4} ). This means that adding more
+    elements to the outcomes doesn't affect significantly the performance of the
+    algorithm. This was to be expected, since the addition of more parameters
+    adds more tools to recognize the correlations at the expense of a maybe more
+    complicated computation of the function. However, the used Analyzer has
+    enough flexibility to fit to those kind of functions.
 
 
     \begin{figure}[]
@@ -1910,16 +1909,15 @@ Now let's explore different versions of this general multi-armed bandit.
       \caption{Training of example for the 3-variable example. These two figures
       shows us how the agent realizes that in order to get reward it needs to
       take the target action (the lever 2 in this case). In (a) we can see the
-      average value of the action taken and how it converges to the target
-      lever. In (b) we can see the
-      cumulative number of actions taken by the agent and how around the
-      $10,000^\text{th}$ episode the agent finds the target arm and chooses it
-      whenever a greedy action is taken. Information: $N=10^4$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
-      $Q_1=0$, $\sigma=0.05$}
+      average value of the action taken in each episode and how it converges to
+      the target lever. In (b) we can see the cumulative number of actions taken
+      by the agent and how around the $10,000^\text{th}$ episode the agent finds
+      the target arm and chooses it whenever a greedy action is taken.
+      Information: $N=10^4$, $\beta_\text{Experimenter}=0.01$,
+      $\text{lr}_\text{Analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
     \end{figure}
 
-    One question that one may ask is: "What if the agent is allowed to pull more
+    A question that one may ask is: "What if the agent is allowed to pull more
     than one lever per episode, for example, $n$ levers, to then be asked for a
     prediction that involves the parameters of $l\leq n$ levers?" In such a case
     the problem can be mapped to a single-lever bandit like the ones we have
@@ -1950,6 +1948,14 @@ Now let's explore different versions of this general multi-armed bandit.
   might be relevant to make the prediction. Let us illustrate again this
   concept by using the pendulum example.
 
+  \begin{figure}
+    \centering
+    \includegraphics{figures/Auxiliary Parameters.pdf}
+    \caption{To add the auxiliary parameters to the learning loop we just need
+    to make a small modification to the diagram.}
+    \label{fig:auxiliaryparameter}
+  \end{figure}
+
   Suppose that, instead of directly asking the Analyzer for the period $T$ of
   the gravity pendulum, what we want the Analyzer to predict is the angle
   $\theta(\tau)$ of the pendulum at a given time $\tau$. The accuracy of the
@@ -1961,23 +1967,21 @@ Now let's explore different versions of this general multi-armed bandit.
   features of the Analyzer uniformly at random from a selected interval. This
   would force the Analyzer to learn without bias within the given interval. We
   can see how the learning loop is modified with the new addition (Fig.
-  \ref{fig:auxiliaryparameters}). We shouldn't expect any drastic change in the
+  \ref{fig:auxiliaryparameter}). We shouldn't expect any drastic change in the
   performance compared to the multi-parameter case. We are just adding
-  parameters where the only difference is that they aren't determined by the
+  parameters, the only difference is that they aren't determined by the
   action of the Experimenter. This means that the Analyzer has some
   degree of information even if the Experimenter takes wrong choices. We can
   expect the Analyzer performing better than random guessing regardless the
   performance of the Experimenter.
+  
+  \par The results of running this example are summarized in 
+  Fig. \ref{completpd}. Like we expected, it worked similarly to previous 
+  examples.
 
-  \begin{figure}
-    \centering
-    \includegraphics{figures/Auxiliary Parameters.pdf}
-    \caption{To add the auxiliary parameters to the learning loop we just need
-    to make a small modification to the diagram.}
-    \label{fig:auxiliaryparameters}
-  \end{figure}
 
-  \begin{myex}
+
+  \begin{myex}\label{pendulumcomplete}
     This example will complete the pendulum example. Instead of asking the 
     analyzer to predict the value of the period $T$, we are going to ask for 
     the angle $\theta(\tau)$ of the pendulum. To do it we are also going
@@ -1989,31 +1993,78 @@ Now let's explore different versions of this general multi-armed bandit.
       f(L,\tau, \theta(0),\dot\theta(0))=\theta(\tau)=
       \theta(0)\text{cos}(\omega\tau)+ \dot\theta(0)\text{sin}(\omega\tau)
     \end{equation}
-    where $\omega = \sqrt{g/L}$.
-    
-    \begin{figure*}  % spans both columns
+    where $\omega = \sqrt{g/L}$. Results on Fig. \ref{fig:completepd}.
+
+    \begin{figure}  % spans both columns
       \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\linewidth]{a.pdf}
-      \caption{Network 1}
+      \includegraphics[width=\linewidth]{figures/Action-MAB5.pdf}
+      \caption{Actions moving average}
       \end{subfigure}
       \hfill % maximize the horizontal distance between the graphs
       \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\linewidth]{b.pdf}
-      \caption{Network  2}
+      \includegraphics[width=\linewidth]{figures/Cum-action-MAB5.pdf}
+      \caption{Cumulative actions taken}
       \end{subfigure}
       
       \bigskip  % some extra vertical whitespace
       \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\linewidth]{c.pdf}
-      \caption{Network  3}
+      \includegraphics[width=\linewidth]{figures/Error-MAB5.pdf}
+      \caption{Absolute error moving average}
       \end{subfigure}
       \hfill % maximize the horizontal distance between the graphs
       \begin{subfigure}{0.45\textwidth}
-      \includegraphics[width=\linewidth]{d.pdf}
-      \caption{Network  4}
-
+      \includegraphics[width=\linewidth]{figures/predictions5.pdf}
+      \caption{Perfect vs Predicted}
+      \end{subfigure}
+      \caption{Summary of the training for the example 
+      \ref{pendulumcomplete}. We observe that the actions 
+      converge like in previous examples. The Analyzer doesn't 
+      completely fit the function, although shows clear signs of 
+      learning. This could be due to an inadequate Neural Network
+      architecture or insufficient training. Information: $N=40,000$,
+      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $Q_1=0$, $\sigma=0.05$}
+      \label{fig:completepd}
+    \end{figure}
   \end{myex}
 
+  \begin{myex} \label{2k}
+    In this short example let us see how our agent can solve a multi-armed
+    bandit problem with $k=2000$, with an auxiliary parameter and a non-trivial
+    function to predict. There is only a target lever $t$ that outputs the value
+    $v_t$. Let $u$ be an auxiliary parameter sampled form a uniform distribution
+    and feeded to the Analyzer. The function asked to predict is: 
+    \begin{equation}
+      f(u,v_t)=\sqrt{uv_t\text{sin}(v_t)}
+    \end{equation}
+    We ran it for $N=2\times10^6$ and we found that the agent successfully 
+    discovered the correct lever in around $6\times10^5$ episodes
+    (Fig. \ref{fig:ActionAverageMAB6}).
+    
+
+    \begin{figure}[]
+      \centering
+      \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{figures/Action-MAB6.pdf}
+        \caption{Moving average of the actions taken}
+        \label{fig:ActionAverageMAB6}
+      \end{subfigure}%
+      \begin{subfigure}{.5\textwidth}
+        \centering
+        \includegraphics[width=1\linewidth]{figures/predictions-MBA6.pdf}
+        \caption{Predicted value vs. Target value}
+        \label{fig:actionsMAB6}
+      \end{subfigure}
+      \caption{ Summary of the training example \eqref{2k}
+         Information: $N=2\times10^6$,
+      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $Q_1=0$, $\sigma=0.05$}
+    \end{figure}
+  \end{myex}
+
+  \subsection{Summary of the multi-armed bandit}
+  TO BE WRITTEN
 % \section{Scenario 2: Spring-Shooting experiment}
 
 
