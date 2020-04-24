@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  22 APR 2020 22:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7350 64-bit) (preloaded format=pdflatex 2020.3.24)  24 APR 2020 06:26
 entering extended mode
 **"c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
 ("c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/main.tex"
@@ -943,23 +943,23 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 ) ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 437.
-LaTeX Font Info:    ... okay on input line 437.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 437.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 435.
+LaTeX Font Info:    ... okay on input line 435.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 435.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
@@ -980,7 +980,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
 \AtBeginShipoutBox=\box64
-Package hyperref Info: Link coloring ON on input line 437.
+Package hyperref Info: Link coloring ON on input line 435.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -990,9 +990,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 437.
-LaTeX Info: Redefining \pageref on input line 437.
-LaTeX Info: Redefining \nameref on input line 437.
+LaTeX Info: Redefining \ref on input line 435.
+LaTeX Info: Redefining \pageref on input line 435.
+LaTeX Info: Redefining \nameref on input line 435.
  ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out") ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.out")
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1002,18 +1002,18 @@ LaTeX Info: Redefining \nameref on input line 437.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 474.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 471.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 474.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 471.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figures/eth_logo.pdf, id=70, 186.76776pt x 68.28511pt>
+<figures/eth_logo.pdf, id=66, 186.76776pt x 68.28511pt>
 File: figures/eth_logo.pdf Graphic file (type pdf)
 <use figures/eth_logo.pdf>
-Package pdftex.def Info: figures/eth_logo.pdf  used on input line 477.
+Package pdftex.def Info: figures/eth_logo.pdf  used on input line 474.
 (pdftex.def)             Requested size: 147.86693pt x 54.06023pt.
  [1
 
@@ -1029,7 +1029,7 @@ This may cause the page layout to be inconsistent, however.
 ]
 
 Package blindtext Warning: USenglish not defined, using English instead.
-(blindtext)                 on input line 535.
+(blindtext)                 on input line 532.
 
 [3
 
@@ -1038,7 +1038,12 @@ Package blindtext Warning: USenglish not defined, using English instead.
 
 ] [5] [6
 
-] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc")
+] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.toc"
+Overfull \hbox (9.2199pt too wide) in paragraph at lines 16--16
+ [][] [][][]\OT1/ptm/m/n/10.95 Simple Re-in-force-ment Learn-ing al-go-rithm for non-stationary 
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1049,14 +1054,14 @@ Package blindtext Warning: USenglish not defined, using English instead.
 
 ]
 Chapter 1.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 689.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 686.
 ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 744--762
+Underfull \hbox (badness 10000) in paragraph at lines 741--759
 
  []
 
@@ -1064,7 +1069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 744--762
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 795--806
+Underfull \hbox (badness 10000) in paragraph at lines 792--803
 
  []
 
@@ -1076,16 +1081,16 @@ Chapter 2.
 [5
 
 ]
-LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 859.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 856.
  ("C:\Users\eduar\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 859.
-<figures/UniverseA1.pdf, id=183, 633.36626pt x 301.125pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 856.
+<figures/UniverseA1.pdf, id=178, 633.36626pt x 301.125pt>
 File: figures/UniverseA1.pdf Graphic file (type pdf)
 <use figures/UniverseA1.pdf>
-Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 883.
+Package pdftex.def Info: figures/UniverseA1.pdf  used on input line 880.
 (pdftex.def)             Requested size: 316.68236pt x 150.56212pt.
  [6] [7 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/UniverseA1.pdf>] [8]
 Chapter 3.
@@ -1093,10 +1098,10 @@ Chapter 3.
 
 ]
 Chapter 4.
-<figures/SimpleSetUp.pdf, id=230, 271.99208pt x 140.73273pt>
+<figures/SimpleSetUp.pdf, id=225, 271.99208pt x 140.73273pt>
 File: figures/SimpleSetUp.pdf Graphic file (type pdf)
 <use figures/SimpleSetUp.pdf>
-Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1021.
+Package pdftex.def Info: figures/SimpleSetUp.pdf  used on input line 1018.
 (pdftex.def)             Requested size: 271.9914pt x 140.73238pt.
 [10
 
@@ -1107,40 +1112,40 @@ Underfull \vbox (badness 1496) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12]
-<figures/SimpleSetUp(Buffer).pdf, id=252, 271.99208pt x 161.01198pt>
+<figures/SimpleSetUp(Buffer).pdf, id=247, 271.99208pt x 161.01198pt>
 File: figures/SimpleSetUp(Buffer).pdf Graphic file (type pdf)
 <use figures/SimpleSetUp(Buffer).pdf>
-Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1111.
+Package pdftex.def Info: figures/SimpleSetUp(Buffer).pdf  used on input line 1108.
 (pdftex.def)             Requested size: 271.9914pt x 161.01158pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/SimpleSetUp(Buffer).pdf>] [14] [15]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 1264.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 1262.
  [16]
-<figures/Avg-Action-Pendulum.pdf, id=289, 433.62pt x 289.08pt>
+<figures/Avg-Action-Pendulum.pdf, id=284, 433.62pt x 289.08pt>
 File: figures/Avg-Action-Pendulum.pdf Graphic file (type pdf)
 <use figures/Avg-Action-Pendulum.pdf>
-Package pdftex.def Info: figures/Avg-Action-Pendulum.pdf  used on input line 1297.
+Package pdftex.def Info: figures/Avg-Action-Pendulum.pdf  used on input line 1295.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
-<figures/Reward-Pendulum.pdf, id=290, 433.62pt x 289.08pt>
+<figures/Reward-Pendulum.pdf, id=285, 433.62pt x 289.08pt>
 File: figures/Reward-Pendulum.pdf Graphic file (type pdf)
 <use figures/Reward-Pendulum.pdf>
-Package pdftex.def Info: figures/Reward-Pendulum.pdf  used on input line 1303.
+Package pdftex.def Info: figures/Reward-Pendulum.pdf  used on input line 1301.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Real-vs-Pred-Pendulum.pdf, id=294, 433.62pt x 289.08pt>
+<figures/Real-vs-Pred-Pendulum.pdf, id=289, 433.62pt x 289.08pt>
 File: figures/Real-vs-Pred-Pendulum.pdf Graphic file (type pdf)
 <use figures/Real-vs-Pred-Pendulum.pdf>
-Package pdftex.def Info: figures/Real-vs-Pred-Pendulum.pdf  used on input line 1344.
+Package pdftex.def Info: figures/Real-vs-Pred-Pendulum.pdf  used on input line 1342.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
-<figures/Error-Pendulum.pdf, id=295, 433.62pt x 289.08pt>
+<figures/Error-Pendulum.pdf, id=290, 433.62pt x 289.08pt>
 File: figures/Error-Pendulum.pdf Graphic file (type pdf)
 <use figures/Error-Pendulum.pdf>
-Package pdftex.def Info: figures/Error-Pendulum.pdf  used on input line 1350.
+Package pdftex.def Info: figures/Error-Pendulum.pdf  used on input line 1348.
 (pdftex.def)             Requested size: 180.0pt x 120.00124pt.
 [17] [18 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Avg-Action-Pendulum.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Reward-Pendulum.pdf
 
@@ -1153,58 +1158,212 @@ pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master The
 pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Error-Pendulum.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 Chapter 5.
-[19
+<figures/Bandit.pdf, id=439, 193.26102pt x 126.26974pt>
+File: figures/Bandit.pdf Graphic file (type pdf)
+<use figures/Bandit.pdf>
+Package pdftex.def Info: figures/Bandit.pdf  used on input line 1375.
+(pdftex.def)             Requested size: 180.0pt x 117.61075pt.
 
-]
-Overfull \hbox (15.99278pt too wide) in paragraph at lines 1417--1417
-[]\OT1/ptm/b/n/12 Simple Re-in-force-ment Learn-ing al-go-rithm for non-sta-tion-ary multi-
+Underfull \hbox (badness 1152) in paragraph at lines 1376--1376
+[]\OT1/ptm/m/n/10 (a) |Sim-ple di-a-gram por-tray-ing the multi-
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 1452--1454
+<figures/Bandit-Draw.pdf, id=440, 307.48576pt x 273.92236pt>
+File: figures/Bandit-Draw.pdf Graphic file (type pdf)
+<use figures/Bandit-Draw.pdf>
+Package pdftex.def Info: figures/Bandit-Draw.pdf  used on input line 1380.
+(pdftex.def)             Requested size: 180.0pt x 160.35051pt.
+[19
+
+] [20 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Bandit.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Bandit-Draw.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 1465--1468
 
  []
 
 [21] [22]
+Overfull \hbox (6.4055pt too wide) in paragraph at lines 1540--1546
+\OT1/ptm/m/n/10.95 since the An-a-lyzer and the En-vi-ron-ment change each episode and it's non-Markovian
+ []
+
+<figures/Bandit-EA.pdf, id=529, 393.86449pt x 279.87662pt>
+File: figures/Bandit-EA.pdf Graphic file (type pdf)
+<use figures/Bandit-EA.pdf>
+Package pdftex.def Info: figures/Bandit-EA.pdf  used on input line 1550.
+(pdftex.def)             Requested size: 295.39764pt x 209.90694pt.
+[23] [24 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Bandit-EA.pdf>]
+<figures/Analyzer1.pdf, id=570, 694.27882pt x 318.0703pt>
+File: figures/Analyzer1.pdf Graphic file (type pdf)
+<use figures/Analyzer1.pdf>
+Package pdftex.def Info: figures/Analyzer1.pdf  used on input line 1642.
+(pdftex.def)             Requested size: 347.13857pt x 159.03474pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1649.
+
+<figures/Actions-MAB1.pdf, id=571, 433.62pt x 289.08pt>
+File: figures/Actions-MAB1.pdf Graphic file (type pdf)
+<use figures/Actions-MAB1.pdf>
+Package pdftex.def Info: figures/Actions-MAB1.pdf  used on input line 1653.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/Cum-action-MAB1.pdf, id=572, 563.26071pt x 271.33809pt>
+File: figures/Cum-action-MAB1.pdf Graphic file (type pdf)
+<use figures/Cum-action-MAB1.pdf>
+Package pdftex.def Info: figures/Cum-action-MAB1.pdf  used on input line 1659.
+(pdftex.def)             Requested size: 180.0pt x 86.70988pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1706.
+
+<figures/Error-MAB1.pdf, id=580, 433.62pt x 289.08pt>
+File: figures/Error-MAB1.pdf Graphic file (type pdf)
+<use figures/Error-MAB1.pdf>
+Package pdftex.def Info: figures/Error-MAB1.pdf  used on input line 1710.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/predictions-MAB1.pdf, id=581, 433.62pt x 289.08pt>
+File: figures/predictions-MAB1.pdf Graphic file (type pdf)
+<use figures/predictions-MAB1.pdf>
+Package pdftex.def Info: figures/predictions-MAB1.pdf  used on input line 1716.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+[25] [26 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Analyzer1.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Actions-MAB1.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB1.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [27 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Error-MAB1.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/predictions-MAB1.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/predictions-MAB1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/performanceMBA2 edited.pdf, id=755, 433.62pt x 300.54483pt>
+File: figures/performanceMBA2 edited.pdf Graphic file (type pdf)
+<use figures/performanceMBA2 edited.pdf>
+Package pdftex.def Info: figures/performanceMBA2 edited.pdf  used on input line 1750.
+(pdftex.def)             Requested size: 216.80946pt x 150.27203pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1759.
+
+<figures/Actions-MAB2.pdf, id=756, 433.62pt x 289.08pt>
+File: figures/Actions-MAB2.pdf Graphic file (type pdf)
+<use figures/Actions-MAB2.pdf>
+Package pdftex.def Info: figures/Actions-MAB2.pdf  used on input line 1763.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/Cum-action-MAB2.pdf, id=757, 569.40868pt x 271.33809pt>
+File: figures/Cum-action-MAB2.pdf Graphic file (type pdf)
+<use figures/Cum-action-MAB2.pdf>
+Package pdftex.def Info: figures/Cum-action-MAB2.pdf  used on input line 1769.
+(pdftex.def)             Requested size: 180.0pt x 85.77419pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1786.
+
+<figures/Error-MAB2.pdf, id=760, 433.62pt x 289.08pt>
+File: figures/Error-MAB2.pdf Graphic file (type pdf)
+<use figures/Error-MAB2.pdf>
+Package pdftex.def Info: figures/Error-MAB2.pdf  used on input line 1790.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/predictions-MAB2.pdf, id=761, 433.62pt x 289.08pt>
+File: figures/predictions-MAB2.pdf Graphic file (type pdf)
+<use figures/predictions-MAB2.pdf>
+Package pdftex.def Info: figures/predictions-MAB2.pdf  used on input line 1796.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1820.
+
+<figures/Actions-MAB3.pdf, id=765, 433.62pt x 289.08pt>
+File: figures/Actions-MAB3.pdf Graphic file (type pdf)
+<use figures/Actions-MAB3.pdf>
+Package pdftex.def Info: figures/Actions-MAB3.pdf  used on input line 1824.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/Cum-action-MAB3.pdf, id=766, 433.62pt x 289.08pt>
+File: figures/Cum-action-MAB3.pdf Graphic file (type pdf)
+<use figures/Cum-action-MAB3.pdf>
+Package pdftex.def Info: figures/Cum-action-MAB3.pdf  used on input line 1830.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+[28 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/performanceMBA2 edited.pdf>] [29 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Actions-MAB2.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB2.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Error-MAB2.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Error-MAB2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/predictions-MAB2.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/predictions-MAB2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [30 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Actions-MAB3.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB3.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1896.
+
+<figures/Actions-MAB4.pdf, id=1019, 433.62pt x 289.08pt>
+File: figures/Actions-MAB4.pdf Graphic file (type pdf)
+<use figures/Actions-MAB4.pdf>
+Package pdftex.def Info: figures/Actions-MAB4.pdf  used on input line 1900.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+<figures/Cum-action-MAB4.pdf, id=1020, 433.62pt x 289.08pt>
+File: figures/Cum-action-MAB4.pdf Graphic file (type pdf)
+<use figures/Cum-action-MAB4.pdf>
+Package pdftex.def Info: figures/Cum-action-MAB4.pdf  used on input line 1906.
+(pdftex.def)             Requested size: 180.0pt x 120.00124pt.
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 1928.
+
+
+Underfull \vbox (badness 2126) has occurred while \output is active []
+
+ [31 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Actions-MAB4.pdf> <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB4.pdf
+
+pdfTeX warning: pdflatex (file c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Cum-action-MAB4.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/Auxiliary Parameters.pdf, id=1100, 291.96577pt x 158.4349pt>
+File: figures/Auxiliary Parameters.pdf Graphic file (type pdf)
+<use figures/Auxiliary Parameters.pdf>
+Package pdftex.def Info: figures/Auxiliary Parameters.pdf  used on input line 1974.
+(pdftex.def)             Requested size: 291.96506pt x 158.43451pt.
+ [32] [33 <c:/Users/eduar/Desktop/MSc Physics ETH/Master Thesis/Designing-Experiments-With-Neural-Networks/Report/figures/Auxiliary Parameters.pdf>]
 Appendix A.
 
 Package blindtext Warning: USenglish not defined, using English instead.
-(blindtext)                 on input line 1586.
+(blindtext)                 on input line 2078.
 
-[23
-
-
-] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl" [24
+[34
 
 
-]) [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1665.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1665.
+] ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.bbl" [35
+
+
+]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2157.
  ("c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1665.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1665.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2157.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2157.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B0D7D07B9DB5CE37C7F8F40B265720DA;1200.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1665.
+(rerunfilecheck)             Checksum: B00A10DDF5953201F043B62DB9B868DE;1112.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2157.
  ) 
 Here is how much of TeX's memory you used:
- 23846 strings out of 480934
- 447187 string characters out of 2899917
- 687425 words of memory out of 3000000
- 39000 multiletter control sequences out of 15000+200000
+ 24023 strings out of 480934
+ 451635 string characters out of 2899917
+ 690117 words of memory out of 3000000
+ 39123 multiletter control sequences out of 15000+200000
  587466 words of font info for 155 fonts, out of 3000000 for 9000
  1164 hyphenation exceptions out of 8191
- 60i,12n,60p,1288b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,12n,60p,1288b,579s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
- <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (33 pages, 923729 bytes).
+ <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathb10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\mathx10.pk>{C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi657\matha10.pk> <C:\Users\eduar\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/mathabx/dpi600\matha8.pk><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/eduar/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "c:\Users\eduar\Desktop\MSc Physics ETH\Master Thesis\Designing-Experiments-With-Neural-Networks\Report\main.pdf" (44 pages, 6802134 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 110 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1278 PDF objects out of 1440 (max. 8388607)
+ 146 named destinations out of 1000 (max. 500000)
+ 263 words of extra memory for PDF output out of 10000 (max. 10000000)
 
