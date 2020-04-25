@@ -805,169 +805,169 @@ thesis and pointing out to the repository, where to find the code, etc.}
 \vspace{12mm}
 
 
-\chapter{Minimal model for science} \label{science}
+% \chapter{Minimal model for science} \label{science}
 
-\section{Introduction} \label{sec:intro_science}
-In this section, we introduce a minimal set of definitions and assumptions to
-define a scientific method. In the goal of achieving an independent automated
-science protocol, we must ensure consistency in the underlying principles to
-avoid unwanted biases and preconceptions inherited from humans.
-\subsection{First assumption: Dynamicality}
-We start with a universe $U$. Since the goal is to create agents able to
-decipher the properties of the universe $U$, we must make the minimal number of
-assumptions that allow us to set a scientific method. First, we need the
-universe to be dynamical. If the universe is static, nothing changes and no
-science is possible. This will give use the first assumption:
+% \section{Introduction} \label{sec:intro_science}
+% In this section, we introduce a minimal set of definitions and assumptions to
+% define a scientific method. In the goal of achieving an independent automated
+% science protocol, we must ensure consistency in the underlying principles to
+% avoid unwanted biases and preconceptions inherited from humans.
+% \subsection{First assumption: Dynamicality}
+% We start with a universe $U$. Since the goal is to create agents able to
+% decipher the properties of the universe $U$, we must make the minimal number of
+% assumptions that allow us to set a scientific method. First, we need the
+% universe to be dynamical. If the universe is static, nothing changes and no
+% science is possible. This will give use the first assumption:
 
-\begin{itemize}
-  \item[\textbf{A1 (Dynamicality)}:] There exists a dynamical universe $U$.
-\end{itemize}
+% \begin{itemize}
+%   \item[\textbf{A1 (Dynamicality)}:] There exists a dynamical universe $U$.
+% \end{itemize}
 
-We can represent the dynamical nature of the universe by parametrizing it with a
-real parameter $\tau \in (-\infty,\infty)$, so that the state of the universe is
-a function of $\tau$. Note that we are not assuming any property of the universe
-function $U(\tau)\rightarrow S$, where $S$ is the set of possible states of the
-universe. For example, it may look that by setting the parameter $\tau$
-unbounded we may be forcing the universe $U$ to have unbounded dynamics.
-However, we could have $U(\tau)$ so that:
-\begin{align*}
-  U(\tau \leq \tau_{\textnormal{initial}})&=s_\text{initial} \\
-  U(\tau \geq \tau_{\textnormal{terminal}})&=s_\text{terminal}
-\end{align*}
-where $s_\textnormal{initial}, s_\textnormal{terminal} \in S $ are the initial
-and terminal states of the universe $U$. We aren't making any assumptions about
-the dynamical bounds on $U$. Also, we aren't making any assumptions on any other
-properties of $U(\tau)$ or even on what the elements of $S$ are. We aren't also
-making any assumption on the continuity of the dynamics, since we could have:
-$$U(\tau_{i} >\tau \geq \tau_{i+1})=s_{\tau_i},\;\;\forall i \in \mathbb{N}$$
-where $\{\tau_i\}_{i=0}^\infty$ is an arbitrary monotonically increasing
-sequence of real numbers. We aren't assuming as well anything about the
-deterministic nature of $U$, since $U(\tau)$ could be a probabilistic function.
-The only assumption made by the statement \textbf{A1} is that the universe
-evolves according some rule $U(\tau)$.
+% We can represent the dynamical nature of the universe by parametrizing it with a
+% real parameter $\tau \in (-\infty,\infty)$, so that the state of the universe is
+% a function of $\tau$. Note that we are not assuming any property of the universe
+% function $U(\tau)\rightarrow S$, where $S$ is the set of possible states of the
+% universe. For example, it may look that by setting the parameter $\tau$
+% unbounded we may be forcing the universe $U$ to have unbounded dynamics.
+% However, we could have $U(\tau)$ so that:
+% \begin{align*}
+%   U(\tau \leq \tau_{\textnormal{initial}})&=s_\text{initial} \\
+%   U(\tau \geq \tau_{\textnormal{terminal}})&=s_\text{terminal}
+% \end{align*}
+% where $s_\textnormal{initial}, s_\textnormal{terminal} \in S $ are the initial
+% and terminal states of the universe $U$. We aren't making any assumptions about
+% the dynamical bounds on $U$. Also, we aren't making any assumptions on any other
+% properties of $U(\tau)$ or even on what the elements of $S$ are. We aren't also
+% making any assumption on the continuity of the dynamics, since we could have:
+% $$U(\tau_{i} >\tau \geq \tau_{i+1})=s_{\tau_i},\;\;\forall i \in \mathbb{N}$$
+% where $\{\tau_i\}_{i=0}^\infty$ is an arbitrary monotonically increasing
+% sequence of real numbers. We aren't assuming as well anything about the
+% deterministic nature of $U$, since $U(\tau)$ could be a probabilistic function.
+% The only assumption made by the statement \textbf{A1} is that the universe
+% evolves according some rule $U(\tau)$.
 
-Note that the parameter $\tau$ doesn't necessarily represent the time as
-perceived by humans. It's just a parameter defined to convey the dynamical
-nature of the universe.
+% Note that the parameter $\tau$ doesn't necessarily represent the time as
+% perceived by humans. It's just a parameter defined to convey the dynamical
+% nature of the universe.
 
-\begin{myex}
-  \label{example1}
-In this example we are going to define a universe that satisfies \textbf{A1}.
-The universe $U$ consists of $n^2$ elements $\{a_{jk}\}_{j,k=0}^{n-1}$. Each
-element can exist in one of two substates: \{1, 0\}. The set of states $S$ is
-then $\{0,1\}^{n^2}.$ Now we need to equip the universe with a dynamical law
-$U(\tau)$. Assuming a discrete evolution, it could be, for example, the laws of
-a deterministic cellular automata. Or a probabilistic law so that each element
-changes its state with a certain probability in each dynamical step. It could be
-any rule that associates a state of $S$ with each discrete value $\tau_i$.
-However, we could also have continuous dynamics. For instance, we can set:
+% \begin{myex}
+%   \label{example1}
+% In this example we are going to define a universe that satisfies \textbf{A1}.
+% The universe $U$ consists of $n^2$ elements $\{a_{jk}\}_{j,k=0}^{n-1}$. Each
+% element can exist in one of two substates: \{1, 0\}. The set of states $S$ is
+% then $\{0,1\}^{n^2}.$ Now we need to equip the universe with a dynamical law
+% $U(\tau)$. Assuming a discrete evolution, it could be, for example, the laws of
+% a deterministic cellular automata. Or a probabilistic law so that each element
+% changes its state with a certain probability in each dynamical step. It could be
+% any rule that associates a state of $S$ with each discrete value $\tau_i$.
+% However, we could also have continuous dynamics. For instance, we can set:
 
-\begin{equation}
-  P(a_{jk}=1,\tau)=e^{-\tau^2} ,\;\;\forall j,k 
-  \label{DynamicalLaw1}
-\end{equation}
+% \begin{equation}
+%   P(a_{jk}=1,\tau)=e^{-\tau^2} ,\;\;\forall j,k 
+%   \label{DynamicalLaw1}
+% \end{equation}
 
-where $P(a_{jk}=1, \tau)$ is the probability of the element $a_{jk}$ being in
-the state $1$ at the \textit{time} \footnote{For communicative convenience we
-use the word time to design the value of $\tau$. However, it doesn't mean that
-$\tau$ represents the time as perceived by humans.} $\tau$. With this dynamical
-law, the evolution of the universe is unbounded, although it has terminal and
-initial states: all elements in the substate 0. One may ask what it means that
-the universe is described by a probability function like \eqref{DynamicalLaw1}.
-It means that at a given value of $\tau$ the state of the universe is choosen
-randomly according to \eqref{DynamicalLaw1}.
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=100mm,scale=0.5]{figures/UniverseA1.pdf}
-   \caption{Graphical representation of the dynamical change of a universe with
-   $n=8$.}
-\end{figure} 
-\end{myex}
+% where $P(a_{jk}=1, \tau)$ is the probability of the element $a_{jk}$ being in
+% the state $1$ at the \textit{time} \footnote{For communicative convenience we
+% use the word time to design the value of $\tau$. However, it doesn't mean that
+% $\tau$ represents the time as perceived by humans.} $\tau$. With this dynamical
+% law, the evolution of the universe is unbounded, although it has terminal and
+% initial states: all elements in the substate 0. One may ask what it means that
+% the universe is described by a probability function like \eqref{DynamicalLaw1}.
+% It means that at a given value of $\tau$ the state of the universe is choosen
+% randomly according to \eqref{DynamicalLaw1}.
+% \begin{figure}[t]
+%   \centering
+%   \includegraphics[width=100mm,scale=0.5]{figures/UniverseA1.pdf}
+%    \caption{Graphical representation of the dynamical change of a universe with
+%    $n=8$.}
+% \end{figure} 
+% \end{myex}
 
-From the assumption \textbf{A1} we can deduce some consequences.
-\begin{myclaim}
-Any universe that satisfies \textbf{A1} has at least one element that can exist
-in more than one substate.
-\end{myclaim}
+% From the assumption \textbf{A1} we can deduce some consequences.
+% \begin{myclaim}
+% Any universe that satisfies \textbf{A1} has at least one element that can exist
+% in more than one substate.
+% \end{myclaim}
 
-The f of this claim is obvious: an empty set cannot change. A set in which
-all elements can exists in only one substate also cannot change. Therefore, the
-simplest universe in which \textbf{A1} holds is a universe with only one element
-that can exists in two substates, this is, a bit that changes its value
-according to a dynamical law.
+% The f of this claim is obvious: an empty set cannot change. A set in which
+% all elements can exists in only one substate also cannot change. Therefore, the
+% simplest universe in which \textbf{A1} holds is a universe with only one element
+% that can exists in two substates, this is, a bit that changes its value
+% according to a dynamical law.
 
-\subsection{The scientific method}
+% \subsection{The scientific method}
 
-Now we need to define what is science in this minimal context. First, let's
-define what an agent is.
+% Now we need to define what is science in this minimal context. First, let's
+% define what an agent is.
 
-\begin{mydef}
-  An agent $A$ is defined as a subset of the universe $U$. $A(\tau)$ is the
-  composition of $A$ at the dynamical value $\tau$. The dynamical evolution of
-  $A$ is determined by the dynamical evolution of $U$.
-\end{mydef}
+% \begin{mydef}
+%   An agent $A$ is defined as a subset of the universe $U$. $A(\tau)$ is the
+%   composition of $A$ at the dynamical value $\tau$. The dynamical evolution of
+%   $A$ is determined by the dynamical evolution of $U$.
+% \end{mydef}
 
-This is a very broad definition of an agent, since we define them just as
-subsets of the universe, so anything can be an agent. We can safely make this
-assumption since humans and computers are subsets of the universe. The
-definition implies that agents obey the same physical laws than the universe.
-Some philosophers would call this implication a materialistic assumption.
+% This is a very broad definition of an agent, since we define them just as
+% subsets of the universe, so anything can be an agent. We can safely make this
+% assumption since humans and computers are subsets of the universe. The
+% definition implies that agents obey the same physical laws than the universe.
+% Some philosophers would call this implication a materialistic assumption.
 
-\par
+% \par
 
-Another definition required for science is the definition of measurement or
-observation. This definition is particularly delicate in the context of quantum
-theory, so we have to be very careful in its definition. 
+% Another definition required for science is the definition of measurement or
+% observation. This definition is particularly delicate in the context of quantum
+% theory, so we have to be very careful in its definition. 
 
-\begin{mydef}
-  An observation $\hat{O}_A$ is defined as the dynamical process in which the
-  state of any subset of an agent $A$ gets correlated to the state of another
-  subset of $U$, the object $O$, that may or not be disjoint to $A$.  
-\end{mydef}
+% \begin{mydef}
+%   An observation $\hat{O}_A$ is defined as the dynamical process in which the
+%   state of any subset of an agent $A$ gets correlated to the state of another
+%   subset of $U$, the object $O$, that may or not be disjoint to $A$.  
+% \end{mydef}
 
-This definition is also very broad, so let's explain it. When we talk about
-observations in the context of humans, we usually understand them as information
-from an object acquired by our sensorial system, for example by observing with
-our visual system a bunch of photons emitted from a source of light. However,
-these terms mean nothing in our minimal model so we need to be more specific.
-When we see an object, the process, as far as we know, happens because a photon
-coming from the object hits some receptors in our retina producing a chain
-reaction that triggers an specific state in some part of the brain. In other
-words, an specific part of us (the agent $A$) gets correlated to the state of
-the object (a subset of $O$ the universe) as a result of the dynamical evolution
-of the universe. The dynamical process that gets both states correlated is an
-observation.
+% This definition is also very broad, so let's explain it. When we talk about
+% observations in the context of humans, we usually understand them as information
+% from an object acquired by our sensorial system, for example by observing with
+% our visual system a bunch of photons emitted from a source of light. However,
+% these terms mean nothing in our minimal model so we need to be more specific.
+% When we see an object, the process, as far as we know, happens because a photon
+% coming from the object hits some receptors in our retina producing a chain
+% reaction that triggers an specific state in some part of the brain. In other
+% words, an specific part of us (the agent $A$) gets correlated to the state of
+% the object (a subset of $O$ the universe) as a result of the dynamical evolution
+% of the universe. The dynamical process that gets both states correlated is an
+% observation.
 
-\begin{myex}
-  In this example we are going to see how an observation translate to our simple
-  model of universe. With the same universe than in \ref{example1}, we can
-  define a new dynamical law that consists on a 1 doing a random walk in a
-  bidimensional grid of zeros. Each time an element $a_{jk}$ switches to 1, it
-  gets correlated to the rest of the elements of the universe since all of them
-  must be zero. In this case, the agent $A$ is the subset of $U$ containing only
-  $a_{jk}$ while the object $O$ can be any subset of $U$. We say then that $A$
-  has made an observation $\hat{O}_{A}$.
-\end{myex}
+% \begin{myex}
+%   In this example we are going to see how an observation translate to our simple
+%   model of universe. With the same universe than in \ref{example1}, we can
+%   define a new dynamical law that consists on a 1 doing a random walk in a
+%   bidimensional grid of zeros. Each time an element $a_{jk}$ switches to 1, it
+%   gets correlated to the rest of the elements of the universe since all of them
+%   must be zero. In this case, the agent $A$ is the subset of $U$ containing only
+%   $a_{jk}$ while the object $O$ can be any subset of $U$. We say then that $A$
+%   has made an observation $\hat{O}_{A}$.
+% \end{myex}
 
-We need one more definition to define the scientific method. Science is about
-making predictions about the physical world, so we need to define what a
-prediction is in our minimal context.
+% We need one more definition to define the scientific method. Science is about
+% making predictions about the physical world, so we need to define what a
+% prediction is in our minimal context.
 
 
 
-\begin{mydef}
-  A prediction is... \textit{(I haven't come yet with a successful definition
-  for a prediction. I'm trying to formulate it with different agents trying
-  to communicate correlations about the "future" of some subsystem of U)}
-\end{mydef}
+% \begin{mydef}
+%   A prediction is... \textit{(I haven't come yet with a successful definition
+%   for a prediction. I'm trying to formulate it with different agents trying
+%   to communicate correlations about the "future" of some subsystem of U)}
+% \end{mydef}
 
-\subsection{Second assumption: Emergency}
-\textit{I want to have a formal definition of predictions and the scientific
-method before writing this subsection. But it's just a corollary of the
-anthropic principle: if we are able to do science, then the dynamical law of the
-universe must allow for scientific agents to be generated. For example, a simple
-cellular automaton that converges to a stable state wouldn't fulfill this
-assumption.}
+% \subsection{Second assumption: Emergency}
+% \textit{I want to have a formal definition of predictions and the scientific
+% method before writing this subsection. But it's just a corollary of the
+% anthropic principle: if we are able to do science, then the dynamical law of the
+% universe must allow for scientific agents to be generated. For example, a simple
+% cellular automaton that converges to a stable state wouldn't fulfill this
+% assumption.}
 
 \chapter{Machine Learning theory} 
 
@@ -1624,7 +1624,7 @@ Now let us explore different versions of this modified multi-armed bandit.
   function of only the value of the target arm. For instance, $f(v_t)=v_t^2$.
   Then the Analyzer is fed the outcome $O(a,s)=v_a$ to try to predict $f(v_t)$.
   It produces a prediction $A(v_a)=p$ that is used to generate a reward
-  $r(p,v_t)$ according to \eqref{gaussian_reward}. Then the Analyzer and the
+  $r(p,f(v_t))$ according to \eqref{gaussian_reward}. Then the Analyzer and the
   Experimenters are trained with their respective algorithms.
 
   \par It is clear that the Analyzer would be able to make a prediction of
@@ -2108,7 +2108,7 @@ parameters for a prediction. We will call this experiments \textit{sequential},
 since a number of actions need to be taken sequentially.
 Let us illustrate the concept with an example of a sequential experiment:
 
-\begin{myex}
+\begin{myex} \label{scalex}
   
   Imagine an experiment that has the objective of determining the mass $M$ of an
   object with the following tools:
@@ -2155,21 +2155,187 @@ problem and therefore is sequential.
 
 \section{E-A for sequential experiments}
 
+\begin{figure}[t]
+  \includegraphics[width=\columnwidth]{figures/sequential-EA.pdf}
+  \caption{Diagram of the learning loop for a E-A architecture for a 
+  sequential experiment with $D$ steps. The structure is the same as for 
+  the simple case but concatenating $D$ Experimenters instead of a single one.}
+  \label{fig:SequentialEA}
+\end{figure}
+
 In this section we are going to explain how to use the E-A architecture to
 tackle sequential experiments. The basic idea behind this approach is to
 concatenate as many Experimenters as sequential actions we need to take and each
 Experimenter is fed with the information gathered by the actions and outcomes
 gathered by the preceding Experimenters. 
 
-Supposing we have a sequential experiment that needs from $n$ sequential
-actions. Then we would have $n$ different Experimenters
-$E_n:\mathcal{X}_n\rightarrow \mathcal{A}_n$ with
-$\mathcal{X}_0\equiv\emptyset$. Each $\mathcal{A}_n$ could be different
-depending on the nature of the experiment, since the Experimenters $E_n$ could
-be different reinforcement learning agents with different architectures. The
-Experimenters' environments< $\mathcal{X}_n$ can contain all the information
-stored in the buffer at the moment they are fed to $E_n$ or just the
-information that the designer of the model considers opportune.
+Suppose we have a sequential experiment that needs from $D$ sequential actions.
+Then we would have $D$ different Experimenters $E_n:\mathcal{X}_n\rightarrow
+\mathcal{A}_n$ with $\mathcal{X}_0\equiv\emptyset$. Each $\mathcal{A}_n$ can be
+different depending on the nature of the experiment, since the Experimenters
+$E_n$ could be different reinforcement learning agents with different
+architectures. The Experimenters' environments $\mathcal{X}_n$ can consist of
+any information stored in the buffer at the moment they are fed to $E_n$.The SPE
+is in the state $s_n \in S$ when the action $a_n \in \mathcal{A}_n$ is taken and
+it produces the outcome $\textbf{O}_n(a_n, s_n) \in \mathbb{R}^{d_n}$ where
+$d_n$ is the number of parameters that are outputted after the action $a_n$.
+Then, as in the single Experimenter version, all the information in the buffer
+together with auxiliary parameters can be stored into $m\in\mathcal{M}$ to fed
+the Analyzer $A:\mathcal{M}\rightarrow \mathcal{P}$. Then the prediction is
+compared with the observed/simulated value of the property to be predicted
+with a reward generation function $r_n$. The reward could be different for each
+experimenter depending on the nature of the architecture. However, in this work
+only explored the architecture with a single reward generation function $r$ for
+all Experimenters.
+
+One of the main limitations of this approach is that we need to fix the number
+$D$ of actions beforehand. In some experiments this may not be relevant since
+the number $D$ is fixed by the experiment itself. However, in others this fact
+might be important. For example, in the context of the example \ref{scalex}, we
+may ignore what is the minimum number of actions needed to determine the mass
+with an uncertainty of less than 100 g. The agent will only search for the best
+strategy for the of actions $D$ given, which may not be optimal.
+
+
+\section{Example}
+
+In this section we are going to show an example of a sequential experiment
+in which the A-E architecture finds the optimal strategy.
+
+\subsection{The experiment}
+
+We have a box of mass $M$ on an infinite horizontal surface with friction
+coefficient $\mu$ respect to the mass $M$. The SPE is programmed so that a canon
+shoots a bullet of mass $m$ with velocity $v$ that collides inelastically with
+$M$ when an episode is started. The mass $M$ is the only parameter restarted
+each episode by sampling uniformly at random from the interval $[M_{min},
+M_{max}]$. We can calculate the distance traveled by the box using the
+conservation of momentum. The moment of the bullet is $p_b=mv$. Applying the
+conservation of momentum we can obtain the velocity of the box after the impact:
+\begin{equation}
+  v_M = \frac{p_M}{M}=\frac{m}{M}v
+\end{equation}
+We know that the friction force is $F=\mu N=\mu mg$. When the box stops, due to
+the conservation of energy, the work realized by the friction force must be the
+kinetic energy $K$ of the mass $M+m$ of the box after the impact of the bullet.
+Since the friction force is assumed to be constant, the work done is $W=Fx=\mu
+mgx$, where $x$ is the distance traveled until it stops. Equating this term to
+the kinetic energy we obtain:
+\begin{equation}
+  \label{displacement} 
+  x=\frac{1}{2g\mu}\left(\frac{vm}{M+m} \right)^2
+\end{equation}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[scale=0.5]{figures/Experiment2.pdf}
+  \caption{Diagram explaining the physical environment. The canon shoots a 
+  bullet of mass $m$ with velocity $v$. When it collides inelastically with the 
+  box of mass $M$, the box displaces. Due to the friction force it stops in
+  one of the four zones $A, B, C$ or $D$.}
+  \label{fig:Box}
+\end{figure}
+
+We give the agent access to two sensors to measure the position of the box:
+\begin{itemize}
+\item \textbf{A low precision but wide range (LPWR) position  sensor}: it works
+as follow: the landing zone is divided into four regions or zones of equal size.
+This sensor outcomes the middle point of the zone in which the box has landed.
+For example, in the situation depicted in Fig. \ref{fig:Box} this sensor would
+produce the outcome: $3$, since it is the middle point of the zone $B$. This
+allows to know roughly where the box landed, but with low accuracy. 
+\item \textbf{A high precision but narrow range (HPNR) position sensor}: It
+works as follow: to activate it you need also to specify a region and if the box
+landed on the specified region the outcome of the sensor is the exact position
+of the box. Otherwise it outputs a constant negative value (set to $-1$)
+representing a failed measurement. For example, in the situation depicted in
+Fig. \ref{fig:Box} this sensor is placed in the zone $B$ it will output the
+value of $x$. If placed in any other zone it outputs $-1$.
+\end{itemize}
+
+The goal of the agent is to predict the position in which the box will
+land for a shooting with velocity $v_{test}$ and bullet mass $m$, but only with
+$\textbf{two uses of the sensors}$. The velocity $v_{test}$ is selected randomly
+each episode from a uniform distribution for the interval $(v-\frac{v}{2},
+v+\frac{v}{2})$. This velocity $v_{test}$ would be the auxiliary parameter fed
+to the Analyzer. 
+
+Using the same procedure that we did for the first shooting, we can find that
+the new displacement $d$ of the box after the shooting is:
+\begin{equation}
+  d=\frac{1}{2g\mu}\left(\frac{v_{test}m}{M+2m} \right)^2
+\end{equation}
+
+Since $d$ depends on the mass $M$, and $M$ can be inferred from the first
+displacement $x$ using \eqref{displacement}, the agent has enough information
+to predict the displacement of the test shooting if it detects correctly the 
+position $x$ of the box.
+
+This experiment is sequential because to always obtain the exact position of the
+box, the agent needs to use sequentially the sensors in a specific way. This
+strategy consists on choosing in the first try the LPWR sensor, to detect in
+which zone the box landed, and in the second use of the sensors to choose the
+HPNR sensor and place it in the zone inferred from the first outcome.
+
+\subsection{Mathematical characterization of the experiment}
+
+Let us contextualize each element of the training using the mathematical
+formulation used in the text.
+
+\begin{itemize}
+  \item The state of the SPE is determined by the tuple $s=(M,v_{test})$.
+  \item The E-A agent has two experimenters: $E_1:\mathcal{X}_1
+  \rightarrow\mathcal{A}$ and $E_2:\mathcal{X}_2 \rightarrow\mathcal{A}$ where
+  $\mathcal{X}_1=\emptyset$ and $\mathcal{X}_2=\mathcal{A}\times \mathbb{R}$,
+  since we feed the second experimenter the action $a_1$ of $E_1$ and the
+  outcome $O(a_1)$ of its action.
+  \item The action space for both experimenters is $\mathcal{A}=\{0,1,2,3,4\}$, 
+  with the action $0$ representing the action of using the LPWR sensor, and
+  the actions $\{1,2,3,4\}$ represent the actions of using the HPNR and placing 
+  it in the zones $A, B, C$ and $D$ respectively.
+  \item The analyzer is $A:\mathcal{M}\rightarrow \mathbb{R}$, where each element
+  of $\mathcal{M}$ is a tuple \\
+  $\left(a_1,O(a_1,s),a_2,O(a_2),v_{test}\right)$.
+  \item The quantity to be predicted is
+  $f(s)=d=\frac{1}{2g\mu}\left(\frac{v_{test}m}{M+2m} \right)^2$
+  \item The reward function is 
+  $r(\Delta)=\exp\left(-\frac{1}{2}\left( \frac{\Delta}{\sigma} \right)
+  ^2\right)$, where $\Delta = \frac{f(s)-p}{p}$ and $p$ is the output of the
+  analyzer.
+  \item The loss function for the Analyzer is $L(f(s),p)=(f(s)-p)^2$
+\end{itemize}
+
+\subsection{Technical details of the agents}
+\subsubsection{Experimenter 1}
+$E_1$ is the same kind of experimenter that we used in the previous examples
+(\ref{Non-stationary multiarmed-bandit}), since for $E_1$ everything looks like
+a multi-armed bandit. The agent was subjected to an $\epsilon$-greedy 
+exploration phase with linear decrease of the exploration rate.
+\subsubsection{Experimenter 2}
+For the Experimenter 2 now we have inputs, so the reinforcement learning
+algorithm of $E_1$ is not valid. Since some of the inputs are real numbers, we
+opted to use a standard Deep Q Network algorithm with online training (See
+Appendix [TODO]). We also tried a modified version of the Deep Q Network (DQN)
+algorithm equipped with a memory and two neural networks (see appendix) to
+improve the performance. We could have opted for a normal Q-learning algorithm
+as well, but would have required some amount of hardcoding, which is undesirable
+in our purpose of finding agents as independent as possible. 
+\\
+\noindent The structure of the neural network for this agent is a two hidden layers  
+(16x16) fully connected sigmoidal neurons for both versions. We ignore if this 
+is an appropriate structure since we haven't performed an optimization of the
+hyperparameters.
+
+\noindent The agent was subjected parelly to the same $\epsilon$-greedy
+exploration phase than $E_1$.
+
+\subsubsection{Analyzer}
+
+The Analyzer in this case is a sequential feedforward neural network with 
+3 hidden layers (20x10x2) fully connected ReLU neurons.
+
+\subsection{Results}
+
 
 
 %
