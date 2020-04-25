@@ -159,7 +159,8 @@
 
 \usepackage{listings}
 \usepackage{url}
-
+\usepackage{wrapfig}
+\usepackage{sidecap}
 \usepackage{algorithm}
 \usepackage[noend]{algpseudocode}
 
@@ -1097,7 +1098,7 @@ of buffer becomes highly useful from an illustrative point of view. Usually, the
 buffer is emptied at the end of each episode or iteration of the learning loop.
 We could not do so, but in practice, keeping the data in the buffer doesn't
 provide any easy advantage since to use it we should solve many challenges, for
-example an increase on the number of features feeded to the agents each episode.
+example an increase on the number of features fed to the agents each episode.
 We won't refer the buffer as \textit{memory} in this work, since the word
 \textit{memory} is reserved for an element of some versions of sub-agents that
 doesn't restart in each iteration. 
@@ -1931,7 +1932,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     precision of the predictions. This kind of agent would be very interesting
     in the context of minimal representation learning. The main challenge here
     is that changing the number of pulls changes also the number of features
-    feeded to the Analyzer. A possible solution would be to add a penalization
+    fed to the Analyzer. A possible solution would be to add a penalization
     to the reward proportional to the number of pulls performed per episode and
     solving the issue of the number of features by using placeholders to keep
     the neural network architecture working. However, the design of this
@@ -2033,7 +2034,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     bandit problem with $k=2000$, with an auxiliary parameter and a non-trivial
     function to predict. There is only a target lever $t$ that outputs the value
     $v_t$. Let $u$ be an auxiliary parameter sampled form a uniform distribution
-    and feeded to the Analyzer. The function asked to predict is: 
+    and fed to the Analyzer. The function asked to predict is: 
     \begin{equation}
       f(u,v_t)=\sqrt{uv_t\text{sin}(v_t)}
     \end{equation}
@@ -2069,30 +2070,108 @@ Now let us explore different versions of this modified multi-armed bandit.
 
 
 
+\chapter{E-A architecture for sequential experiments}
+
+In the previous section we showed how the simplest version of the
+E-A architecture can find the optimal strategy for experiments that can be
+expressed as a multi-armed bandit problem. This is: experiments with a discrete
+number of action that can be predetermined before the experiment is started.
+However, in general it is not possible to express every experiment as a 
+multi-armed bandit problem. For example, if the action space is continuous 
+(e.g. selecting the position of a detector) or if the experiment 
+requires from a dynamical intervention, for example, if in an experiment
+consisting of sequential actions, it's needed the result of 
+the preceding actions to take the correct choices. In this section we are going
+to show how one could tackle this kind of experiments using the E-A 
+architecture. 
+
+\section{Sequential experiments}
+
+So far, all the E-A models we have used consists of an Experimenter $E:\emptyset
+\rightarrow \mathcal{A}$ whose action $a$ over the environment in the state $s$
+produce some outcome $\textbf{O}(a,s)$, and then the outcome and maybe some
+additional information are fed to the Analyzer $A:\mathcal{M} \rightarrow
+\mathcal{P}$ to output a prediction about a physical property of the system.
+Then such property is observed (or in our case, simulated) and compared to the
+prediction to generate a reward and a loss, to train both $E$ and $A$. 
+
+This simple structure is enough for experiments in which we can group all
+actions and measurements to be taken in a single action at the beginning of the
+experiment. For example, if the experiment consists on measuring different
+parameters of an electric circuit to know the power consumed by a section of the
+circuit. We can group all those choices of measurements, e.g. measuring the
+intensity at node A and the voltage at node B, in a single action taken at the
+beginning of an episode. This is because the outcomes of the measurements don't
+condition each other. However, in other experiments the outcomes of previous
+actions may condition the actions to be taken in order to get the correct
+parameters for a prediction. We will call this experiments \textit{sequential}, 
+since a number of actions need to be taken sequentially.
+Let us illustrate the concept with an example of a sequential experiment:
+
+\begin{myex}
+  
+  Imagine an experiment that has the objective of determining the mass $M$ of an
+  object with the following tools:
+  
+  \begin{itemize}
+    \item A beam balance with two plates that leans to the side of the heavier
+    plate. 
+    \item A set of calibrated weights consisting of:
+    \begin{itemize}
+      \item A mass of 100 g
+      \item Two masses 200 g
+      \item A mass of 500 g
+      \item A mass of 1 Kg
+    \end{itemize}  
+  \end{itemize}
+
+If the mass $M$ to be weighted is less than $2$Kg we can find value of the mass
+$M$, with a uncertainty of 100 g, in only five uses of the scale. For example,
+if the mass is 1.3 Kg a procedure would be the following:
+\\\\
+\begin{minipage}[]{0.5\linewidth}
+  \centering
+  \strut\vspace*{-\baselineskip}\newline\includegraphics[width=0.8\linewidth]{figures/scale.pdf}
+\end{minipage}
+\begin{minipage}[]{0.4\linewidth}
+  \begin{enumerate}
+  \item M vs 2 Kg $\rightarrow$ right
+  \item M vs 1 Kg $\rightarrow$ left
+  \item  M vs 1.5Kg $\rightarrow$ right
+  \item  M vs 1.2 Kg $\rightarrow$ left
+  \item  M vs 1.4 kg $\rightarrow$ right
+  \item  We know that the mass is: $1.3$ Kg $\pm 100$ g
+\end{enumerate}
+\end{minipage}
+\\\\
+
+However, in order to find the value of $M$ in five uses of the scale or less we
+can't have a prefixed strategy at the start of the experiment. We need to
+observe the outcomes of each measurement individually and respond accordingly.
+We can not express then this experiment as a multi-armed bandit decision
+problem and therefore is sequential.
+
+\end{myex}
+
+\section{E-A for sequential experiments}
+
+In this section we are going to explain how to use the E-A architecture to
+tackle sequential experiments. The basic idea behind this approach is to
+concatenate as many Experimenters as sequential actions we need to take and each
+Experimenter is fed with the information gathered by the actions and outcomes
+gathered by the preceding Experimenters. 
+
+Supposing we have a sequential experiment that needs from $n$ sequential
+actions. Then we would have $n$ different Experimenters
+$E_n:\mathcal{X}_n\rightarrow \mathcal{A}_n$ with
+$\mathcal{X}_0\equiv\emptyset$. Each $\mathcal{A}_n$ could be different
+depending on the nature of the experiment, since the Experimenters $E_n$ could
+be different reinforcement learning agents with different architectures. The
+Experimenters' environments< $\mathcal{X}_n$ can contain all the information
+stored in the buffer at the moment they are fed to $E_n$ or just the
+information that the designer of the model considers opportune.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-% \section{Scenario 3: Shooting with two position sensors}
-
-% So far we have used always the same architecture with a Q-table that chooses
-% a predefined experimenter to optimize the reward obtained by the Analyzers 
-% prediction. However, it may be the case in which we have experiments with 
-% several measurements or actions that depends on the outcomes of the previous
-% observations.
-
-\clearpage
-%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2100,7 +2179,6 @@ Now let us explore different versions of this modified multi-armed bandit.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-
 
 
 
