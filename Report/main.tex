@@ -372,7 +372,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% FRENCH SPACING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Doesn't put any additional space after interpunction-characters
+%% does not put any additional space after interpunction-characters
 %% like : , . 
 %\frenchspacing
 %
@@ -734,7 +734,7 @@ Some areas of science are starting to suffer from a reproducibility crisis
 \cite{Saltelli, begley2012raise} in which scientists are generally unable to
 reproduce their peers' findings. Some voices in the physics community
 \cite{Sabine} point out that foundational physics has been stagnated during the
-last decades. However, some authors defend that there isn't such a crisis
+last decades. However, some authors defend that there is not such a crisis
 \cite{Fanelli2628}. Nonetheless, it is clear that to sustain an exponential
 growth of reliable scientific production with no exponentially increasing human
 effort is impossible, and the crisis is thus, unavoidable.
@@ -805,7 +805,7 @@ thesis and pointing out to the repository, where to find the code, etc.}
 \vspace{12mm}
 
 
-% \chapter{Minimal model for science} \label{science}
+\chapter{Minimal model for science} \label{science}
 
 % \section{Introduction} \label{sec:intro_science}
 % In this section, we introduce a minimal set of definitions and assumptions to
@@ -835,18 +835,18 @@ thesis and pointing out to the repository, where to find the code, etc.}
 %   U(\tau \geq \tau_{\textnormal{terminal}})&=s_\text{terminal}
 % \end{align*}
 % where $s_\textnormal{initial}, s_\textnormal{terminal} \in S $ are the initial
-% and terminal states of the universe $U$. We aren't making any assumptions about
-% the dynamical bounds on $U$. Also, we aren't making any assumptions on any other
-% properties of $U(\tau)$ or even on what the elements of $S$ are. We aren't also
+% and terminal states of the universe $U$. We are not making any assumptions about
+% the dynamical bounds on $U$. Also, we are not making any assumptions on any other
+% properties of $U(\tau)$ or even on what the elements of $S$ are. We are not also
 % making any assumption on the continuity of the dynamics, since we could have:
 % $$U(\tau_{i} >\tau \geq \tau_{i+1})=s_{\tau_i},\;\;\forall i \in \mathbb{N}$$
 % where $\{\tau_i\}_{i=0}^\infty$ is an arbitrary monotonically increasing
-% sequence of real numbers. We aren't assuming as well anything about the
+% sequence of real numbers. We are not assuming as well anything about the
 % deterministic nature of $U$, since $U(\tau)$ could be a probabilistic function.
 % The only assumption made by the statement \textbf{A1} is that the universe
 % evolves according some rule $U(\tau)$.
 
-% Note that the parameter $\tau$ doesn't necessarily represent the time as
+% Note that the parameter $\tau$ does not necessarily represent the time as
 % perceived by humans. It's just a parameter defined to convey the dynamical
 % nature of the universe.
 
@@ -869,7 +869,7 @@ thesis and pointing out to the repository, where to find the code, etc.}
 
 % where $P(a_{jk}=1, \tau)$ is the probability of the element $a_{jk}$ being in
 % the state $1$ at the \textit{time} \footnote{For communicative convenience we
-% use the word time to design the value of $\tau$. However, it doesn't mean that
+% use the word time to design the value of $\tau$. However, it does not mean that
 % $\tau$ represents the time as perceived by humans.} $\tau$. With this dynamical
 % law, the evolution of the universe is unbounded, although it has terminal and
 % initial states: all elements in the substate 0. One may ask what it means that
@@ -973,7 +973,7 @@ thesis and pointing out to the repository, where to find the code, etc.}
 
 TO BE WRITTEN.
 
-\chapter{Experimenter-Analyzer model} \label{EAmodel}
+\chapter{Experimenter-analyzer model} \label{EAmodel}
 
 In this section, we are going to present our proposal for a basic model for a
 machine learning set-up that designs an experiment applying the scientific
@@ -999,15 +999,15 @@ composed by two different kinds of sub-agents that complement each other:
   what actions to take they can consider previous observations and other kind of 
   information.
   \item \textbf{Analyzers}: this kind of sub-agents are learning agents
-  that take the information gathered by the Experimenters to make predictions
+  that take the information gathered by the experimenters to make predictions
   about the environment. Then, based on the accuracy of those predictions
   compared to the real values \footnote{One may ask how these real values are
   obtained. Those values could be obtained by measurements made by other
-  Experimenters that form part of the learning agent. However, for simplicity in
+  experimenters that form part of the learning agent. However, for simplicity in
   the work presented here we assume that the real values needed to check the
   validity of the prediction are always accessible with unlimited accuracy to
   the agent. In the context of this modular framework we could assume that we
-  have an Experimenter that its only possible action is to measure the real
+  have an experimenter that its only possible action is to measure the real
   value of the target property.} of the environment a reward is generated to
   train all the sub-agents. 
 
@@ -1018,11 +1018,11 @@ composed by two different kinds of sub-agents that complement each other:
   \centering
   \includegraphics{figures/SimpleSetUp.pdf}
   \caption{Diagram of the simplest combination of elements. The feedback loop
-  consists on the following: 1. The Experimenter takes an action. 2. The
+  consists on the following: 1. The experimenter takes an action. 2. The
   environment gives back an outcome resulting from the action. 3. The action is
   taken by the analyzer and used to make a prediction. 4. The prediction about
   the environment and the real value of the environment are compared to generate
-  the loss and the reward to train the Analyzer and the Experimenter.}
+  the loss and the reward to train the analyzer and the experimenter.}
   \label{fig:simplesetup}
 \end{figure}
 
@@ -1034,55 +1034,55 @@ goal is to find the oscillation period on Earth's surface. We know the period is
 a function only of the length $L$ and the value of the Earth's gravity (which we
 assume to be constant): $T \approx 2\pi\sqrt{\frac{L}{g}}$, so the value of the
 mass $M$ is irrelevant for the purpose, but in principle this is unknown to the
-agent. In this set-up we give the Experimenter two possible actions to take (but
+agent. In this set-up we give the experimenter two possible actions to take (but
 only one try): either measuring the mass $M$ (eg. by using a calibrated spring)
 or measuring the length $L$ of the string (e.g by using a calibrated ruler).
-When the Experimenter takes an action over the Environment, it produces an
+When the experimenter takes an action over the Environment, it produces an
 outcome (either the mass $M$ or the length $L$). This outcome is passed to the
-Analyzer which tries to make a guess of the period based on the value of the
-outcome of Experimenter's action. Then the real period of the pendulum is
-observed and compared to the value predicted by the Analyzer. Depending on the
+analyzer which tries to make a guess of the period based on the value of the
+outcome of experimenter's action. Then the real period of the pendulum is
+observed and compared to the value predicted by the analyzer. Depending on the
 result of the comparison a loss and a reward are generated to train the
-Experimenter and the Analyzer. In general: the closer the value of the
+experimenter and the analyzer. In general: the closer the value of the
 prediction to the actual value the smaller the loss and the higher the reward.
 After the iteration is completed, a new pendulum with new values of $M$ and $L$
 (ideally generated uniformly at random under the i.i.d. assumption) is generated
 and the process starts again.
 
 The goal in the set-up depicted in Fig. \ref{fig:simplesetup} is to form a
-feedback loop between the Experimenter and the Analyzer from the, at first
+feedback loop between the experimenter and the analyzer from the, at first
 unknown, correlations between the outcomes and the values to be predicted. The
-better the Experimenter gets, the better the data available for the Analyzer to
-make better predictions that will generate better rewards for the Experimenter.
+better the experimenter gets, the better the data available for the analyzer to
+make better predictions that will generate better rewards for the experimenter.
 Hopefully, this feedback loop will converge to an optimal experiment strategy
 and an optimal model for the predictions. At the beginning both sub-agents will
 start by giving random outputs since they are not trained. This is what we call
 the \textit{exploration phase} and it is of fundamental importance for the
 feedback loop to start. It can be artificially enforced, for example with
 $\epsilon$-greedy algorithms that we will discuss later in this work. If there
-exists any correlation between the choices of the Experimenter and the target
-value to be predicted, the Analyzer's training algorithm (usually Stochastic
+exists any correlation between the choices of the experimenter and the target
+value to be predicted, the analyzer's training algorithm (usually Stochastic
 Gradient Descent) can exploit those correlations to start the descent to some
 local or global minimum. This working principle is somehow similar to the use of
 artificial neural networks for feature selection in classical machine learning
 theory.
 
-The alert reader may have noted that in \ref{fig:simplesetup} the Analyzer has
-no apparent way of telling which action the Experimenter took, since it only
-receives the outcome of the experiment. Therefore the Analyzer doesn't know if
+The alert reader may have noted that in \ref{fig:simplesetup} the analyzer has
+no apparent way of telling which action the experimenter took, since it only
+receives the outcome of the experiment. Therefore the analyzer does not know if
 what is receiving is the value of $M$ or $L$. Although it may appear counter
-intuitive, the Analyzer doesn't care in this particular set-up. The optimal
+intuitive, the analyzer does not care in this particular set-up. The optimal
 strategy is to treat everything as if it were $L$ since knowing the value of $M$
-doesn't provide any information about $T$. However, it may make sense for the
-Analyzer to know when $M$ is provided if the objective is to minimize the loss
-function (e.g. if the Analyzer knew that the value corresponds to $M$ the
+does not provide any information about $T$. However, it may make sense for the
+analyzer to know when $M$ is provided if the objective is to minimize the loss
+function (e.g. if the analyzer knew that the value corresponds to $M$ the
 optimal prediction would be the random guess that minimizes the loss). In
 practice, unless the distributions where $M$ and $L$ are generated from are the
-same, the Analyzer learns to differentiate them with high confidence just by
+same, the analyzer learns to differentiate them with high confidence just by
 value of the outcome. However, in other set-ups this may not be the case and the
-information about what actions were taken is useful for the Analyzer to make the
+information about what actions were taken is useful for the analyzer to make the
 predictions. In this case, we should also feed the actions as inputs to the
-Analyzer. As we will see, these Experiment-Analyzer loops can grow very quickly
+analyzer. As we will see, these Experiment-analyzer loops can grow very quickly
 in complexity when several sub-agents are involved. This is why we introduce the
 concept of \textit{buffer}.
 
@@ -1096,12 +1096,12 @@ when we have a few sub-agents with several outcomes it becomes very difficult to
 keep track of each connection and to represent them. In these cases, the concept
 of buffer becomes highly useful from an illustrative point of view. Usually, the
 buffer is emptied at the end of each episode or iteration of the learning loop.
-We could not do so, but in practice, keeping the data in the buffer doesn't
+We could not do so, but in practice, keeping the data in the buffer does not
 provide any easy advantage since to use it we should solve many challenges, for
 example an increase on the number of features fed to the agents each episode.
 We won't refer the buffer as \textit{memory} in this work, since the word
 \textit{memory} is reserved for an element of some versions of sub-agents that
-doesn't restart in each iteration. 
+does not restart in each iteration. 
 
 
 \begin{figure}
@@ -1111,7 +1111,7 @@ doesn't restart in each iteration.
   process is identical to the process depicted in Fig. \ref{fig:simplesetup}
   with the difference that the values of the action and the outcome are stored
   in the buffer, and then passed to the analyzer. In this case the information
-  about which action was taken is available to the Analyzer.} 
+  about which action was taken is available to the analyzer.} 
   \label{fig:simplesetupbuffer}
 \end{figure}
 
@@ -1145,7 +1145,7 @@ our model.
         sub-agent's environment\footnote{Not to be confused with the SPE.}.
         \item \textbf{Analyzer:} the goal of this part of the agent is to
         process the data collected in the observations after the action of the
-        Experimenter to predict a physical property of the SPE. This property
+        experimenter to predict a physical property of the SPE. This property
         could be a physical parameter of the system or a prediction of the
         dynamics of the environment. It will usally consist of a regular
         regression neural network or an autoencoder, depending on the specific
@@ -1157,7 +1157,7 @@ our model.
     \item \textbf{Orchestration:} when coding we will call Orchestration
     everything that connects the different parts to complete a feedback loop.
     For example, one of the tasks of the Orchestration is to transform the state
-    of the SPE into the measurements received by the Analyzer. The Orchestration
+    of the SPE into the measurements received by the analyzer. The Orchestration
     is needed when we simulate fictitious physical situations in a computer to
     test our models. It represents somehow something analogous to the sensors
     and wires that connect the external environment to the processor of an
@@ -1173,13 +1173,13 @@ is then:
  \begin{equation}
   S\equiv \{(m,l):m \in \left[0.1, 1\right],l \in [0.1,1]\}
  \end{equation}
-Now, let us define an Experimenter. In this case, the Experimenter's environment
+Now, let us define an experimenter. In this case, the experimenter's environment
 space $\mathcal{X}$ is the empty set $\emptyset$, since there is no input. This
 means that the agent takes the action based solely on the rewards obtained. The
 action space $\mathcal{A}$ is just $\{0,1\}$, with 0 representing the action of
 measuring the mass and 1 the action of measuring the length.
 
-We can therefore set a very basic decision rule for our Experimenter agent:
+We can therefore set a very basic decision rule for our experimenter agent:
 
 \begin{itemize}
   \item Let $\textbf{Q}=(q_0,q_1)$ be the value table, where $q_0$ and $q_1$ are
@@ -1201,7 +1201,7 @@ We can therefore set a very basic decision rule for our Experimenter agent:
     a = \argmax_{x \in \mathcal{A}} Q(x)
     \label{argmax_policy}
   \end{equation}
-  This is, the Experimenter takes the action $a$ with the highest $q_a$, and 
+  This is, the experimenter takes the action $a$ with the highest $q_a$, and 
   $E$ is trained by updating $\textbf{Q}$ each episode.
 \end{itemize}
 
@@ -1217,7 +1217,7 @@ decision rule, and slowly, when the values $q_a$ are more reliable, let the
 agent choose according to \eqref{argmax_policy}. The easiest way to achieve that
 is with an $\epsilon$-greedy decision algorithm: we set an exploration rate
 $\epsilon$ that decreases in each episode until it reaches a minimum value
-$\epsilon_\text{min}\geq 0$. The Experimenter is set to take the
+$\epsilon_\text{min}\geq 0$. The experimenter is set to take the
 \eqref{argmax_policy} policy with probability of $P_{\text{greedy}}=1-\epsilon$
 and a random action with a probability of $P_{\text{random}}=\epsilon$. We have
 the freedom to choose how to decrease the value of $\epsilon$, and it may have a
@@ -1230,14 +1230,14 @@ of the training. So in each episode:
 \end{align} 
 
 
-For the Analyzer, we set a trainable real function $A: S \rightarrow
+For the analyzer, we set a trainable real function $A: S \rightarrow
 \mathbb{R}$. We can use any trainable function, but to keep it simple let's use
 a regular feed-forward neural network with one hidden layer of two neurons,
 trained with the Stochastic Gradient Descent (SGD) algorithm and a the Mean
 Squared Error (MSE) loss.
 
 We need now to define how to calculate the reward.  In our case we want the
-reward function to be high when the Analyzer predicts a period $T_\text{pred}$
+reward function to be high when the analyzer predicts a period $T_\text{pred}$
 close to the real period of the pendulum and low when the period prediction is
 far. So, ideally we would like a function that:
 \begin{align}
@@ -1271,7 +1271,7 @@ pseudocode:
     \State $ \text{action} \gets \argmax Q $
     \State $ \text{measurement} \gets \text{pendulum[action]}$
     \State $ \text{prediction} \gets \text{analyzer(measurement)}$
-    \State $ \text{Apply SGD to Analyzer with data point } (\text{measurement},T)$
+    \State $ \text{Apply SGD to analyzer with data point } (\text{measurement},T)$
     \State $ \text{reward} \gets \text{reward}(\text{prediction}, T)$
     \State $ Q[\text{action}] \gets Q[\text{action}]+ \text{reward}$ 
     \State $ \text{count }\gets \text{count} + 1$
@@ -1281,9 +1281,9 @@ pseudocode:
 \end{myex}
 
 Let us see how this simple algorithm performs in the task. Ideally, the
-Experimenter would find the optimal policy which consists in choosing always to
-measure the length and the Analyzer would learn to estimate accurately $T$ from
-the data obtained by the Experimenter. In our experiments, with this simple
+experimenter would find the optimal policy which consists in choosing always to
+measure the length and the analyzer would learn to estimate accurately $T$ from
+the data obtained by the experimenter. In our experiments, with this simple
 structure of only two neurons and the very naive reinforcement learning policy
 the agent consistently finds the optimal action (to measure $L$). It also
 accurately predicts the value of $T$ in less than 10,000 episodes. With less
@@ -1308,17 +1308,17 @@ episodes it is less consistent in finding the optimal policy.
   \caption{(a) The moving average of the actions taken in each episode. We can
   see how it starts taking both actions evenly with an average of 0.5. This is
   expected since at the beginning $\epsilon \approx 1$. As $\epsilon$ decreases
-  the Experimenter starts to take more greedy actions and gets biased towards
+  the experimenter starts to take more greedy actions and gets biased towards
   the action 1 (measure $L$). This bias appears as a result of the existing
   correlation between $L$ and $T$, but not between $M$ and $T$. This correlation
-  is exploited by the SGD algorithm for the neural network of the Analyzer. (b)
+  is exploited by the SGD algorithm for the neural network of the analyzer. (b)
   The moving average of the reward obtained in each episode. At the beginning
   the reward obtained is low and similar to those obtained with random guesses.
-  However, it increases slowly, apparently because the Analyzer starts to
+  However, it increases slowly, apparently because the analyzer starts to
   exploit slightly the correlation between $L$ and $T$. This slight improvement
   over the prediction for the outcomes of Action 1, creates the bias that starts
   the feedback loop. Values: $\sigma=0.05$, $N=10000$,
-  $\text{lr}_\text{Analyzer}=0.01$, Optimizer = Adam}
+  $\text{lr}_\text{analyzer}=0.01$, Optimizer = Adam}
   \label{fig:PendulumTraining}
   \end{figure}
 
@@ -1331,7 +1331,7 @@ episodes it is less consistent in finding the optimal policy.
   consists on fitting a continuous single variable function. A task that can be
   solved optimally by a single layered sigmoidal neural network
   \cite{cybenko1989approximation}. This pendulum example, although trivial, is
-  useful to appreciate the working principle behind the Experimenter-Analyzer
+  useful to appreciate the working principle behind the experimenter-analyzer
   architecture and how the feedback loop is formed. In the next section we are
   going to explore less trivial examples with more complex learning loops.
 
@@ -1354,7 +1354,7 @@ episodes it is less consistent in finding the optimal policy.
   how it fits the $y=x$ line, showing that it learned the relation between
   $L$ an $T$. (b) In this figure we can see how the error decreases to almost 
   zero with very low deviation.Values: $\sigma=0.05$, $N=10000$,
-  $\text{lr}_\text{Analyzer}=0.01$, Optimizer = Adam
+  $\text{lr}_\text{analyzer}=0.01$, Optimizer = Adam
   }
   \label{fig:PendulumError}
   \end{figure}
@@ -1387,11 +1387,11 @@ Learning and Probablity Theory. Let us start by introducing the general problem.
 Suppose that we have an agent that has access to a k-armed bandit. Each time the
 agent pulls one of the $k$ levers, the bandit produces a reward. The objective
 of the agent is to maximize the obtained reward in a determined number of trials
-or episodes $N$. The agent doesn't know how the bandit produces the rewards. Its
+or episodes $N$. The agent does not know how the bandit produces the rewards. Its
 only way of getting information about the reward system is by trial and error by
 pulling the levers and obtaining rewards.
 
-Mathematically we can model our agent as an Experimenter
+Mathematically we can model our agent as an experimenter
 $E:\mathcal{X}\rightarrow\mathcal{A}$, where the action space is
 $\mathcal{A}=\{0,1,...,k\}$ and the state space $\mathcal{X}$ is again the empty
 set $\emptyset$. The bandit can be modelled as a probabilistic function
@@ -1508,7 +1508,7 @@ Lets outline with pseudo-code how this agent would work:
 
   If we pay attention to the pseudo-code, we see that to take the first action
   we need an initial estimate $Q_1$ for each action. These initial estimates
-  aren't irrelevant. They play an important role on the convergence of the
+  are not irrelevant. They play an important role on the convergence of the
   algorithm. For example, if we set $Q_1=0 \; \; \forall a \in \mathcal{A}$, the
   $\argmax Q_1$ will output a random action. Therefore, the training can be
   biased towards that random action depending on the initial reward. Sometimes a
@@ -1534,13 +1534,13 @@ If we come back to the pendulum example of Chapter \ref{EAmodel}, we can map the
 physical set up to a 2-armed bandit problem. We just need to assign the action
 of  measuring $L$ to one of the arms and measuring $M$ to the other. Then we set
 the function $R$ of the bandit to be $R:\mathcal{A}\times S\rightarrow
-\mathbb{R}$ as a composition of Gaussian reward function $r$ with the Analyzer
+\mathbb{R}$ as a composition of Gaussian reward function $r$ with the analyzer
 predicting the period from the outcome. Basically, we assume that the bandit is
-the result of the interaction between the Environment, the Analyzer and the
+the result of the interaction between the Environment, the analyzer and the
 Gaussian comparator (Fig. \ref{fig:Bandit-EA}). \par Note that this multi-armed
-bandit problem is quite difficult: it is non-stationary since the Analyzer and
+bandit problem is quite difficult: it is non-stationary since the analyzer and
 the Environment change each episode and it is non-Markovian since the
-performance of the Analyzer depends on the training over all the previous
+performance of the analyzer depends on the training over all the previous
 episodes. However, as we have seen, even very simple agents perform surprisingly
 well for this simple case.
 
@@ -1565,15 +1565,15 @@ without further intervention until the end of the experiment.
 
 In this kind of set up we only have a single experimenter at the beginning of
 the learning loop. This means that the state space $\mathcal{X}$  of the
-Experimenter's environment is again the empty set $\emptyset$. The action space
+experimenter's environment is again the empty set $\emptyset$. The action space
 $\mathcal{A}$ is finite and discrete with $k \in \mathbb{N}$ possible actions.
-The SPE, in the state $s \in S$, after the action $a$ of the Experimenter,
+The SPE, in the state $s \in S$, after the action $a$ of the experimenter,
 generates an outcome $\textbf{O}(a,s) \in \mathbb{R}^m$, and the value of the
 target physical property $\textbf{f}(s') \in \mathbb{R}^l$, where $s' \in S$ is
-the state of the SPE after the action $a$. Then, the Analyzer $A$ is asked to
+the state of the SPE after the action $a$. Then, the analyzer $A$ is asked to
 guess $\textbf{f}(s')$ using the value of $\textbf{O}(a,s)$ and potentially the
 action $a$ and some additional auxiliary information $I \in  \mathbb{R}^{p}$.
-The prediction $\textbf{P} \in \mathbb{R}^l$ of the Analyzer is compared to the
+The prediction $\textbf{P} \in \mathbb{R}^l$ of the analyzer is compared to the
 actual value of the physical property $\textbf{f}(s')$ by means of a reward
 generating function $r:\mathbb{R}^l\times\mathbb{R}^l\rightarrow\mathbb{R}$. The
 output of $r(\textbf{f}(s'),\textbf{P})$ is the output reward of the bandit.
@@ -1582,7 +1582,7 @@ output of $r(\textbf{f}(s'),\textbf{P})$ is the output reward of the bandit.
 % objects the reader shouldn't be confused with the learning loop, that is 
 % rather simple. Let's outline it here in a more informal language:
 % \begin{itemize}
-%   \item The Experimenter pulls a lever of the bandit.
+%   \item The experimenter pulls a lever of the bandit.
 %   \item A set of $m$ real numbers is generated.
 %   \item Some function $\textbf{f}(a,s)$ is computed, unknown to the agent.
 %   \item 
@@ -1622,13 +1622,13 @@ Now let us explore different versions of this modified multi-armed bandit.
   Each time a lever $a$ is pulled, the outcome $O(a,s)$ is just the the value
   $v_a$ associated to the arm $a$. We choose the function $f(s)$ to be any real
   function of only the value of the target arm. For instance, $f(v_t)=v_t^2$.
-  Then the Analyzer is fed the outcome $O(a,s)=v_a$ to try to predict $f(v_t)$.
+  Then the analyzer is fed the outcome $O(a,s)=v_a$ to try to predict $f(v_t)$.
   It produces a prediction $A(v_a)=p$ that is used to generate a reward
-  $r(p,f(v_t))$ according to \eqref{gaussian_reward}. Then the Analyzer and the
-  Experimenters are trained with their respective algorithms.
+  $r(p,f(v_t))$ according to \eqref{gaussian_reward}. Then the analyzer and the
+  experimenters are trained with their respective algorithms.
 
-  \par It is clear that the Analyzer would be able to make a prediction of
-  $f(s)$ better than random guessing only if the Experimenter chooses the target
+  \par It is clear that the analyzer would be able to make a prediction of
+  $f(s)$ better than random guessing only if the experimenter chooses the target
   arm $t$. Note also that the pendulum example is just a particular case of this
   example. We just need to set $t$ as the arm that outputs $L$, and
   $f(v_t)=T(L)$.
@@ -1640,10 +1640,10 @@ Now let us explore different versions of this modified multi-armed bandit.
 
     \begin{figure}
       \centering
-      \includegraphics[scale=0.5]{figures/Analyzer1.pdf}
+      \includegraphics[scale=0.5]{figures/analyzer1.pdf}
       \caption{Two hidden layer feed-forward neural network, with each layer
       consisting in 16 fully connected neurons.}
-      \label{Analyzer1}
+      \label{analyzer1}
     \end{figure}
 
 
@@ -1668,7 +1668,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       In (b) we can see the cumulative number of actions taken by the agent and
       how around the $600^\text{th}$ episode the agent finds the target arm and
       chooses it whenever a greedy action is taken. Information: $N=5000$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure}  
 
@@ -1679,13 +1679,13 @@ Now let us explore different versions of this modified multi-armed bandit.
     \begin{itemize}
       \item The number of arms to $k=8$.
       \item The function $f(v_t)$ to be the identity $f(v_t)=v_t$
-      \item The Experimenter is based on the algorithm described in
+      \item The experimenter is based on the algorithm described in
       \ref{SimpleRL}, equipped with an $\epsilon$-greedy exploration phase with
       exponential decrease of the exploration rate. 
-      \item The Analyzer is a two hidden layer feed-forward neural network, with
+      \item The analyzer is a two hidden layer feed-forward neural network, with
       each layer consisting in 16 fully connected neurons activated with the
-      ReLU function (Fig. \ref{Analyzer1} ). The optimizer is just t qhe
-      gradient descent algorithm. This Analyzer is of unnecessary complexity for
+      ReLU function (Fig. \ref{analyzer1} ). The optimizer is just t qhe
+      gradient descent algorithm. This analyzer is of unnecessary complexity for
       this task, but it will be useful later for more complex functions
       $f(v_t)$.
       \item The reward generating function $r$ is defined as in q
@@ -1696,12 +1696,12 @@ Now let us explore different versions of this modified multi-armed bandit.
     $N=5000$ the agent always finds the target lever and correctly learns the
     identity function. In the Fig. \ref{fig:actionsMAB1} we can observe how the
     agent discovers the target lever around the episode 600, and once the lever
-    is found, as it is expected, the Analyzer converges very quickly to the
+    is found, as it is expected, the analyzer converges very quickly to the
     identity function (Fig. \ref{fig:ActionAverageMAB1}). Although this example
     might look trivial, is not evident that it should work. Note that at
-    the beginning, neither the Experimenter or the Analyzer has any information
+    the beginning, neither the experimenter or the analyzer has any information
     about the target lever or the function $f(s')$. In the exploration phase,
-    the Experimenter chooses random levers and the Analyzer tries to fit the
+    the experimenter chooses random levers and the analyzer tries to fit the
     function with most of the times useless inputs but $1/8^{\text{th}}$ of the
     times a useful value. Then the Gradient Descent algorithm is applied and
     results to be surprisingly robust to the noise produced by the useless inputs.
@@ -1725,7 +1725,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       the correct lever and the exploration rate vanishes. In (b) we can see the
       predictions of the agent after 5000 episodes and how it fits nearly
       perfectly the identity function. Information: $N=5000$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure} 
   \end{myex}
@@ -1779,7 +1779,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       In (b) we can see the cumulative number of actions taken by the agent and
       how around the $2000^\text{th}$ episode the agent finds the target arm and
       chooses it whenever a greedy action is taken. Information: $N=5000$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure}
 
@@ -1805,7 +1805,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       the correct lever and the exploration rate vanishes. In (b) we can see the
       predictions of the agent after 50,000 episodes and how it fits with
       acceptable accuracy the target function. Information: $N=50,000$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure} 
   \end{myex}
@@ -1840,8 +1840,8 @@ Now let us explore different versions of this modified multi-armed bandit.
       despite of the large number of levers. In (b) we can see the cumulative
       number of actions taken by the agent and how around the $40,000^\text{th}$
       episode the agent finds the target arm and chooses it whenever a greedy
-      action is taken. Information: $N=10^5$, $\beta_\text{Experimenter}=0.01$,
-      $\text{lr}_\text{Analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
+      action is taken. Information: $N=10^5$, $\beta_\text{experimenter}=0.01$,
+      $\text{lr}_\text{analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
     \end{figure}
   \end{myex}
 
@@ -1849,7 +1849,7 @@ Now let us explore different versions of this modified multi-armed bandit.
   complex functions and large action spaces. There is no reason to think that
   larger action spaces or more complex correlations would impose any limitations
   besides an increase on the number of episodes required or the need of a more
-  flexible Analyzer. As we will see in another example later, even with a more
+  flexible analyzer. As we will see in another example later, even with a more
   complex configuration and 2,000 different levers the agent is able to find the
   correct lever (although the training took around 5h in an average laptop
   processor).
@@ -1880,16 +1880,16 @@ Now let us explore different versions of this modified multi-armed bandit.
       f(x_t,y_t,z_t)=x_ty_tz_t
     \end{equation}
 
-    Note that in this case at the input of the Analyzer we will feed three
+    Note that in this case at the input of the analyzer we will feed three
     parameters instead of one, maintaining the same hidden layers. Keeping the
     rest of the agent settings like in the previous examples we find that it
     discovers the correct action and learns to predict $f(s')$ in less than
     10,000 episodes. This behavior is almost as good as for the single variable
     case (Fig. \ref{fig:ActionAverageMAB4} ). This means that adding more
-    elements to the outcomes doesn't affect significantly the performance of the
+    elements to the outcomes does not affect significantly the performance of the
     algorithm. This was to be expected, since the addition of more parameters
     adds more tools to recognize the correlations at the expense of a maybe more
-    complicated computation of the function. However, the used Analyzer has
+    complicated computation of the function. However, the used analyzer has
     enough flexibility to fit to those kind of functions.
 
 
@@ -1914,8 +1914,8 @@ Now let us explore different versions of this modified multi-armed bandit.
       the target lever. In (b) we can see the cumulative number of actions taken
       by the agent and how around the $10,000^\text{th}$ episode the agent finds
       the target arm and chooses it whenever a greedy action is taken.
-      Information: $N=10^4$, $\beta_\text{Experimenter}=0.01$,
-      $\text{lr}_\text{Analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
+      Information: $N=10^4$, $\beta_\text{experimenter}=0.01$,
+      $\text{lr}_\text{analyzer}=0.01$, $Q_1=0$, $\sigma=0.05$}
     \end{figure}
 
     A question that one may ask is: "What if the agent is allowed to pull more
@@ -1932,7 +1932,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     precision of the predictions. This kind of agent would be very interesting
     in the context of minimal representation learning. The main challenge here
     is that changing the number of pulls changes also the number of features
-    fed to the Analyzer. A possible solution would be to add a penalization
+    fed to the analyzer. A possible solution would be to add a penalization
     to the reward proportional to the number of pulls performed per episode and
     solving the issue of the number of features by using placeholders to keep
     the neural network architecture working. However, the design of this
@@ -1943,9 +1943,9 @@ Now let us explore different versions of this modified multi-armed bandit.
 
   In this version of the multi-armed bandit we are going to introduce a 
   slight change in the architecture of the bandit. This consists in adding
-  to the input of the Analyzer some auxiliary information needed to make
+  to the input of the analyzer some auxiliary information needed to make
   the prediction. In addition to the outcome $\textbf{O}(a,s)$ and potentially
-  the action $a$, we can also feed to the Analyzer more parameters that 
+  the action $a$, we can also feed to the analyzer more parameters that 
   might be relevant to make the prediction. Let us illustrate again this
   concept by using the pendulum example.
 
@@ -1957,24 +1957,24 @@ Now let us explore different versions of this modified multi-armed bandit.
     \label{fig:auxiliaryparameter}
   \end{figure}
 
-  Suppose that, instead of directly asking the Analyzer for the period $T$ of
-  the gravity pendulum, what we want the Analyzer to predict is the angle
+  Suppose that, instead of directly asking the analyzer for the period $T$ of
+  the gravity pendulum, what we want the analyzer to predict is the angle
   $\theta(\tau)$ of the pendulum at a given time $\tau$. The accuracy of the
-  Analyzer predicting the angle would determine the reward. However, the
+  analyzer predicting the angle would determine the reward. However, the
   dynamics are determined by a second order differential equation. In order to
-  predict the angle $\theta(\tau)$ correctly, the Analyzer needs at least three
+  predict the angle $\theta(\tau)$ correctly, the analyzer needs at least three
   extra parameters. The time $\tau$ and the values $\theta(0)$ and
   $\dot{\theta}(0)$. It is, in general, a good practice to sample the extra
-  features of the Analyzer uniformly at random from a selected interval. This
-  would force the Analyzer to learn without bias within the given interval. We
+  features of the analyzer uniformly at random from a selected interval. This
+  would force the analyzer to learn without bias within the given interval. We
   can see how the learning loop is modified with the new addition (Fig.
   \ref{fig:auxiliaryparameter}). We shouldn't expect any drastic change in the
   performance compared to the multi-parameter case. We are just adding
-  parameters, the only difference is that they aren't determined by the
-  action of the Experimenter. This means that the Analyzer has some
-  degree of information even if the Experimenter takes wrong choices. We can
-  expect the Analyzer performing better than random guessing regardless the
-  performance of the Experimenter.
+  parameters, the only difference is that they are not determined by the
+  action of the experimenter. This means that the analyzer has some
+  degree of information even if the experimenter takes wrong choices. We can
+  expect the analyzer performing better than random guessing regardless the
+  performance of the experimenter.
   
   \par The results of running this example are summarized in 
   Fig. \ref{completpd}. Like we expected, it worked similarly to previous 
@@ -1986,7 +1986,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     This example will complete the pendulum example. Instead of asking the 
     analyzer to predict the value of the period $T$, we are going to ask for 
     the angle $\theta(\tau)$ of the pendulum. To do it we are also going
-    to feed to the Analyzer the instant $\tau$ and the initial values
+    to feed to the analyzer the instant $\tau$ and the initial values
     $\theta(0)$ and $\dot\theta(0)$. All these values are generated from a
     uniform distribution randomly each episode. We assume that the pendulum
     behaves like an simple harmonic oscillator and therefore:
@@ -2019,11 +2019,11 @@ Now let us explore different versions of this modified multi-armed bandit.
       \end{subfigure}
       \caption{Summary of the training for the example 
       \ref{pendulumcomplete}. We observe that the actions 
-      converge like in previous examples. The Analyzer doesn't 
+      converge like in previous examples. The analyzer does not 
       completely fit the function, although shows clear signs of 
       learning. This could be due to an inadequate Neural Network
       architecture or insufficient training. Information: $N=40,000$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
       \label{fig:completepd}
     \end{figure}
@@ -2034,7 +2034,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     bandit problem with $k=2000$, with an auxiliary parameter and a non-trivial
     function to predict. There is only a target lever $t$ that outputs the value
     $v_t$. Let $u$ be an auxiliary parameter sampled form a uniform distribution
-    and fed to the Analyzer. The function asked to predict is: 
+    and fed to the analyzer. The function asked to predict is: 
     \begin{equation}
       f(u,v_t)=\sqrt{uv_t\text{sin}(v_t)}
     \end{equation}
@@ -2059,7 +2059,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       \end{subfigure}
       \caption{ Summary of the training example \eqref{2k}
          Information: $N=2\times10^6$,
-      $\beta_\text{Experimenter}=0.01$, $\text{lr}_\text{Analyzer}=0.01$,
+      $\beta_\text{experimenter}=0.01$, $\text{lr}_\text{analyzer}=0.01$,
       $Q_1=0$, $\sigma=0.05$}
     \end{figure}
   \end{myex}
@@ -2080,17 +2080,17 @@ However, in general it is not possible to express every experiment as a
 multi-armed bandit problem. For example, if the action space is continuous 
 (e.g. selecting the position of a detector) or if the experiment 
 requires from a dynamical intervention, for example, if in an experiment
-consisting of sequential actions, it's needed the result of 
+consisting of sequential actions, it is needed the result of 
 the preceding actions to take the correct choices. In this section we are going
 to show how one could tackle this kind of experiments using the E-A 
 architecture. 
 
 \section{Sequential experiments}
 
-So far, all the E-A models we have used consists of an Experimenter $E:\emptyset
+So far, all the E-A models we have used consists of an experimenter $E:\emptyset
 \rightarrow \mathcal{A}$ whose action $a$ over the environment in the state $s$
 produce some outcome $\textbf{O}(a,s)$, and then the outcome and maybe some
-additional information are fed to the Analyzer $A:\mathcal{M} \rightarrow
+additional information are fed to the analyzer $A:\mathcal{M} \rightarrow
 \mathcal{P}$ to output a prediction about a physical property of the system.
 Then such property is observed (or in our case, simulated) and compared to the
 prediction to generate a reward and a loss, to train both $E$ and $A$. 
@@ -2159,34 +2159,34 @@ problem and therefore is sequential.
   \includegraphics[width=\columnwidth]{figures/sequential-EA.pdf}
   \caption{Diagram of the learning loop for a E-A architecture for a 
   sequential experiment with $D$ steps. The structure is the same as for 
-  the simple case but concatenating $D$ Experimenters instead of a single one.}
+  the simple case but concatenating $D$ experimenters instead of a single one.}
   \label{fig:SequentialEA}
 \end{figure}
 
 In this section we are going to explain how to use the E-A architecture to
 tackle sequential experiments. The basic idea behind this approach is to
-concatenate as many Experimenters as sequential actions we need to take and each
-Experimenter is fed with the information gathered by the actions and outcomes
-gathered by the preceding Experimenters. 
+concatenate as many experimenters as sequential actions we need to take and each
+experimenter is fed with the information gathered by the actions and outcomes
+gathered by the preceding experimenters. 
 
 Suppose we have a sequential experiment that needs from $D$ sequential actions.
-Then we would have $D$ different Experimenters $E_n:\mathcal{X}_n\rightarrow
+Then we would have $D$ different experimenters $E_n:\mathcal{X}_n\rightarrow
 \mathcal{A}_n$ with $\mathcal{X}_0\equiv\emptyset$. Each $\mathcal{A}_n$ can be
-different depending on the nature of the experiment, since the Experimenters
+different depending on the nature of the experiment, since the experimenters
 $E_n$ could be different reinforcement learning agents with different
-architectures. The Experimenters' environments $\mathcal{X}_n$ can consist of
+architectures. The experimenters' environments $\mathcal{X}_n$ can consist of
 any information stored in the buffer at the moment they are fed to $E_n$.The SPE
 is in the state $s_n \in S$ when the action $a_n \in \mathcal{A}_n$ is taken and
 it produces the outcome $\textbf{O}_n(a_n, s_n) \in \mathbb{R}^{d_n}$ where
 $d_n$ is the number of parameters that are outputted after the action $a_n$.
-Then, as in the single Experimenter version, all the information in the buffer
+Then, as in the single experimenter version, all the information in the buffer
 together with auxiliary parameters can be stored into $m\in\mathcal{M}$ to fed
-the Analyzer $A:\mathcal{M}\rightarrow \mathcal{P}$. Then the prediction is
+the analyzer $A:\mathcal{M}\rightarrow \mathcal{P}$. Then the prediction is
 compared with the observed/simulated value of the property to be predicted
 with a reward generation function $r_n$. The reward could be different for each
 experimenter depending on the nature of the architecture. However, in this work
 only explored the architecture with a single reward generation function $r$ for
-all Experimenters.
+all experimenters.
 
 One of the main limitations of this approach is that we need to fix the number
 $D$ of actions beforehand. In some experiments this may not be relevant since
@@ -2258,7 +2258,7 @@ land for a shooting with velocity $v_{test}$ and bullet mass $m$, but only with
 $\textbf{two uses of the sensors}$. The velocity $v_{test}$ is selected randomly
 each episode from a uniform distribution for the interval $(v-\frac{v}{2},
 v+\frac{v}{2})$. This velocity $v_{test}$ would be the auxiliary parameter fed
-to the Analyzer. 
+to the analyzer. 
 
 Using the same procedure that we did for the first shooting, we can find that
 the new displacement $d$ of the box after the shooting is:
@@ -2302,17 +2302,21 @@ formulation used in the text.
   $r(\Delta)=\exp\left(-\frac{1}{2}\left( \frac{\Delta}{\sigma} \right)
   ^2\right)$, where $\Delta = \frac{f(s)-p}{p}$ and $p$ is the output of the
   analyzer.
-  \item The loss function for the Analyzer is $L(f(s),p)=(f(s)-p)^2$
+  \item The loss function for the analyzer is $L(f(s),p)=(f(s)-p)^2$
 \end{itemize}
 
 \subsection{Technical details of the agents}
+\begin{figure}[H]
+  \includegraphics[width=\columnwidth]{figures/Two-sensors.pdf}
+  \caption{Diagram of the learning loop for the experiment.}
+\end{figure}
 \subsubsection{Experimenter 1}
 $E_1$ is the same kind of experimenter that we used in the previous examples
 (\ref{Non-stationary multiarmed-bandit}), since for $E_1$ everything looks like
 a multi-armed bandit. The agent was subjected to an $\epsilon$-greedy 
 exploration phase with linear decrease of the exploration rate.
 \subsubsection{Experimenter 2}
-For the Experimenter 2 now we have inputs, so the reinforcement learning
+For the experimenter 2 now we have inputs, so the reinforcement learning
 algorithm of $E_1$ is not valid. Since some of the inputs are real numbers, we
 opted to use a standard Deep Q Network algorithm with online training (See
 Appendix [TODO]). We also tried a modified version of the Deep Q Network (DQN)
@@ -2331,12 +2335,88 @@ exploration phase than $E_1$.
 
 \subsubsection{Analyzer}
 
-The Analyzer in this case is a sequential feedforward neural network with 
+The analyzer in this case is a sequential feedforward neural network with 
 3 hidden layers (20x10x2) fully connected ReLU neurons.
+\subsection{Results and discussion}
 
-\subsection{Results}
+\begin{figure}[H]  % spans both columns
+  \begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\linewidth]{figures/Actions1-TSS.pdf}
+  \caption{Action 1 by zone \\ (moving average)}
+  \label{Actions1-TSS}
+  \end{subfigure}
+  \hfill % maximize the horizontal distance between the graphs
+  \begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\linewidth]{figures/Actions2-TSS.pdf}
+  \caption{Action 2 by zone \\ (moving average)}
+  \label{Actions2-TSS}
+  \end{subfigure}
+  
+  \bigskip  % some extra vertical whitespace
+  \begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\linewidth]{figures/Relative-Error-TSS.pdf}
+  \caption{Relative error \\ (moving average)}
+  \end{subfigure}
+  \hfill % maximize the horizontal distance between the graphs
+  \begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\linewidth]{figures/Rewards-TSS.pdf}
+  \caption{Reward per episode \\ (moving average)}
+  \end{subfigure}
+  \caption{Summary of the training for the simple DQN agent. In (a), we can see
+  how the first experimenter learns to take the action $0$, this is, using the
+  LPWR sensor always. In (b) we see how the second experimenter learns the
+  optimal strategy converging to the correct action for every zone. This implies
+  the agent learns to interpret correctly the outcome obtained by $E_1$ and
+  places the HPNR sensor in the corresponding zone. In (c), we observe the
+  decrease on the relative error, that goes to nearly zero for every zone,
+  meaning that the analyzer learns to interpret correctly the outcomes. In (d),
+  we see the reward obtained by the agent per episode. It gets close to the 
+  maximum of one at the end of the training for all zones.
+  Number of episodes: $N=2.5\times10^6$}
+  \label{fig:TSS}
+\end{figure}
 
+Since $x\;\;\propto \;\;1/M^2$, if we sample uniformly at random $M$, it means
+that the zones closer to the canon are going to be quadratically more frequent
+than zones further away. With the used parameters, we obtain that the box lands
+in the zone $A\sim54\%$ of the times, $\sim27\%$ in $B$, $\sim 12\%$ in
+$C$ and $\sim7\%$ in zone $D$. Then our training data for the agent is 
+strongly biased to the closer zones $A$ and $B$.
 
+In our tests, we found that with not enough training, the agent in an attempt 
+to maximize the reward and minimize the loss learns to exploit this imbalance by
+choosing always to place the HPNR sensor in zones $A$ and $B$. This is actually
+a clever strategy, since it obtains the exact position of the box for $80\%$ of
+the episodes. However is suboptimal, since by placing first the LPWR sensor and
+then using its outcome to place the HPNR sensor in the correct place it is
+possible to obtain the exact position a $100\%$ of the times.
+
+We observed, that if we let the agent train long enough ($2.5\times 10^6$
+episodes), it finds the optimal strategy even for an unbalanced scenario. This
+shows that the E-A architecture is potentially valid for getting information
+about rare events by showing robustness against imbalanced environments. In Fig.
+\ref{fig:TSS} we have a summary of the training. As we can see in Figs.
+\ref{Actions1-TSS} and \ref{Actions2-TSS} both experimenter learn to cooperate,
+the experimenter 1 taking always the action 0, and the experimenter 2 using the
+outcome of the action taken by experimenter 1 to place correctly the HPNR
+sensor. It results surprising that this can be achieved only with the rewards
+generated from the at first untrained analyzer. The working principle is
+supposed to be the same than for the multi-armed bandit: to let the analyzer
+exploit the correlations during the exploration phase to start a feedback loop
+in which all agents improvement improves each other performance.
+
+Changing the DQN algorithm of the experimenter 2 to a more sophisticated Dual
+DQN algorithm with experience replay reduced the number of episodes needed to
+find the optimal strategy by a factor of $10$, needing only $2.5\times10^5$
+episodes to show almost identical results. However, both algorithms took a
+similar amount of computation time ($\sim 5$ h in an average laptop). This is
+because the Dual DQN algorithm fits several points from the memory in each
+episode, taking longer to compute each episode.
+
+This shows us that there is a lot of room for improvement by choosing different 
+reinforcement learning agents or hyper-parameters. It also manifest one of the 
+strength of this architecture: its modularity. With very few changes on the 
+learning architecture we can try completely different agents.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -2,27 +2,28 @@
 \babel@toc {USenglish}{}
 \babel@toc {USenglish}{}
 \contentsline {chapter}{\numberline {1}Preface}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Machine Learning theory}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Experimenter-Analyzer model}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}General elements and definitions}{10}{section.3.1}%
-\contentsline {chapter}{\numberline {4}E-A architecture in different scenarios}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Scenario 1: Modified multi-armed bandit}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}General multi-armed bandit problem}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{17}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Modified multi-armed bandit problem}{19}{subsection.4.1.3}%
-\contentsline {subsubsection}{Modified multi-armed bandit I}{21}{section*.9}%
-\contentsline {subsubsection}{Modified multi-armed bandit II}{26}{section*.17}%
-\contentsline {subsubsection}{Modified multi-armed bandit III}{28}{section*.19}%
-\contentsline {subsection}{\numberline {4.1.4}Summary of the multi-armed bandit}{29}{subsection.4.1.4}%
-\contentsline {chapter}{\numberline {5}E-A architecture for sequential experiments}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Sequential experiments}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}E-A for sequential experiments}{33}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Example}{34}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}The experiment}{34}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Mathematical characterization of the experiment}{36}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Technical details of the agents}{37}{subsection.5.3.3}%
-\contentsline {subsubsection}{Experimenter 1}{37}{section*.25}%
-\contentsline {subsubsection}{Experimenter 2}{37}{section*.26}%
-\contentsline {subsubsection}{Analyzer}{37}{section*.27}%
-\contentsline {subsection}{\numberline {5.3.4}Results}{37}{subsection.5.3.4}%
-\contentsline {chapter}{\numberline {A}Appendix ?}{38}{appendix.A}%
+\contentsline {chapter}{\numberline {2}Minimal model for science}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Machine Learning theory}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Experimenter-analyzer model}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}General elements and definitions}{10}{section.4.1}%
+\contentsline {chapter}{\numberline {5}E-A architecture in different scenarios}{16}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Scenario 1: Modified multi-armed bandit}{16}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}General multi-armed bandit problem}{16}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{18}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Modified multi-armed bandit problem}{20}{subsection.5.1.3}%
+\contentsline {subsubsection}{Modified multi-armed bandit I}{22}{section*.9}%
+\contentsline {subsubsection}{Modified multi-armed bandit II}{27}{section*.17}%
+\contentsline {subsubsection}{Modified multi-armed bandit III}{29}{section*.19}%
+\contentsline {subsection}{\numberline {5.1.4}Summary of the multi-armed bandit}{30}{subsection.5.1.4}%
+\contentsline {chapter}{\numberline {6}E-A architecture for sequential experiments}{32}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sequential experiments}{32}{section.6.1}%
+\contentsline {section}{\numberline {6.2}E-A for sequential experiments}{34}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Example}{35}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}The experiment}{35}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Mathematical characterization of the experiment}{37}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Technical details of the agents}{38}{subsection.6.3.3}%
+\contentsline {subsubsection}{Experimenter 1}{38}{section*.26}%
+\contentsline {subsubsection}{Experimenter 2}{38}{section*.27}%
+\contentsline {subsubsection}{Analyzer}{39}{section*.28}%
+\contentsline {subsection}{\numberline {6.3.4}Results and discussion}{39}{subsection.6.3.4}%
+\contentsline {chapter}{\numberline {A}Appendix ?}{41}{appendix.A}%
