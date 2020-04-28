@@ -489,9 +489,8 @@
     Master's Thesis
  
     \vspace{\stretch{8}}
-    \Huge\textbf{
-    Designing experiments with neural networks
-          }
+    \Huge\textbf{Scientific agents to extract physical
+    parameters with Machine Learning}
     
     \vspace{\stretch{10}}
     \LARGE{
@@ -529,12 +528,16 @@
 \chapter*{Acknowledgments}
 %\addcontentsline{toc}{chapter}{\numberline{}Acknowledgments}
 %\label{cha:acknowledgments}
-\blindtext
-
+I would like to thank my supervisor, Raban Iten, for his attentive guidance on
+this project. All the conversations and the detailed feedback have 
+been fundamental for the outcome of this work. I also wish to extend my special
+thanks to the Professor Renato Renner and the Quantum Information Theory group
+for accepting me as Master student. Finally, I wish to show my appreciation to
+Tony Metger for the insightful conversations at the start of the project.
 
 \vspace{1.1cm}
 \noindent
-Zurich,  April 14, 2020
+Zurich,  April 28, 2020
 
 \vspace{2.4cm}
 \noindent
@@ -561,18 +564,15 @@ Eduardo Gonzalez Sanchez
   \vspace{0.5cm}
 
 
-\noindent (\textit{Mock version, not definitive}) In this work we propose a new
-model that mixes reinforcement learning and deep learning to create agents able
-to design strategies for experiments, using as feedback only the quality of the
-predictions about properties of the physical system made exclusively from the
-data the agents collect. This is could be summarized as 'agents able to do
-science'; since science checks its validity by making predictions over the
-physical world. In the thesis we also put the first building blocks of a
-theoretical model for the scientific method in machines. This last part is
-important in the long-term goal of developing a variant of quantum theory that
-can consistently describe agents who are using the theory. If the science of the
-future is done by machines, we must ensure consistency in the underlying
-principles driving automated science.
+\noindent An important challenge for the automation of science is the
+minimization of prior human assumptions about the physical world.
+In this work we propose a new modular architecture that mixes reinforcement
+learning and deep learning to create agents that are able to design strategies
+for experiments. The architecture is inspired in the scientific method and uses
+as feedback only the empirical validation of predictions about properties of a
+given physical system. These predictions are made exclusively from the
+experimental data the agents collect. We explore with different examples the
+performance and the capabilities of this new architecture.
 
 \vspace{3mm}
 
@@ -581,7 +581,7 @@ principles driving automated science.
 \vspace{10mm}
 \noindent{\bf{Keywords:}}
 Reinforcement learning, deep learning, automated science, feature representation, 
-experiment design, artificial intelligence
+experiment design, artificial intelligence, neural networks
 \end{abstract}
 
 
@@ -679,26 +679,13 @@ experiment design, artificial intelligence
 
 
 
-\chapter{Preface} 
+\chapter*{Preface} 
 
 Many of the limitations of humans at doing science come from their biological
-condition:
-    \begin{itemize}
-        \item  Humans have a limited lifespan: 72.6 years on average
-        \cite{owidlifeexpectancy}. When experienced scientists die their
-        knowledge and expertise die with them.
-        \item From the limited lifespan, humans can dedicate only a fraction to
-        do science. This is inevitable since humans need to eat, sleep and deal
-        with social interactions, among other things. Moreover, humans need
-        decades of study and training to start making contributions to the
-        scientific knowledge.
-        \item Humans are susceptible to suffer from diseases and other limiting
-        biological conditions that hinder their scientific production.
-        \item Humans' understanding of the physical world is tightly linked to
-        their limited sensorial perception and other inherited or acquired
-        factors like the language or the cognitive capacity.
-    \end{itemize}
-    
+condition. Humans' understanding of the physical world is tightly linked to
+their limited sensorial perception and other inherited or acquired 
+factors like the language or the cognitive capacity.
+
 Other limitations are indirectly caused by the need to satisfy their biological
 necessities. For example, a person who wants to dedicate their life to science
 needs some type of financial support to satisfy the basic human necessities.
@@ -744,26 +731,25 @@ drawback produced by the biological limitations of human beings. Humans'
 intuition and understanding of the physical world is conditioned by the percepts
 collected by their sensory system. This limitation becomes evident when trying
 to intuitively understand physical systems that show behaviors that differ from
-those susceptible to be collected by the sensory system. This is the case of,
-for example, quantum theory. Humankind has developed tools to overcome the
-limitations of the sensorial system to observe new properties of physical
-systems that are out of reach for our biological receptors. For instance, using
-infrared cameras to map infrared signals to a representation in the visible
-spectrum, humans can detect infrared radiation. But these tools don't allow to
-build an intuitive understanding of the phenomena without analogies to the
-phenomena perceived by the sensory system. For example, people that are blind
-from birth have never had any input to their visual cortex, so they have no
-visual intuition which limits their ability to understand some physical
-concepts. Similarly, the lack of receptors for other arbitrary physical
-properties limits human understanding of the physical world and likely hinders
-scientific advance. \\ 
+those susceptible to be collected by the sensory system. Humankind has developed
+tools to overcome the limitations of the sensorial system to observe new
+properties of physical systems that are out of reach for our biological
+receptors. For instance, using infrared cameras to map infrared signals to a
+representation in the visible spectrum, humans can detect infrared radiation.
+But these tools do not allow to build an intuitive understanding of the
+phenomena without analogies to the phenomena perceived by the sensory system.
+For example, people that are blind from birth have never had any input to their
+visual cortex, so they have no visual intuition which limits their ability to
+understand some physical concepts. Similarly, the lack of receptors for other
+arbitrary physical properties limits human understanding of the physical world
+and likely hinders scientific advance. \\ 
 \par 
-Modern science requires from agents with complex cognitive abilities. So far
+Modern science requires agents with complex cognitive abilities. So far
 humans are the only known material structure able to perform it. It is true that
-some animals perform scientific behavior, like Crows or monkeys solving puzzles
+some animals perform scientific behavior, like crows or monkeys solving puzzles
 by trial and error. But those anecdotal examples are far from the formalized
 version of the scientific method employed by humans. However, humans are also
-the living f of the possibility of agents performing sophisticated science.
+the living proof of the possibility of agents performing sophisticated science.
 There is no reason to think that there's anything special in humans that makes
 them the best possible form of a scientific agent. Rather it is reasonable to
 think that there is plenty of space for improvement, since the human brain was
@@ -772,40 +758,159 @@ designed solely by millions of years of random mutations and natural selection.
 Recent advances in artificial intelligence, yet far from achieving an artificial
 general intelligence, open the door to an automation of science. In the recent
 years, a vast amount of effort has been dedicated to the development of machine
-learning techniques to help scientists of the physical sciences to process data
-to create new better models \cite{Carleo_2019}. However, these machine learning
-based techniques are just tools to help human scientists to interpret complex
-data to provide new predictions, and not efforts towards an automation of
-science. Nonetheless, the potential role that artificial intelligence might play
-in the process of scientific production has been getting growing awareness. In
+learning techniques to help scientists to process data to create new better
+models \cite{Carleo_2019}. However, these machine learning based techniques are
+just tools to help human scientists to interpret complex data to provide new
+predictions, and not efforts towards an automation of science. Nonetheless, the
+potential role that artificial intelligence might play in the process of
+scientific production has been getting growing awareness. In
 \cite{Melnikov_2018}, the authors use a projective simulation model to design
 complex photonic experiments that produce high-dimensional entangled multiphoton
-states. According the authors, the system autonomously discovers experimental
-techniques which are a standard in modern quantum optical experiments. In
-\cite{iten2020discovering} the authors explore the use of variational
-autoencoders to extract autonomously physically relevant parameters from
-physical data without prior assumptions about the physical system. In
-\cite{nautrup2020operationally} they expand the work to present an architecture
+states. According to the authors, the system autonomously discovers experimental
+techniques which are a well-known building blocks of modern quantum optical
+experiments. In \cite{iten2020discovering}, the authors explore the use of
+variational autoencoders to extract autonomously physically relevant parameters
+from physical data without prior assumptions about the physical system. In
+\cite{nautrup2020operationally}, they expand the work to present an architecture
 based on communitcating agents that deal with different aspects of a physical
 system and show that it can be combined with reinforcement learning techniques.
-More work on similar directions can be found in [citas articulo de Raban II].
+More work on similar directions can be found in
+\cite{ried2019minimal,Wu_2019,De_Simone_2019,
+PhysRevD.99.015014,rahaman2019learning}.
 \par
 However, scientific agents need to be designed carefully to minimize the
-inherited biases and limitations from their human creators. In this thesis we
-present a minimal axiomatic model for science and a new model architecture that
-mixes reinforcement learning with deep learning to create agents capable to
-design strategies for experiments. Using as feedback only the quality of the
-predictions about properties of the physical system made exclusively from the
-data the agents collect from their sensorial available receptors. 
+inherited biases and limitations from their human creators. In this thesis a new
+model architecture that mixes reinforcement learning with deep learning to
+create agents that are able to design strategies for experiments. Using as
+feedback only the quality of the predictions about properties of the physical
+system. The predictions are made exclusively from the data the agents collect
+from their sensorial receptors. \\
 \\
-\\
-\textit{Here I will write a couple of paragraphs explaining the structure of the 
-thesis and pointing out to the repository, where to find the code, etc.}
 
 \vspace{12mm}
 
 
-\chapter{Minimal model for science} \label{science}
+\chapter{Introduction} \label{Introduction}
+\section{Towards the automation of science}
+
+Arguably, a crucial step in the goal of creating an artificial scientific agent
+is to build agents that can generate theoretical models of the environment in
+which they exist. We want to minimize the influence of prior human assumptions
+about the physical world in such artificial agents as much as it is achievable.
+\par In the work presented in \cite{iten2020discovering}, the authors present a
+model to discover autonomously the relevant parameters of a physical system from
+some given experimental data. To do it they use a neural network architecture
+that constructs a minimal representation of the system. This is done with
+variational auto-encoders used to make predictions about the system from which
+the experimental data was obtained. The auto-encoder structure forces the
+encoder to reduce the experimental data to the minimal representation needed to
+correctly emit those predictions. This latent representation stores the
+meaningful physical parameters that contains the relevant information to make
+the assertions about the physical system. However, although the physical
+parameters are extracted autonomously from the experimental data, the
+experimental data fed to the auto-encoder is gathered or generated by humans. A
+critical stride to minimize the influence of prior human assumptions is to
+construct agents that can gather the experimental data autonomously without
+human intervention. The only way to autonomously obtain experimental data is
+through autonomous experimentation. An artificial scientific agent, in order to
+be independent from human science, needs to be capable of independently
+designing and running experiments in the physical world.
+
+\par In this work, we present a modular machine learning architecture inspired
+by the scientific method. The agent learns to find the optimal use of some given
+actions and sensorial receptors to gather data from a simulated physical
+environment. The model optimizes the experimental strategy to minimize the error
+on the predictions of some specific properties of the physical system. To
+achieve it we mix reinforcement learning agents to decide what experiment to
+make, trained in parallel with a machine learning set-up that uses the data
+collected to make the predictions. Those predictions are then are compared to
+the empirical value of the physical property to test its validity and generate
+the feedback needed for the training. This model can be combined seamlessly with
+variational auto-encoders to build agents that can autonomously gather data and
+learn the meaningful physical parameters of a system with almost no prior human
+assumptions.
+
+\section{The scientific method to train agents}
+
+An autonomous scientific agent is by definition an agent that applies the
+scientific method to generate a theoretical model of its environment. The goal
+of a scientific agent is to obtain an interpretable model of the environment
+that contains it that allows to make successful predictions empirically
+verifiable. It is then reasonable to base the structure of the learning process
+of such agents in the well established scientific method of knowledge
+acquisition. Let us outline informally this process to then explain how it
+should be followed to train an artificial scientific agent.
+
+\par To define the scientific method we need two elements: a physical
+environment and an agent capable of applying the scientific method. The physical
+environment is a set of elements that change. The agent is a subset of the
+environment that can obtain information about the environment through
+observation, formulate questions about the environment, and emit
+predictions about the environment. The scientific method consists
+informally on the following steps:
+\begin{enumerate}
+  \item \textbf{Formulation of a question:} The scientific agent formulates a
+  question about the environment.
+  \item \textbf{Observation:} the agent collects some information about the
+  environment through observation.
+  \item  \textbf{Hypothesis:} The agent creates a theoretical model or
+  hypothesis of the environment based on the observations.
+  \item \textbf{Prediction:} The agent emits a testable prediction based on the
+  hypothesis, this is, an experimental outcome to check if the hypothesis is
+  correct.
+  \item \textbf{Test:} An observation to check the validity of the 
+  prediction.
+  \item \textbf{Analysis and iteration:} The agent uses the result of the test
+  as feedback to validate or falsify the hypothesis. If the validation is 
+  strongly supported by the test the question is considered answered. 
+  If not, the agent comes back to $2$ and uses the feedback to make new
+  observations and modify the hypothesis.
+\end{enumerate}
+
+We base our machine learning model on those steps as follows:
+
+\begin{enumerate}
+  \item \textbf{Formulation of a question:} We set a question for the agent.
+  This is the main source of human prior knowledge.
+  \item \textbf{Observation:} done by reinforcement learning agents with access
+  to sensorial receptors and actions to interact with the environment.
+  \item  \textbf{Hypothesis:} We set a trainable function that takes the data
+  collected in the observation to produce a model. For example, in the case of
+  using an artificial neural network, the weights would represent the model. We
+  can set variational auto-encoders to obtain an interpretable minimal
+  representation.
+  \item \textbf{Prediction:} The output of the trainable function with the
+  observation as input.
+  \item \textbf{Test:} The prediction is compared with the experimental outcome
+  that answers the set question.
+  \item \textbf{Analysis and iteration:} from the comparison between the
+  prediction and the experimental outcome a signal is generated to modify the
+  agent. For the reinforcement learning part this signal would be a reward that
+  is high when the prediction is accurate and low when is not. For the predictor
+  function a loss value to modify the parameters defining the function. For
+  example, the mean squared error to apply gradient descent in a neural network.
+\end{enumerate}
+
+\section{Structure of the thesis}
+
+The thesis consists of an appendix and six chapters including the preface and
+this introduction. In Chapter 3 we present a detailed description of our machine
+learning architecture, the experimenter-analyzer model. There we explain the
+basic structure of the model and how it can be implemented to solve a very
+simple example. In Chapter 4 we study a type of experiments that can be
+formulated as a multi-armed bandit problem. We show with several examples how to
+use the most simple structure of our architecture to approach efficiently this
+kind of set-ups. In Chapter 5 we discuss another type of experiments that cannot
+be expressed as a multi-armed bandit problem. We show how to exploit the
+modularity of our architecture to use several reinforcement learning agents to
+approach the task. Then we demonstrate its validity by successfully finding the
+optimal strategy in a detailed example. In Chapter 6 we draw the conclusions of
+this project and outline some future steps to expand the current work.
+
+
+
+
+
 
 % \section{Introduction} \label{sec:intro_science}
 % In this section, we introduce a minimal set of definitions and assumptions to
@@ -969,47 +1074,45 @@ thesis and pointing out to the repository, where to find the code, etc.}
 % cellular automaton that converges to a stable state wouldn't fulfill this
 % assumption.}
 
-\chapter{Machine Learning theory} 
-
-TO BE WRITTEN.
-
 \chapter{Experimenter-analyzer model} \label{EAmodel}
 
 In this section, we are going to present our proposal for a basic model for a
-machine learning set-up that designs an experiment applying the scientific
-method. It is a model that mixes reinforcement learning and and deep learning to
-create agents able to design strategies for experiments, using as feedback only
-the quality of the predictions about properties of the physical system made
-exclusively from the data the agents collect. 
+machine learning set-up that designs an experiment that captures the necessary
+information to find the relevant physical parameters of a system. It is a model
+that mixes reinforcement learning and and deep learning to create agents that
+are able to design strategies for experiments. Using as feedback only
+the quality of the predictions about properties of the system made
+exclusively from the data the agents have collected. 
 
 One of the cornerstones of our model is the principle of modularity: in order to
-be applicable to a wide range of set-ups it needs to be constituted by simple
-individual elements that can be combined to build complex learning loops. The
-agent that will learn to design experiments and make predictions with them is
-composed by two different kinds of sub-agents that complement each other:
+be applicable to a wide range of set-ups our machine learning model needs to be
+constituted by simple individual elements that can be combined to build complex
+learning loops. The agent is composed by two different kinds of sub-agents that
+complement each other:
 
 \begin{itemize}
   \item \textbf{Experimenters}: this kind of sub-agents are reinforcement
-  learning based agents. Its goal is to take decisions about influencing the
+  learning based agents. Their goal is to take decisions about influencing the
   dynamics of the physical system (e.g by modifying a parameter of a controlled
   experiment) or about what measurements to make (eg. by choosing what property
   of the physical system to measure). It could be that the choice of
-  measurement modifies as well the dynamics of the physical system (eg. by
-  choosing which slit to "look at" in the double slit experiment). To choose
-  what actions to take they can consider previous observations and other kind of 
-  information.
-  \item \textbf{Analyzers}: this kind of sub-agents are learning agents
-  that take the information gathered by the experimenters to make predictions
-  about the environment. Then, based on the accuracy of those predictions
-  compared to the real values \footnote{One may ask how these real values are
-  obtained. Those values could be obtained by measurements made by other
-  experimenters that form part of the learning agent. However, for simplicity in
-  the work presented here we assume that the real values needed to check the
-  validity of the prediction are always accessible with unlimited accuracy to
-  the agent. In the context of this modular framework we could assume that we
-  have an experimenter that its only possible action is to measure the real
-  value of the target property.} of the environment a reward is generated to
-  train all the sub-agents. 
+  measurement modifies the dynamics of the physical system (eg. by choosing
+  which slit to "look at" in the double slit experiment). To choose what actions
+  to take, they can consider previous observations and other kind of
+  information. For example, some auxiliary parameters or what actions were taken
+  previously.
+  \item \textbf{Analyzers}: this kind of sub-agents are learning agents that
+  take the information gathered to make predictions about the environment. Then,
+  based on the accuracy of those predictions compared to the empirical values
+  \footnote{One may ask how these empirical values are obtained. Those values
+  could be obtained by measurements made by other experimenters that form part
+  of the learning agent. However, for simplicity in the work presented here we
+  assume that the actual values needed to check the validity of the prediction
+  are always accessible with unlimited accuracy to the agent. In the context of
+  this modular framework we could assume that we have an experimenter whose
+  only possible action is to measure the empirical value of the target
+  property.} of the environment a reward is generated to train all the
+  sub-agents. 
 
 \end{itemize}
 
@@ -1021,64 +1124,62 @@ composed by two different kinds of sub-agents that complement each other:
   consists on the following: 1. The experimenter takes an action. 2. The
   environment gives back an outcome resulting from the action. 3. The action is
   taken by the analyzer and used to make a prediction. 4. The prediction about
-  the environment and the real value of the environment are compared to generate
-  the loss and the reward to train the analyzer and the experimenter.}
+  the environment and the empirical value of the environment are compared to
+  generate the loss and the reward to train the analyzer and the experimenter.}
   \label{fig:simplesetup}
 \end{figure}
 
 To get a better understanding of the purpose of each part of the model let us
 take a look to the simplest structure that can be formed with the model (Fig.
-\ref{fig:simplesetup}). To illustrate it let us imagine a simple physical set-up.
-Suppose we have a simple gravity pendulum of length $L$ and mass $M$ and the
-goal is to find the oscillation period on Earth's surface. We know the period is
-a function only of the length $L$ and the value of the Earth's gravity (which we
-assume to be constant): $T \approx 2\pi\sqrt{\frac{L}{g}}$, so the value of the
-mass $M$ is irrelevant for the purpose, but in principle this is unknown to the
-agent. In this set-up we give the experimenter two possible actions to take (but
-only one try): either measuring the mass $M$ (eg. by using a calibrated spring)
-or measuring the length $L$ of the string (e.g by using a calibrated ruler).
-When the experimenter takes an action over the Environment, it produces an
-outcome (either the mass $M$ or the length $L$). This outcome is passed to the
-analyzer which tries to make a guess of the period based on the value of the
-outcome of experimenter's action. Then the real period of the pendulum is
-observed and compared to the value predicted by the analyzer. Depending on the
-result of the comparison a loss and a reward are generated to train the
-experimenter and the analyzer. In general: the closer the value of the
+\ref{fig:simplesetup}). To illustrate it let us imagine a simple physical
+set-up. Suppose we are given a simple gravity pendulum of length $L$ and mass
+$M$ and the goal is to find the oscillation period on Earth's surface. We know
+the period is a function only of the length $L$ and the value of the Earth's
+gravity (which we assume to be constant): $T \approx 2\pi\sqrt{\frac{L}{g}}$, so
+the value of the mass $M$ is irrelevant for the purpose, but in principle this
+is unknown to the agent. In this set-up, we give the experimenter two possible
+actions to take (but only one try): either measuring the mass $M$ (eg. by using
+a calibrated spring) or measuring the length $L$ of the string (e.g by using a
+calibrated ruler). When the experimenter takes an action over the environment,
+it produces an outcome (either the mass $M$ or the length $L$). This outcome is
+passed to the analyzer which tries to make a guess of the period based on the
+value of the outcome of experimenter's action. Then the empirical pet isriod of
+the pendulum is observed and compared to the value predicted by the analyzer.
+Depending on the result of the comparison a loss and a reward are generated to
+train the experimenter and the analyzer. In general: the closer the value of the
 prediction to the actual value the smaller the loss and the higher the reward.
 After the iteration is completed, a new pendulum with new values of $M$ and $L$
-(ideally generated uniformly at random under the i.i.d. assumption) is generated
-and the process starts again.
+(ideally generated uniformly at random under the i.i.d. assumption) are
+generated and the process starts again.
 
 The goal in the set-up depicted in Fig. \ref{fig:simplesetup} is to form a
 feedback loop between the experimenter and the analyzer from the, at first
 unknown, correlations between the outcomes and the values to be predicted. The
 better the experimenter gets, the better the data available for the analyzer to
 make better predictions that will generate better rewards for the experimenter.
-Hopefully, this feedback loop will converge to an optimal experiment strategy
-and an optimal model for the predictions. At the beginning both sub-agents will
+Hopefully, this feedback loop will converge to an optimal experimental strategy
+and nearly perfect predictions. At the beginning both sub-agents will
 start by giving random outputs since they are not trained. This is what we call
 the \textit{exploration phase} and it is of fundamental importance for the
 feedback loop to start. It can be artificially enforced, for example with
 $\epsilon$-greedy algorithms that we will discuss later in this work. If there
 exists any correlation between the choices of the experimenter and the target
-value to be predicted, the analyzer's training algorithm (usually Stochastic
-Gradient Descent) can exploit those correlations to start the descent to some
-local or global minimum. This working principle is somehow similar to the use of
-artificial neural networks for feature selection in classical machine learning
-theory.
+value to be predicted, the analyzer's training algorithm (usually some version
+of the gradient descent) can exploit those correlations to start the descent to some
+local or global minimum.
 
 The alert reader may have noted that in \ref{fig:simplesetup} the analyzer has
 no apparent way of telling which action the experimenter took, since it only
-receives the outcome of the experiment. Therefore the analyzer does not know if
-what is receiving is the value of $M$ or $L$. Although it may appear counter
-intuitive, the analyzer does not care in this particular set-up. The optimal
-strategy is to treat everything as if it were $L$ since knowing the value of $M$
-does not provide any information about $T$. However, it may make sense for the
-analyzer to know when $M$ is provided if the objective is to minimize the loss
-function (e.g. if the analyzer knew that the value corresponds to $M$ the
-optimal prediction would be the random guess that minimizes the loss). In
-practice, unless the distributions where $M$ and $L$ are generated from are the
-same, the analyzer learns to differentiate them with high confidence just by
+receives the outcome of the experiment. Therefore the analyzer does not know
+whether the value that it is receiving is the value of $M$ or $L$. Although it
+may appear counter intuitive, the optimal analyzer does not care in this
+particular set-up. The optimal strategy is to treat everything as if it were $L$
+since knowing the value of $M$ does not provide any information about $T$.
+However, it may make sense for the analyzer to know when $M$ is provided if the
+objective is to minimize the loss function (e.g. if the analyzer knew that the
+value corresponds to $M$ the optimal prediction would be the random guess that
+minimizes the loss). In practice, unless the distributions of $M$ and $L$ are
+the same, the analyzer learns to differentiate them with high confidence just by
 value of the outcome. However, in other set-ups this may not be the case and the
 information about what actions were taken is useful for the analyzer to make the
 predictions. In this case, we should also feed the actions as inputs to the
@@ -1089,8 +1190,8 @@ concept of \textit{buffer}.
 In our model we can use a buffer to store everything that we might want to feed
 to the agents. Usually this will be the actions taken and the outcomes obtained
 in every observation of the environment, although we have the freedom to add
-whatever we might need. It is just a variable to store information. This
-variable is not strictly needed, since we could establish directly the
+whatever we might need. It is just a placeholder to store information. This
+placeholder is not strictly needed, since we could establish directly the
 connections between the different subagents and environment outcomes. However,
 when we have a few sub-agents with several outcomes it becomes very difficult to
 keep track of each connection and to represent them. In these cases, the concept
@@ -1098,7 +1199,7 @@ of buffer becomes highly useful from an illustrative point of view. Usually, the
 buffer is emptied at the end of each episode or iteration of the learning loop.
 We could not do so, but in practice, keeping the data in the buffer does not
 provide any easy advantage since to use it we should solve many challenges, for
-example an increase on the number of features fed to the agents each episode.
+example an increase in the number of features fed to the agents each episode.
 We won't refer the buffer as \textit{memory} in this work, since the word
 \textit{memory} is reserved for an element of some versions of sub-agents that
 does not restart in each iteration. 
@@ -1110,8 +1211,8 @@ does not restart in each iteration.
   \caption{Diagram of a simple learning loop with buffer. In this case, the
   process is identical to the process depicted in Fig. \ref{fig:simplesetup}
   with the difference that the values of the action and the outcome are stored
-  in the buffer, and then passed to the analyzer. In this case the information
-  about which action was taken is available to the analyzer.} 
+  in the buffer, and then are passed to the analyzer. In this case the
+  information about which action was taken is available to the analyzer.} 
   \label{fig:simplesetupbuffer}
 \end{figure}
 
@@ -1123,9 +1224,9 @@ our model.
     physical world that determines the outcomes of all the measurements realized
     by the agent. It is completely represented by a state $ s \in S $, where $S$
     is the set of all possible states in which the SPE can be. For this
-    particular model we assume that the evolution of the system is assumed to be
-    given by a Markovian function $f: S \rightarrow S$ such that
-    $f(s_\tau)=s_{\tau+1}$. This function maybe deterministic or not.
+    particular model we assume that the evolution of the system is given by a
+    function $f: S \rightarrow S$ such that $f(s_\tau)=s_{\tau+1}$. This
+    function maybe deterministic or not.
     \item \textbf{Agent:} the agent is formed by the composition of two kind of
     different subagents:
     \begin{itemize}
@@ -1147,12 +1248,16 @@ our model.
         process the data collected in the observations after the action of the
         experimenter to predict a physical property of the SPE. This property
         could be a physical parameter of the system or a prediction of the
-        dynamics of the environment. It will usally consist of a regular
+        dynamics of the environment. It will usually consist of a regular
         regression neural network or an autoencoder, depending on the specific
         set-up. But we could use any trainable function like SVMs or any kind of
         regression. Mathematically it can be represented by a trainable function
         $ A :\mathcal{M} \rightarrow \mathcal{P}$, where $\mathcal{M}$ is the
-        space of measurements and $\mathcal{P}$ is the space of predictions.
+        space of measurements and $\mathcal{P}$ is the space of predictions. In
+        the context of minimal representation learning
+        \cite{iten2020discovering}, we can use an autoencoder structure to split
+        $A$ in two parts: $A:\mathcal{M} \rightarrow \mathcal{R}\rightarrow
+        \mathcal{P}$, where $\mathcal{R}$ is the representation space.
   \end{itemize}
     \item \textbf{Orchestration:} when coding we will call Orchestration
     everything that connects the different parts to complete a feedback loop.
@@ -1182,11 +1287,14 @@ measuring the mass and 1 the action of measuring the length.
 We can therefore set a very basic decision rule for our experimenter agent:
 
 \begin{itemize}
-  \item Let $\textbf{Q}=(q_0,q_1)$ be the value table, where $q_0$ and $q_1$ are
-  the values associated with the actions 0 and 1 respectively.  $Q$ can be also
-  understood as a trainable function $Q:\mathcal{X}\times\mathcal{A} \rightarrow
-  \mathbb{R}$. Initially $Q(a)=0 \; \forall a \in \mathcal{A}$. 
-  \item  Every episode, the agent takes an action $a$ and receives a reward $r$
+  \item We define the value function $Q:\mathcal{A}\times
+  \mathcal{X}\rightarrow\mathbb{R}$ that associates with each action $a \in
+  \mathcal{A}$ a value $Q(x,a)=q_{x,a}$. If $\mathcal{A}$ and $\mathcal{X}$ are discrete
+  spaces we can associate a value table to $Q$ with elements $Q(x,a)$. In the 
+  case where $\mathcal{X}$ is $\emptyset$, the value table is just a vector 
+  $\mathbb{\textbf{Q}}=(q_0,q_1,...,q_{k})$, where $k$ is the number of elements
+  in $\mathcal{A}.$
+  \item  In every episode, the agent takes an action $a$ and receives a reward $r$
   after taking the action.
   The update rule for $\textbf{Q}$ is the following:
   \begin{equation}
@@ -1198,7 +1306,7 @@ We can therefore set a very basic decision rule for our experimenter agent:
   \item The agent's policy $E:\emptyset  \rightarrow \mathcal{A}$ or 
   decision rule is:
   \begin{equation}
-    a = \argmax_{x \in \mathcal{A}} Q(x)
+    a = \argmax_{\lambda \in \mathcal{A}} Q(\lambda)
     \label{argmax_policy}
   \end{equation}
   This is, the experimenter takes the action $a$ with the highest $q_a$, and 
@@ -1206,20 +1314,20 @@ We can therefore set a very basic decision rule for our experimenter agent:
 \end{itemize}
 
 Note that the choice of \eqref{update_rule1} is just to illustrate that we can
-build Reinforcement Learning agents with very simple rules. We could have
+build reinforcement learning agents with very simple rules. We could have
 chosen instead of the cumulative reward the average reward obtained with the 
 action, but the working principle would be identical.
 
 However, our policy is still flawed, since the first action that gets a reward
-would always be elected afterward independently of its optimality. To solve this
-we can force the agent to initially explore different options ignoring the
+would always be elected afterwards independently of its optimality. To solve
+this, we can force the agent to initially explore different options ignoring the
 decision rule, and slowly, when the values $q_a$ are more reliable, let the
-agent choose according to \eqref{argmax_policy}. The easiest way to achieve that
+agent choose according to \eqref{argmax_policy}. The easiest way to achieve this
 is with an $\epsilon$-greedy decision algorithm: we set an exploration rate
 $\epsilon$ that decreases in each episode until it reaches a minimum value
-$\epsilon_\text{min}\geq 0$. The experimenter is set to take the
-\eqref{argmax_policy} policy with probability of $P_{\text{greedy}}=1-\epsilon$
-and a random action with a probability of $P_{\text{random}}=\epsilon$. We have
+$\epsilon_\text{min}\geq 0$. The experimenter is set to take the policy given in
+\eqref{argmax_policy} with probability $P_{\text{greedy}}=1-\epsilon$
+and a random action with a probability $P_{\text{random}}=\epsilon$. We have
 the freedom to choose how to decrease the value of $\epsilon$, and it may have a
 crucial impact on the training. A very popular rule is to decrease the value
 constantly by subtracting $_\epsilon = 1/N$, where $N$ is the number iterations
@@ -1264,14 +1372,14 @@ pseudocode:
     \begin{algorithmic}[1]
     \Procedure{Pendulum}{}
     \BState count = 0
-    \BState $\textbf{while } \text{count} < N:$
+    \BState $\textbf{while } \text{count} < N_{\text{Episodes}}:$
     \State $ M, L \gets \text{random sample }  M, L$
     \State $ T \gets T(L)$
     \State $ \text{pendulum} \gets [M,L,T]$
     \State $ \text{action} \gets \argmax Q $
     \State $ \text{measurement} \gets \text{pendulum[action]}$
     \State $ \text{prediction} \gets \text{analyzer(measurement)}$
-    \State $ \text{Apply SGD to analyzer with data point } (\text{measurement},T)$
+    \State $ \text{Apply GD to analyzer with data point } (\text{measurement},T)$
     \State $ \text{reward} \gets \text{reward}(\text{prediction}, T)$
     \State $ Q[\text{action}] \gets Q[\text{action}]+ \text{reward}$ 
     \State $ \text{count }\gets \text{count} + 1$
@@ -1284,7 +1392,7 @@ Let us see how this simple algorithm performs in the task. Ideally, the
 experimenter would find the optimal policy which consists in choosing always to
 measure the length and the analyzer would learn to estimate accurately $T$ from
 the data obtained by the experimenter. In our experiments, with this simple
-structure of only two neurons and the very naive reinforcement learning policy
+structure of only two neurons and the very naive reinforcement learning policy,
 the agent consistently finds the optimal action (to measure $L$). It also
 accurately predicts the value of $T$ in less than 10,000 episodes. With less
 episodes it is less consistent in finding the optimal policy.
@@ -1322,16 +1430,16 @@ episodes it is less consistent in finding the optimal policy.
   \label{fig:PendulumTraining}
   \end{figure}
 
-  In the figures Fig. \ref{fig:PendulumTraining} and Fig.
-  \ref{fig:PendulumError} we can observe the evolution of different parameters
-  during the training. All the parameters show successful learning of both, the
-  optimal policy and the prediction of the period. More complex neural network
-  structures and longer trainings can achieve much lower errors. However, this
-  is not a surprise since once the optimal policy is obtained the process just
-  consists on fitting a continuous single variable function. A task that can be
-  solved optimally by a single layered sigmoidal neural network
+  In Fig. \ref{fig:PendulumTraining} and Fig. \ref{fig:PendulumError} we can
+  observe the evolution of different parameters during the training. All the
+  parameters show successful learning of both, the optimal policy and the
+  prediction of the period. More complex neural network structures and longer
+  trainings can achieve much lower errors. However, this is not a surprise since
+  once the optimal policy is obtained the process just consists on fitting a
+  continuous single variable function. A task that can be solved optimally by a
+  single layered sigmoidal neural network consisting of enough neurons
   \cite{cybenko1989approximation}. This pendulum example, although trivial, is
-  useful to appreciate the working principle behind the experimenter-analyzer
+  useful to demonstrate the working principle behind the experimenter-analyzer
   architecture and how the feedback loop is formed. In the next section we are
   going to explore less trivial examples with more complex learning loops.
 
@@ -1341,7 +1449,7 @@ episodes it is less consistent in finding the optimal policy.
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{figures/Real-vs-Pred-Pendulum.pdf}
-    \caption{Real T vs Predicted T}
+    \caption{Empirical T vs Predicted T}
     \label{fig:RealvsPredictedPendulum}
   \end{subfigure}%
   \begin{subfigure}{.5\textwidth}
@@ -1350,12 +1458,11 @@ episodes it is less consistent in finding the optimal policy.
     \caption{Moving average of the error}
     \label{fig:ErrorAveragePendulum}
   \end{subfigure}
-  \caption{(a) A sample of the predictions made by trained agent. We can see
-  how it fits the $y=x$ line, showing that it learned the relation between
-  $L$ an $T$. (b) In this figure we can see how the error decreases to almost 
-  zero with very low deviation.Values: $\sigma=0.05$, $N=10000$,
-  $\text{lr}_\text{analyzer}=0.01$, Optimizer = Adam
-  }
+  \caption{(a) A sample of the predictions made by the trained agent. We can see
+  how the predictions are very accurate, showing that it learned the relation
+  between $L$ an $T$. (b) In this figure we can see how the error decreases to
+  almost zero with very low deviation.Values: $\sigma=0.05$, $N=10000$,
+  $\text{lr}_\text{analyzer}=0.01$}
   \label{fig:PendulumError}
   \end{figure}
 
@@ -1363,8 +1470,8 @@ episodes it is less consistent in finding the optimal policy.
 \label{Scenarios}
 \section{Scenario 1: Modified multi-armed bandit}
 In the first section of this chapter we are going to study a modified version of
-the classical Multi-armed bandit problem, a classical problem of Reinforcement
-Learning and Probablity Theory. Let us start by introducing the general problem.
+the classical Multi-armed bandit problem, a classical problem of reinforcement
+learning and probablity theory. Let us start by introducing the general problem.
 % We will show that we can map any experiment 
 % consisting of a non-interactive discrete choice measurements to our modified
 % multi-armed bandit. 
@@ -1374,14 +1481,14 @@ Learning and Probablity Theory. Let us start by introducing the general problem.
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{figures/Bandit.pdf}
-    \caption{Simple diagram portraying the multi-armed bandit problem}
+    \caption{Simple diagram portraying the multi-armed bandit problem.}
   \end{subfigure}
   \begin{subfigure}{.5\textwidth}
     \centering
     \includegraphics[width=1\linewidth]{figures/Bandit-Draw.pdf}
     \caption{Draw of a two armed bandit}
   \end{subfigure}
-  \caption{Multi-armed bandit problem}
+  \caption{Multi-armed bandit problem.}
   \end{figure}
 
 Suppose that we have an agent that has access to a k-armed bandit. Each time the
@@ -1399,7 +1506,7 @@ $R:A\times ... \rightarrow \mathbb{R}$, with "$...$" meaning that in principle
 the generated reward can depend on anything: the previous actions, the previous
 rewards, the number of trials, the number of times a lever has been pulled, etc.
 This is an extremely general problem. Often authors make assumptions on $R$. For
-example, $R$ being Markovian if depends only on the last rewards and/or actions.
+example, $R$ being Markovian if it depends only on the last rewards and/or actions.
 Or stationary if $R$ can be modeled as a set of immutable distributions
 $R=\{R_1,... , R_k\}$, with each distribution being associated with the rewards
 delivered by each of the arms of the bandit.
@@ -1410,7 +1517,7 @@ taken in the $n^\text{th}$ episode, and $r_n$ the reward obtained. This is:
 \begin{equation}
   Q^*(a) = \mathbb{E}[r_n|a_n = a]
 \end{equation}
-Note that, although we don't write it explicitly, $Q^*(a)$ can also depend on 
+Note that, although we do not write it explicitly, $Q^*(a)$ can also depend on 
 any of the subsets of the domain of $R$.
 The optimal strategy for the k-armed bandit problem is to always choose 
 $a^*=\argmax Q^*(x)$.
@@ -1425,8 +1532,8 @@ going to discuss here many of the approaches to solve the multi-armed bandit
 problem. However, let us outline a very simple algorithm that works particularly
 well for non-stationary bandits. 
 
-\subsection{Simple Reinforcement Learning algorithm for non-stationary
-multi-armed bandit} \label{SimpleRL}
+\subsection{Simple reinforcement learning algorithm for non-stationary
+multi-armed bandits} \label{SimpleRL}
 
 Let us outline a simple algorithm that we will use later in this section. This
 algorithm can be understood as a particular case of the Q-Learning algorithm,
@@ -1536,10 +1643,10 @@ of  measuring $L$ to one of the arms and measuring $M$ to the other. Then we set
 the function $R$ of the bandit to be $R:\mathcal{A}\times S\rightarrow
 \mathbb{R}$ as a composition of Gaussian reward function $r$ with the analyzer
 predicting the period from the outcome. Basically, we assume that the bandit is
-the result of the interaction between the Environment, the analyzer and the
+the result of the interaction between the environment, the analyzer and the
 Gaussian comparator (Fig. \ref{fig:Bandit-EA}). \par Note that this multi-armed
 bandit problem is quite difficult: it is non-stationary since the analyzer and
-the Environment change each episode and it is non-Markovian since the
+the environment change each episode and it is non-Markovian since the
 performance of the analyzer depends on the training over all the previous
 episodes. However, as we have seen, even very simple agents perform surprisingly
 well for this simple case.
@@ -1638,15 +1745,6 @@ Now let us explore different versions of this modified multi-armed bandit.
 
   \begin{myex}\label{MAB1ex}
 
-    \begin{figure}
-      \centering
-      \includegraphics[scale=0.5]{figures/analyzer1.pdf}
-      \caption{Two hidden layer feed-forward neural network, with each layer
-      consisting in 16 fully connected neurons.}
-      \label{analyzer1}
-    \end{figure}
-
-
     \begin{figure}[]
       \centering
       \begin{subfigure}{.5\textwidth}
@@ -1684,7 +1782,7 @@ Now let us explore different versions of this modified multi-armed bandit.
       exponential decrease of the exploration rate. 
       \item The analyzer is a two hidden layer feed-forward neural network, with
       each layer consisting in 16 fully connected neurons activated with the
-      ReLU function (Fig. \ref{analyzer1} ). The optimizer is just t qhe
+      ReLU function (Fig. \ref{analyzer1} ). The optimizer is just the
       gradient descent algorithm. This analyzer is of unnecessary complexity for
       this task, but it will be useful later for more complex functions
       $f(v_t)$.
@@ -1703,7 +1801,7 @@ Now let us explore different versions of this modified multi-armed bandit.
     about the target lever or the function $f(s')$. In the exploration phase,
     the experimenter chooses random levers and the analyzer tries to fit the
     function with most of the times useless inputs but $1/8^{\text{th}}$ of the
-    times a useful value. Then the Gradient Descent algorithm is applied and
+    times a useful value. Then the gradient descent algorithm is applied and
     results to be surprisingly robust to the noise produced by the useless inputs.
     \begin{figure}[]
       \centering
@@ -2075,21 +2173,21 @@ Now let us explore different versions of this modified multi-armed bandit.
 In the previous section we showed how the simplest version of the
 E-A architecture can find the optimal strategy for experiments that can be
 expressed as a multi-armed bandit problem. This is: experiments with a discrete
-number of action that can be predetermined before the experiment is started.
-However, in general it is not possible to express every experiment as a 
+number of actions that can be predetermined before the experiment is started.
+However, it is not possible in general to express every experiment as a 
 multi-armed bandit problem. For example, if the action space is continuous 
 (e.g. selecting the position of a detector) or if the experiment 
-requires from a dynamical intervention, for example, if in an experiment
+requires a dynamical intervention. For example, if in an experiment
 consisting of sequential actions, it is needed the result of 
 the preceding actions to take the correct choices. In this section we are going
-to show how one could tackle this kind of experiments using the E-A 
+to show how one could tackle these latter experiments using the E-A 
 architecture. 
 
 \section{Sequential experiments}
 
 So far, all the E-A models we have used consists of an experimenter $E:\emptyset
 \rightarrow \mathcal{A}$ whose action $a$ over the environment in the state $s$
-produce some outcome $\textbf{O}(a,s)$, and then the outcome and maybe some
+produce some outcome $\textbf{O}(a,s)$. Then the outcome and maybe some
 additional information are fed to the analyzer $A:\mathcal{M} \rightarrow
 \mathcal{P}$ to output a prediction about a physical property of the system.
 Then such property is observed (or in our case, simulated) and compared to the
@@ -2101,7 +2199,7 @@ experiment. For example, if the experiment consists on measuring different
 parameters of an electric circuit to know the power consumed by a section of the
 circuit. We can group all those choices of measurements, e.g. measuring the
 intensity at node A and the voltage at node B, in a single action taken at the
-beginning of an episode. This is because the outcomes of the measurements don't
+beginning of an episode. This is because the outcomes of the measurements do not
 condition each other. However, in other experiments the outcomes of previous
 actions may condition the actions to be taken in order to get the correct
 parameters for a prediction. We will call this experiments \textit{sequential}, 
@@ -2146,7 +2244,7 @@ if the mass is 1.3 Kg a procedure would be the following:
 \\\\
 
 However, in order to find the value of $M$ in five uses of the scale or less we
-can't have a prefixed strategy at the start of the experiment. We need to
+cannot have a prefixed strategy at the start of the experiment. We need to
 observe the outcomes of each measurement individually and respond accordingly.
 We can not express then this experiment as a multi-armed bandit decision
 problem and therefore is sequential.
@@ -2165,9 +2263,9 @@ problem and therefore is sequential.
 
 In this section we are going to explain how to use the E-A architecture to
 tackle sequential experiments. The basic idea behind this approach is to
-concatenate as many experimenters as sequential actions we need to take and each
-experimenter is fed with the information gathered by the actions and outcomes
-gathered by the preceding experimenters. 
+concatenate as many experimenters as sequential actions are needed. Each
+experimenter is fed with the information gathered by the actions of the
+preceding experimenters. 
 
 Suppose we have a sequential experiment that needs from $D$ sequential actions.
 Then we would have $D$ different experimenters $E_n:\mathcal{X}_n\rightarrow
@@ -2175,18 +2273,18 @@ Then we would have $D$ different experimenters $E_n:\mathcal{X}_n\rightarrow
 different depending on the nature of the experiment, since the experimenters
 $E_n$ could be different reinforcement learning agents with different
 architectures. The experimenters' environments $\mathcal{X}_n$ can consist of
-any information stored in the buffer at the moment they are fed to $E_n$.The SPE
-is in the state $s_n \in S$ when the action $a_n \in \mathcal{A}_n$ is taken and
-it produces the outcome $\textbf{O}_n(a_n, s_n) \in \mathbb{R}^{d_n}$ where
+any information stored in the buffer at the moment they are fed to $E_n$. The
+SPE is in the state $s_n \in S$ when the action $a_n \in \mathcal{A}_n$ is taken
+and it produces the outcome $\textbf{O}_n(a_n, s_n) \in \mathbb{R}^{d_n}$ where
 $d_n$ is the number of parameters that are outputted after the action $a_n$.
 Then, as in the single experimenter version, all the information in the buffer
 together with auxiliary parameters can be stored into $m\in\mathcal{M}$ to fed
 the analyzer $A:\mathcal{M}\rightarrow \mathcal{P}$. Then the prediction is
-compared with the observed/simulated value of the property to be predicted
-with a reward generation function $r_n$. The reward could be different for each
+compared with the observed/simulated value of the property to be predicted with
+a reward generation function $r_n$. The reward could be different for each
 experimenter depending on the nature of the architecture. However, in this work
-only explored the architecture with a single reward generation function $r$ for
-all experimenters.
+we only explored the architecture with a single reward generation function $r$
+for all experimenters.
 
 One of the main limitations of this approach is that we need to fix the number
 $D$ of actions beforehand. In some experiments this may not be relevant since
@@ -2207,20 +2305,21 @@ in which the A-E architecture finds the optimal strategy.
 We have a box of mass $M$ on an infinite horizontal surface with friction
 coefficient $\mu$ respect to the mass $M$. The SPE is programmed so that a canon
 shoots a bullet of mass $m$ with velocity $v$ that collides inelastically with
-$M$ when an episode is started. The mass $M$ is the only parameter restarted
-each episode by sampling uniformly at random from the interval $[M_{min},
-M_{max}]$. We can calculate the distance traveled by the box using the
-conservation of momentum. The moment of the bullet is $p_b=mv$. Applying the
+$M$ when an episode is started. The mass $M$ is the only parameter that restarts
+at each episode by sampling uniformly at random from the interval
+$[M_{min}, M_{max}]$. We can calculate the distance traveled by the box using
+the conservation of momentum. The moment of the bullet is $p_b=mv$. Applying the
 conservation of momentum we can obtain the velocity of the box after the impact:
 \begin{equation}
-  v_M = \frac{p_M}{M}=\frac{m}{M}v
+  v' = \frac{p_b}{M'}=\frac{m}{M+m}v
 \end{equation}
-We know that the friction force is $F=\mu N=\mu mg$. When the box stops, due to
-the conservation of energy, the work realized by the friction force must be the
-kinetic energy $K$ of the mass $M+m$ of the box after the impact of the bullet.
-Since the friction force is assumed to be constant, the work done is $W=Fx=\mu
-mgx$, where $x$ is the distance traveled until it stops. Equating this term to
-the kinetic energy we obtain:
+where $M'=m+M$ is the mass of the moving block formed by the bullet and the box.
+ We know that the friction force is $F=\mu N=\mu (m+M)g$. When the box stops,
+ due to the conservation of energy, the work realized by the friction force must
+ be the kinetic energy $K$ of the mass $M'$ of the block after the impact of the
+ bullet. Since the friction force is assumed to be constant, the work done is
+ $W=Fx=\mu (m+M)gx$, where $x$ is the distance traveled until it stops. Equating
+ this term to the kinetic energy we obtain:
 \begin{equation}
   \label{displacement} 
   x=\frac{1}{2g\mu}\left(\frac{vm}{M+m} \right)^2
@@ -2239,7 +2338,7 @@ the kinetic energy we obtain:
 We give the agent access to two sensors to measure the position of the box:
 \begin{itemize}
 \item \textbf{A low precision but wide range (LPWR) position  sensor}: it works
-as follow: the landing zone is divided into four regions or zones of equal size.
+as follows: the landing zone is divided into four regions or zones of equal size.
 This sensor outcomes the middle point of the zone in which the box has landed.
 For example, in the situation depicted in Fig. \ref{fig:Box} this sensor would
 produce the outcome: $3$, since it is the middle point of the zone $B$. This
@@ -2405,18 +2504,147 @@ supposed to be the same than for the multi-armed bandit: to let the analyzer
 exploit the correlations during the exploration phase to start a feedback loop
 in which all agents improvement improves each other performance.
 
-Changing the DQN algorithm of the experimenter 2 to a more sophisticated Dual
+Changing the DQN algorithm of the experimenter 2 to a more sophisticated dual
 DQN algorithm with experience replay reduced the number of episodes needed to
 find the optimal strategy by a factor of $10$, needing only $2.5\times10^5$
 episodes to show almost identical results. However, both algorithms took a
 similar amount of computation time ($\sim 5$ h in an average laptop). This is
-because the Dual DQN algorithm fits several points from the memory in each
+because the dual DQN algorithm fits several points from the memory in each
 episode, taking longer to compute each episode.
 
 This shows us that there is a lot of room for improvement by choosing different 
 reinforcement learning agents or hyper-parameters. It also manifest one of the 
 strength of this architecture: its modularity. With very few changes on the 
 learning architecture we can try completely different agents.
+
+
+\chapter{Conclusion and future work}
+
+In this section we are going to discuss the conclusions extracted from this
+project and outline future work to expand the E-A architecture.
+
+\section{Conclusion}
+
+In this work we have proposed a new machine learning architecture that
+successfully finds the correct strategies for some given type of experiments. We
+found that it works by exploiting the existing correlations between data
+obtained with specific actions and the empirical value of the asked property to
+start a feedback loop. Such correlations are found in a random exploration phase
+of the action space with an at first untrained predictor function that is
+trained with a gradient descent like algorithm. These architecture achieved the 
+following milestones:
+\begin{itemize}
+  \item It successfully finds the correct strategies for multi-armed bandit like
+  experiments in every tested case. However, the computation time scales poorly
+  to large action spaces (5h on an average laptop for an action space of $\sim
+  10^3$ possible actions). Although these type of problems are from limited
+  interest and do not need from this kind of architecture to be solved, they are
+  useful to show the ability of the E-A architecture to find unknown
+  correlations solely by empirical validation.
+  \item It showed its ability to solve sequential experiments in which
+  sequential actions need to be taken. This is done by concatenating
+  sequentially reinforcement learning agents. Based on the feedback obtained
+  through empirical validation, they learn to cooperate to find the optimal 
+  strategy for the experiment. Parallel to that, the feedforward neural network
+  that produces the predictions learns to efficiently interpret the data to 
+  make accurate predictions.
+\end{itemize}
+
+We show that performance can vary widely depending on the machine learning tools
+used for the experimenters and the analyzers. We explored the use of agents with
+memory and they tend to perform better (learn the correct strategy in less
+episodes). Although the memory should be carefully implemented to not break the
+feedback loop, e.g. allowing only a small size memory.
+
+However, we also find some weaknesses on the architecture that are not solved yet.
+The structure of the specific E-A model used for a given experiment strongly
+influences the development of the experiment. For example, in sequential
+experiments we need to set the number $D$ of actions or, in general, what actions
+are allowed. This prior assumptions are yet unavoidable in this kind of set-ups.
+We suggest that many of this prior assumptions can be loosened by
+introducing the use of recurrent neural networks, variational methods and
+common machine learning techniques, like automatic feature selection or
+hyper-parameter optimization. Another weakness relates to its scalability. For
+experiments with large $D$, training at least $D$ separate agents becomes 
+computationally intractable. Finally, we don't have any approach yet to help to
+interpret the optimal experiment found by the network. This is relevant
+for complex experiments with complicated sequences of actions. It could be
+difficult to understand why the agent chose a specific strategy even if 
+the strategy performs well on the predictions. In the next section we are going
+to discuss our suggestions and upcoming work to solve some of these weaknesses.
+
+\section{Future work}
+
+In the following section lets outline some future work and some ideas that could
+be implemented to solve some of the current drawbacks of the architecture.
+\subsection{Experimenters for continuous action spaces}
+So far we only explored experiments with discrete action spaces, but many
+experiments require to set continuous values in each taken action.
+For instance, in the example of the sliding box of Chapter 5, instead of placing 
+the HPNR sensor in a discrete zone we could let the agent to place it anywhere
+within a given interval. 
+
+The reason why we have not explored yet this kind of experiments comes from the
+fact that all reinforcement learning agents used to portray the experimenter
+role were based in methods that compute the value function $Q(x,a)$ for every
+action $a\in \mathcal{A}$ and state $x \in \mathcal{X}$. The state space
+$\mathcal{X}$ can be continuous for this kind of algorithms since we can use
+neural networks to produce an estimate of $Q$ for each action even for
+continuous inputs. However, for the action space $\mathcal{A}$ this is not the
+case, since we decide which action to take by computing the $\argmax_{a \in
+\mathcal{A}} Q(x,a)$. Therefore, we need to compute the value of $Q$ for every
+action, impossible for a continuous action space. \par To solve this issue we
+can use reinforcement learning agents with policies independent from the value
+function. One example of these kind of agents are the actor-critic algorithms.
+This kind of algorithm divide the process of policy generation in two: an actor
+that consists on a parametric function independent from the value function and a
+critic that evaluates the actions taken by the actor by using an estimation of
+the expected reward. We suspect this kind of agents should be seamlessly
+implemented in the E-A architecture.
+
+\subsection{Combination of the Experimenter-Analyzer architecture with SciNet}
+
+In \cite{iten2020discovering}, the authors explore the use of variational
+auto-encoders to extract autonomously physically relevant parameters from
+physical data without prior assumptions about the physical system. They proposed
+a neural network architecture called \textit{SciNet} where they use a
+variational auto-encoder to find the minimal latent representation that contains
+relevant physical parameters. This SciNet architecture can be combined with the
+Experimenter-Analyzer architecture to create an agent that autonomously collect
+the data and find the relevant physical parameters, using only as feedback for
+the training the quality of the predictions. This can be achieve by substituting
+the regular regression neural networks used in this work as the analyzer with a
+SciNet auto-encoder.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics{figures/ScinetInEA.pdf}
+  \caption{Diagram of a Experimenter-Analyzer structure combined with a SciNet
+  VAE to extract the relevant physical parameters from the data collected by the
+  experimenter. The image of the auto-encoder was taken from the original paper
+  \cite{iten2020discovering} with the permission of the authors.}
+  \label{}
+\end{figure}
+
+\subsection{Recurrent Neural Networks for sequential experiments with constant 
+action spaces}
+
+There are some sequential experiments, like the beam scale experiment of Ex.
+\ref{scalex}, where every event of the sequence shares the same action space.
+In this cases we may be able to substitute sequential reinforcement agents with
+a single recurrent neural network. LSTM networks are a promising technology for
+this kind of approach. This method could be a partial solution to the
+scalability issue and might proportionate tools to infer the optimal $D$
+automatically.
+
+\subsection{Application of the architecture to real physical systems}
+
+It might be interesting to explore real life experiments where we can try the
+E-A architecture. Potential candidates should be experiments on systems that
+allow for fast measurements. In the run simulations, each full iteration of
+the learning loop takes on average $\sim 10$ ms. Many experimental set-ups allow
+to manipulate and read measurements of physical systems in much smaller
+timescales, e.g. electrical circuits or condensed matter systems.
 
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2431,28 +2659,22 @@ learning architecture we can try completely different agents.
 
 
 
-\begin{appendix}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% HEADER APPENDIX
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
+% \begin{appendix}
+% %
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% HEADER APPENDIX
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %
+% \chapter{Theoretical background of machine learning}
+% In this chapter we are going to explain briefly some of the core machine
+% learning concepts used in this work. The content of this chapter is strongly
+% based on the content from \cite{nielsen2015neural} and
+% \cite{sutton2018reinforcement}.
 
 
 
 
 
-
-\lhead[\fancyplain{\scshape Appendix \thechapter}
-{\scshape Appendix \thechapter}]
-{\fancyplain{\scshape \leftmark}
-  {\rightmark}}
-%
-\rhead[\fancyplain{\scshape \leftmark}
-{\scshape \leftmark}]
-{\fancyplain{\scshape Appendix \thechapter}
-  {\scshape Appendix \thechapter}}
-%
 
 
 
@@ -2462,17 +2684,6 @@ learning architecture we can try completely different agents.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %\include{f}
-
-
-
-
-
-
-\chapter{Appendix ?} \label{app:pgm}
-
-\blindtext
-
-
 
 
 
@@ -2490,24 +2701,11 @@ learning architecture we can try completely different agents.
 
 
 
-\clearpage
-%
+% \clearpage
+% %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% HEADER BIBLIOGRAPHY
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-\lhead[\fancyplain{\scshape Appendix}
-{\scshape Appendix}]
-{\fancyplain{\scshape \leftmark}
-  {\scshape \leftmark}}
-%
-\rhead[\fancyplain{\scshape \leftmark}
-{\scshape \leftmark}]
-{\fancyplain{\scshape Appendix}
-  {\scshape Appendix}}
-  
-  
-  
   
   
   
@@ -2538,8 +2736,8 @@ learning architecture we can try completely different agents.
 %% END OF APPENDIX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-\end{appendix}
-%
+% \end{appendix}
+% %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% INDEX
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -21,10 +21,6 @@
 \babel@aux{USenglish}{}
 \babel@aux{USenglish}{}
 \babel@aux{USenglish}{}
-\citation{owidlifeexpectancy}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Preface}{1}{chapter.1}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
 \citation{sinatra2015century,BornmannRudiger}
 \citation{publications7010018}
 \citation{Alkhateeb}
@@ -35,157 +31,172 @@
 \citation{Melnikov_2018}
 \citation{iten2020discovering}
 \citation{nautrup2020operationally}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Minimal model for science}{5}{chapter.2}\protected@file@percent }
+\citation{ried2019minimal,Wu_2019,De_Simone_2019,PhysRevD.99.015014,rahaman2019learning}
+\citation{iten2020discovering}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{science}{{2}{5}{Minimal model for science}{chapter.2}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Machine Learning theory}{6}{chapter.3}\protected@file@percent }
+\newlabel{Introduction}{{1}{4}{Introduction}{chapter.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Towards the automation of science}{4}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}The scientific method to train agents}{5}{section.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Structure of the thesis}{6}{section.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Experimenter-analyzer model}{8}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Experimenter-analyzer model}{7}{chapter.4}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{EAmodel}{{4}{7}{Experimenter-analyzer model}{chapter.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram of the simplest combination of elements. The feedback loop consists on the following: 1. The experimenter takes an action. 2. The environment gives back an outcome resulting from the action. 3. The action is taken by the analyzer and used to make a prediction. 4. The prediction about the environment and the real value of the environment are compared to generate the loss and the reward to train the analyzer and the experimenter.\relax }}{8}{figure.caption.3}\protected@file@percent }
+\newlabel{EAmodel}{{2}{8}{Experimenter-analyzer model}{chapter.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Diagram of the simplest combination of elements. The feedback loop consists on the following: 1. The experimenter takes an action. 2. The environment gives back an outcome resulting from the action. 3. The action is taken by the analyzer and used to make a prediction. 4. The prediction about the environment and the empirical value of the environment are compared to generate the loss and the reward to train the analyzer and the experimenter.\relax }}{9}{figure.caption.4}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:simplesetup}{{4.1}{8}{Diagram of the simplest combination of elements. The feedback loop consists on the following: 1. The experimenter takes an action. 2. The environment gives back an outcome resulting from the action. 3. The action is taken by the analyzer and used to make a prediction. 4. The prediction about the environment and the real value of the environment are compared to generate the loss and the reward to train the analyzer and the experimenter.\relax }{figure.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram of a simple learning loop with buffer. In this case, the process is identical to the process depicted in Fig. \ref  {fig:simplesetup} with the difference that the values of the action and the outcome are stored in the buffer, and then passed to the analyzer. In this case the information about which action was taken is available to the analyzer.\relax }}{10}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:simplesetupbuffer}{{4.2}{10}{Diagram of a simple learning loop with buffer. In this case, the process is identical to the process depicted in Fig. \ref {fig:simplesetup} with the difference that the values of the action and the outcome are stored in the buffer, and then passed to the analyzer. In this case the information about which action was taken is available to the analyzer.\relax }{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}General elements and definitions}{10}{section.4.1}\protected@file@percent }
-\newlabel{update_rule1}{{4.2}{12}{}{equation.4.2}{}}
-\newlabel{argmax_policy}{{4.3}{12}{}{equation.4.3}{}}
-\newlabel{gaussian_reward}{{4.8}{13}{}{equation.4.8}{}}
+\newlabel{fig:simplesetup}{{2.1}{9}{Diagram of the simplest combination of elements. The feedback loop consists on the following: 1. The experimenter takes an action. 2. The environment gives back an outcome resulting from the action. 3. The action is taken by the analyzer and used to make a prediction. 4. The prediction about the environment and the empirical value of the environment are compared to generate the loss and the reward to train the analyzer and the experimenter.\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagram of a simple learning loop with buffer. In this case, the process is identical to the process depicted in Fig. \ref  {fig:simplesetup} with the difference that the values of the action and the outcome are stored in the buffer, and then are passed to the analyzer. In this case the information about which action was taken is available to the analyzer.\relax }}{11}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:simplesetupbuffer}{{2.2}{11}{Diagram of a simple learning loop with buffer. In this case, the process is identical to the process depicted in Fig. \ref {fig:simplesetup} with the difference that the values of the action and the outcome are stored in the buffer, and then are passed to the analyzer. In this case the information about which action was taken is available to the analyzer.\relax }{figure.caption.5}{}}
+\citation{iten2020discovering}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}General elements and definitions}{12}{section.2.1}\protected@file@percent }
+\newlabel{update_rule1}{{2.2}{13}{}{equation.2.2}{}}
+\newlabel{argmax_policy}{{2.3}{13}{}{equation.2.3}{}}
+\newlabel{gaussian_reward}{{2.8}{14}{}{equation.2.8}{}}
 \citation{cybenko1989approximation}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Simple learning loop\relax }}{14}{algorithm.1}\protected@file@percent }
-\newlabel{pendulum}{{1}{14}{Simple learning loop\relax }{algorithm.1}{}}
-\newlabel{fig:ActionAveragePendulum}{{4.3a}{15}{Moving average of the actions\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:ActionAveragePendulum}{{a}{15}{Moving average of the actions\relax }{figure.caption.5}{}}
-\newlabel{fig:RewardAveragePendulum}{{4.3b}{15}{Moving average of the reward\relax }{figure.caption.5}{}}
-\newlabel{sub@fig:RewardAveragePendulum}{{b}{15}{Moving average of the reward\relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces (a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {analyzer}=0.01$, Optimizer = Adam\relax }}{15}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:PendulumTraining}{{4.3}{15}{(a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {analyzer}=0.01$, Optimizer = Adam\relax }{figure.caption.5}{}}
-\newlabel{fig:RealvsPredictedPendulum}{{4.4a}{15}{Real T vs Predicted T\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:RealvsPredictedPendulum}{{a}{15}{Real T vs Predicted T\relax }{figure.caption.6}{}}
-\newlabel{fig:ErrorAveragePendulum}{{4.4b}{15}{Moving average of the error\relax }{figure.caption.6}{}}
-\newlabel{sub@fig:ErrorAveragePendulum}{{b}{15}{Moving average of the error\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces (a) A sample of the predictions made by trained agent. We can see how it fits the $y=x$ line, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {analyzer}=0.01$, Optimizer = Adam \relax }}{15}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:PendulumError}{{4.4}{15}{(a) A sample of the predictions made by trained agent. We can see how it fits the $y=x$ line, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {analyzer}=0.01$, Optimizer = Adam \relax }{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}E-A architecture in different scenarios}{16}{chapter.5}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Simple learning loop\relax }}{15}{algorithm.1}\protected@file@percent }
+\newlabel{pendulum}{{1}{15}{Simple learning loop\relax }{algorithm.1}{}}
+\newlabel{fig:ActionAveragePendulum}{{2.3a}{16}{Moving average of the actions\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:ActionAveragePendulum}{{a}{16}{Moving average of the actions\relax }{figure.caption.6}{}}
+\newlabel{fig:RewardAveragePendulum}{{2.3b}{16}{Moving average of the reward\relax }{figure.caption.6}{}}
+\newlabel{sub@fig:RewardAveragePendulum}{{b}{16}{Moving average of the reward\relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces (a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {analyzer}=0.01$, Optimizer = Adam\relax }}{16}{figure.caption.6}\protected@file@percent }
+\newlabel{fig:PendulumTraining}{{2.3}{16}{(a) The moving average of the actions taken in each episode. We can see how it starts taking both actions evenly with an average of 0.5. This is expected since at the beginning $\epsilon \approx 1$. As $\epsilon $ decreases the experimenter starts to take more greedy actions and gets biased towards the action 1 (measure $L$). This bias appears as a result of the existing correlation between $L$ and $T$, but not between $M$ and $T$. This correlation is exploited by the SGD algorithm for the neural network of the analyzer. (b) The moving average of the reward obtained in each episode. At the beginning the reward obtained is low and similar to those obtained with random guesses. However, it increases slowly, apparently because the analyzer starts to exploit slightly the correlation between $L$ and $T$. This slight improvement over the prediction for the outcomes of Action 1, creates the bias that starts the feedback loop. Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {analyzer}=0.01$, Optimizer = Adam\relax }{figure.caption.6}{}}
+\newlabel{fig:RealvsPredictedPendulum}{{2.4a}{17}{Empirical T vs Predicted T\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:RealvsPredictedPendulum}{{a}{17}{Empirical T vs Predicted T\relax }{figure.caption.7}{}}
+\newlabel{fig:ErrorAveragePendulum}{{2.4b}{17}{Moving average of the error\relax }{figure.caption.7}{}}
+\newlabel{sub@fig:ErrorAveragePendulum}{{b}{17}{Moving average of the error\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces (a) A sample of the predictions made by the trained agent. We can see how the predictions are very accurate, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text  {lr}_\text  {analyzer}=0.01$\relax }}{17}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:PendulumError}{{2.4}{17}{(a) A sample of the predictions made by the trained agent. We can see how the predictions are very accurate, showing that it learned the relation between $L$ an $T$. (b) In this figure we can see how the error decreases to almost zero with very low deviation.Values: $\sigma =0.05$, $N=10000$, $\text {lr}_\text {analyzer}=0.01$\relax }{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}E-A architecture in different scenarios}{18}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{Scenarios}{{5}{16}{E-A architecture in different scenarios}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Scenario 1: Modified multi-armed bandit}{16}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}General multi-armed bandit problem}{16}{subsection.5.1.1}\protected@file@percent }
+\newlabel{Scenarios}{{3}{18}{E-A architecture in different scenarios}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Scenario 1: Modified multi-armed bandit}{18}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}General multi-armed bandit problem}{18}{subsection.3.1.1}\protected@file@percent }
 \citation{sutton2018reinforcement}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Multi-armed bandit problem\relax }}{17}{figure.caption.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{18}{subsection.5.1.2}\protected@file@percent }
-\newlabel{SimpleRL}{{5.1.2}{18}{Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{subsection.5.1.2}{}}
-\newlabel{simpleQ}{{5.2}{18}{Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{equation.5.2}{}}
-\newlabel{weighted_sum}{{5.7}{18}{Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{equation.5.7}{}}
-\newlabel{eq:sum}{{5.8}{19}{Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{equation.5.8}{}}
-\newlabel{eq:aux}{{5.10}{19}{Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{equation.5.10}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces \relax }}{19}{algorithm.2}\protected@file@percent }
-\newlabel{Non-stationary multiarmed-bandit}{{2}{19}{\relax }{algorithm.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.3}Modified multi-armed bandit problem}{20}{subsection.5.1.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagram of how the simplest combination for the E-A architecture (\ref  {fig:simplesetup}) can be modelled as a multi-armed bandit.\relax }}{21}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:Bandit-EA}{{5.2}{21}{Diagram of how the simplest combination for the E-A architecture (\ref {fig:simplesetup}) can be modelled as a multi-armed bandit.\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit I}{22}{section*.9}\protected@file@percent }
-\newlabel{MAB1ex}{{5.1.3}{22}{}{mythm.5.1.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Two hidden layer feed-forward neural network, with each layer consisting in 16 fully connected neurons.\relax }}{23}{figure.caption.10}\protected@file@percent }
-\newlabel{analyzer1}{{5.3}{23}{Two hidden layer feed-forward neural network, with each layer consisting in 16 fully connected neurons.\relax }{figure.caption.10}{}}
-\newlabel{fig:ActionAverageMAB1}{{5.4a}{23}{Moving average of the actions\relax }{figure.caption.11}{}}
-\newlabel{sub@fig:ActionAverageMAB1}{{a}{23}{Moving average of the actions\relax }{figure.caption.11}{}}
-\newlabel{fig:actionsMAB1}{{5.4b}{23}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.11}{}}
-\newlabel{sub@fig:actionsMAB1}{{b}{23}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Training of example \ref  {MAB1ex}. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 6 in this case). In a) we can see the average value of the action taken in each episode how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $600^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{23}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:ErrorAverageMAB1}{{5.5a}{24}{Average error per episode\relax }{figure.caption.12}{}}
-\newlabel{sub@fig:ErrorAverageMAB1}{{a}{24}{Average error per episode\relax }{figure.caption.12}{}}
-\newlabel{fig:predictionsMAB1}{{5.5b}{24}{Predicted value vs. Target value\relax }{figure.caption.12}{}}
-\newlabel{sub@fig:predictionsMAB1}{{b}{24}{Predicted value vs. Target value\relax }{figure.caption.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Performance of the example \ref  {MAB1ex}. These two figures shows us how the agent learns to predict the identity function. In a) we can see the average value of the error drops quickly to zero as the agent identify the correct lever and the exploration rate vanishes. In (b) we can see the predictions of the agent after 5000 episodes and how it fits nearly perfectly the identity function. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{24}{figure.caption.12}\protected@file@percent }
-\newlabel{MAB2ex}{{5.1.4}{24}{}{mythm.5.1.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Graphical representation of the predictions made by the analyzer after the training compared to the exact value $e^{\text  {sin}(v_t)}$ for the interval $[v_{min}=0,v_{max}=10]$ after 50,000 episodes of training.\relax }}{25}{figure.caption.13}\protected@file@percent }
-\newlabel{performanceMBA2}{{5.6}{25}{Graphical representation of the predictions made by the analyzer after the training compared to the exact value $e^{\text {sin}(v_t)}$ for the interval $[v_{min}=0,v_{max}=10]$ after 50,000 episodes of training.\relax }{figure.caption.13}{}}
-\newlabel{MAB3ex}{{5.1.5}{25}{}{mythm.5.1.5}{}}
-\newlabel{fig:ActionAverageMAB2}{{5.7a}{26}{Moving average of the actions\relax }{figure.caption.14}{}}
-\newlabel{sub@fig:ActionAverageMAB2}{{a}{26}{Moving average of the actions\relax }{figure.caption.14}{}}
-\newlabel{fig:actionsMAB2}{{5.7b}{26}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.14}{}}
-\newlabel{sub@fig:actionsMAB2}{{b}{26}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Training of example \ref  {MAB2ex}. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 6 in this case). In (a) we can see the average value of the action taken in each episode and how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $2000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{26}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:ErrorAverageMAB2}{{5.8a}{26}{Average error per episode\relax }{figure.caption.15}{}}
-\newlabel{sub@fig:ErrorAverageMAB2}{{a}{26}{Average error per episode\relax }{figure.caption.15}{}}
-\newlabel{fig:predictionsMAB2}{{5.8b}{26}{Predicted value vs. Target value\relax }{figure.caption.15}{}}
-\newlabel{sub@fig:predictionsMAB2}{{b}{26}{Predicted value vs. Target value\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Performance of the example \ref  {MAB2ex}. These two figures shows us how the agent learns to predict the identity function. In (a) we can see the average value of the error drops to zero as the agent identify the correct lever and the exploration rate vanishes. In (b) we can see the predictions of the agent after 50,000 episodes and how it fits with acceptable accuracy the target function. Information: $N=50,000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{26}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:ActionAverageMAB3}{{5.9a}{27}{Moving average of the actions\relax }{figure.caption.16}{}}
-\newlabel{sub@fig:ActionAverageMAB3}{{a}{27}{Moving average of the actions\relax }{figure.caption.16}{}}
-\newlabel{fig:actionsMAB3}{{5.9b}{27}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.16}{}}
-\newlabel{sub@fig:actionsMAB3}{{b}{27}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.16}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Training of example \ref  {MAB3ex} . These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 2 in this case). In a) we can see the average value of the action taken in each episode and how it converges to the target lever, despite of the large number of levers. In (b) we can see the cumulative number of actions taken by the agent and how around the $40,000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=10^5$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{27}{figure.caption.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit II}{27}{section*.17}\protected@file@percent }
-\newlabel{fig:ActionAverageMAB4}{{5.10a}{28}{Moving average of the actions\relax }{figure.caption.18}{}}
-\newlabel{sub@fig:ActionAverageMAB4}{{a}{28}{Moving average of the actions\relax }{figure.caption.18}{}}
-\newlabel{fig:actionsMAB4}{{5.10b}{28}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.18}{}}
-\newlabel{sub@fig:actionsMAB4}{{b}{28}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces Training of example for the 3-variable example. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 2 in this case). In (a) we can see the average value of the action taken in each episode and how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $10,000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=10^4$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{28}{figure.caption.18}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces To add the auxiliary parameters to the learning loop we just need to make a small modification to the diagram.\relax }}{29}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:auxiliaryparameter}{{5.11}{29}{To add the auxiliary parameters to the learning loop we just need to make a small modification to the diagram.\relax }{figure.caption.20}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit III}{29}{section*.19}\protected@file@percent }
-\newlabel{pendulumcomplete}{{5.1.6}{30}{}{mythm.5.1.6}{}}
-\newlabel{2k}{{5.1.7}{30}{}{mythm.5.1.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.4}Summary of the multi-armed bandit}{30}{subsection.5.1.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Summary of the training for the example \ref  {pendulumcomplete}. We observe that the actions converge like in previous examples. The analyzer does not completely fit the function, although shows clear signs of learning. This could be due to an inadequate Neural Network architecture or insufficient training. Information: $N=40,000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{31}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:completepd}{{5.12}{31}{Summary of the training for the example \ref {pendulumcomplete}. We observe that the actions converge like in previous examples. The analyzer does not completely fit the function, although shows clear signs of learning. This could be due to an inadequate Neural Network architecture or insufficient training. Information: $N=40,000$, $\beta _\text {experimenter}=0.01$, $\text {lr}_\text {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }{figure.caption.21}{}}
-\newlabel{fig:ActionAverageMAB6}{{5.13a}{31}{Moving average of the actions taken\relax }{figure.caption.22}{}}
-\newlabel{sub@fig:ActionAverageMAB6}{{a}{31}{Moving average of the actions taken\relax }{figure.caption.22}{}}
-\newlabel{fig:actionsMAB6}{{5.13b}{31}{Predicted value vs. Target value\relax }{figure.caption.22}{}}
-\newlabel{sub@fig:actionsMAB6}{{b}{31}{Predicted value vs. Target value\relax }{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces  Summary of the training example \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {2k}\unskip \@@italiccorr )}} Information: $N=2\times 10^6$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{31}{figure.caption.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}E-A architecture for sequential experiments}{32}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Multi-armed bandit problem.\relax }}{19}{figure.caption.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{20}{subsection.3.1.2}\protected@file@percent }
+\newlabel{SimpleRL}{{3.1.2}{20}{Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{subsection.3.1.2}{}}
+\newlabel{simpleQ}{{3.2}{20}{Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{equation.3.2}{}}
+\newlabel{weighted_sum}{{3.7}{20}{Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{equation.3.7}{}}
+\newlabel{eq:sum}{{3.8}{21}{Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{equation.3.8}{}}
+\newlabel{eq:aux}{{3.10}{21}{Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{equation.3.10}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces \relax }}{21}{algorithm.2}\protected@file@percent }
+\newlabel{Non-stationary multiarmed-bandit}{{2}{21}{\relax }{algorithm.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Modified multi-armed bandit problem}{22}{subsection.3.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagram of how the simplest combination for the E-A architecture (\ref  {fig:simplesetup}) can be modelled as a multi-armed bandit.\relax }}{23}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:Bandit-EA}{{3.2}{23}{Diagram of how the simplest combination for the E-A architecture (\ref {fig:simplesetup}) can be modelled as a multi-armed bandit.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit I}{24}{section*.10}\protected@file@percent }
+\newlabel{MAB1ex}{{3.1.3}{24}{}{mythm.3.1.3}{}}
+\newlabel{fig:ActionAverageMAB1}{{3.3a}{25}{Moving average of the actions\relax }{figure.caption.11}{}}
+\newlabel{sub@fig:ActionAverageMAB1}{{a}{25}{Moving average of the actions\relax }{figure.caption.11}{}}
+\newlabel{fig:actionsMAB1}{{3.3b}{25}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.11}{}}
+\newlabel{sub@fig:actionsMAB1}{{b}{25}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Training of example \ref  {MAB1ex}. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 6 in this case). In a) we can see the average value of the action taken in each episode how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $600^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{25}{figure.caption.11}\protected@file@percent }
+\newlabel{MAB2ex}{{3.1.4}{25}{}{mythm.3.1.4}{}}
+\newlabel{fig:ErrorAverageMAB1}{{3.4a}{26}{Average error per episode\relax }{figure.caption.12}{}}
+\newlabel{sub@fig:ErrorAverageMAB1}{{a}{26}{Average error per episode\relax }{figure.caption.12}{}}
+\newlabel{fig:predictionsMAB1}{{3.4b}{26}{Predicted value vs. Target value\relax }{figure.caption.12}{}}
+\newlabel{sub@fig:predictionsMAB1}{{b}{26}{Predicted value vs. Target value\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Performance of the example \ref  {MAB1ex}. These two figures shows us how the agent learns to predict the identity function. In a) we can see the average value of the error drops quickly to zero as the agent identify the correct lever and the exploration rate vanishes. In (b) we can see the predictions of the agent after 5000 episodes and how it fits nearly perfectly the identity function. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{26}{figure.caption.12}\protected@file@percent }
+\newlabel{MAB3ex}{{3.1.5}{26}{}{mythm.3.1.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Graphical representation of the predictions made by the analyzer after the training compared to the exact value $e^{\text  {sin}(v_t)}$ for the interval $[v_{min}=0,v_{max}=10]$ after 50,000 episodes of training.\relax }}{27}{figure.caption.13}\protected@file@percent }
+\newlabel{performanceMBA2}{{3.5}{27}{Graphical representation of the predictions made by the analyzer after the training compared to the exact value $e^{\text {sin}(v_t)}$ for the interval $[v_{min}=0,v_{max}=10]$ after 50,000 episodes of training.\relax }{figure.caption.13}{}}
+\newlabel{fig:ActionAverageMAB2}{{3.6a}{27}{Moving average of the actions\relax }{figure.caption.14}{}}
+\newlabel{sub@fig:ActionAverageMAB2}{{a}{27}{Moving average of the actions\relax }{figure.caption.14}{}}
+\newlabel{fig:actionsMAB2}{{3.6b}{27}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.14}{}}
+\newlabel{sub@fig:actionsMAB2}{{b}{27}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Training of example \ref  {MAB2ex}. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 6 in this case). In (a) we can see the average value of the action taken in each episode and how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $2000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=5000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{27}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:ErrorAverageMAB2}{{3.7a}{28}{Average error per episode\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:ErrorAverageMAB2}{{a}{28}{Average error per episode\relax }{figure.caption.15}{}}
+\newlabel{fig:predictionsMAB2}{{3.7b}{28}{Predicted value vs. Target value\relax }{figure.caption.15}{}}
+\newlabel{sub@fig:predictionsMAB2}{{b}{28}{Predicted value vs. Target value\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Performance of the example \ref  {MAB2ex}. These two figures shows us how the agent learns to predict the identity function. In (a) we can see the average value of the error drops to zero as the agent identify the correct lever and the exploration rate vanishes. In (b) we can see the predictions of the agent after 50,000 episodes and how it fits with acceptable accuracy the target function. Information: $N=50,000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{28}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:ActionAverageMAB3}{{3.8a}{28}{Moving average of the actions\relax }{figure.caption.16}{}}
+\newlabel{sub@fig:ActionAverageMAB3}{{a}{28}{Moving average of the actions\relax }{figure.caption.16}{}}
+\newlabel{fig:actionsMAB3}{{3.8b}{28}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.16}{}}
+\newlabel{sub@fig:actionsMAB3}{{b}{28}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Training of example \ref  {MAB3ex} . These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 2 in this case). In a) we can see the average value of the action taken in each episode and how it converges to the target lever, despite of the large number of levers. In (b) we can see the cumulative number of actions taken by the agent and how around the $40,000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=10^5$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{28}{figure.caption.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit II}{29}{section*.17}\protected@file@percent }
+\newlabel{fig:ActionAverageMAB4}{{3.9a}{30}{Moving average of the actions\relax }{figure.caption.18}{}}
+\newlabel{sub@fig:ActionAverageMAB4}{{a}{30}{Moving average of the actions\relax }{figure.caption.18}{}}
+\newlabel{fig:actionsMAB4}{{3.9b}{30}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.18}{}}
+\newlabel{sub@fig:actionsMAB4}{{b}{30}{Cumulative number of actions taken by the experimenter\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Training of example for the 3-variable example. These two figures shows us how the agent realizes that in order to get reward it needs to take the target action (the lever 2 in this case). In (a) we can see the average value of the action taken in each episode and how it converges to the target lever. In (b) we can see the cumulative number of actions taken by the agent and how around the $10,000^\text  {th}$ episode the agent finds the target arm and chooses it whenever a greedy action is taken. Information: $N=10^4$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{30}{figure.caption.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Modified multi-armed bandit III}{30}{section*.19}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces To add the auxiliary parameters to the learning loop we just need to make a small modification to the diagram.\relax }}{31}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:auxiliaryparameter}{{3.10}{31}{To add the auxiliary parameters to the learning loop we just need to make a small modification to the diagram.\relax }{figure.caption.20}{}}
+\newlabel{pendulumcomplete}{{3.1.6}{31}{}{mythm.3.1.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Summary of the training for the example \ref  {pendulumcomplete}. We observe that the actions converge like in previous examples. The analyzer does not completely fit the function, although shows clear signs of learning. This could be due to an inadequate Neural Network architecture or insufficient training. Information: $N=40,000$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{32}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:completepd}{{3.11}{32}{Summary of the training for the example \ref {pendulumcomplete}. We observe that the actions converge like in previous examples. The analyzer does not completely fit the function, although shows clear signs of learning. This could be due to an inadequate Neural Network architecture or insufficient training. Information: $N=40,000$, $\beta _\text {experimenter}=0.01$, $\text {lr}_\text {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }{figure.caption.21}{}}
+\newlabel{2k}{{3.1.7}{32}{}{mythm.3.1.7}{}}
+\newlabel{fig:ActionAverageMAB6}{{3.12a}{33}{Moving average of the actions taken\relax }{figure.caption.22}{}}
+\newlabel{sub@fig:ActionAverageMAB6}{{a}{33}{Moving average of the actions taken\relax }{figure.caption.22}{}}
+\newlabel{fig:actionsMAB6}{{3.12b}{33}{Predicted value vs. Target value\relax }{figure.caption.22}{}}
+\newlabel{sub@fig:actionsMAB6}{{b}{33}{Predicted value vs. Target value\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces  Summary of the training example \textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {2k}\unskip \@@italiccorr )}} Information: $N=2\times 10^6$, $\beta _\text  {experimenter}=0.01$, $\text  {lr}_\text  {analyzer}=0.01$, $Q_1=0$, $\sigma =0.05$\relax }}{33}{figure.caption.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Summary of the multi-armed bandit}{33}{subsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}E-A architecture for sequential experiments}{34}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Sequential experiments}{32}{section.6.1}\protected@file@percent }
-\newlabel{scalex}{{6.1.1}{33}{}{mythm.6.1.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagram of the learning loop for a E-A architecture for a sequential experiment with $D$ steps. The structure is the same as for the simple case but concatenating $D$ experimenters instead of a single one.\relax }}{34}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:SequentialEA}{{6.1}{34}{Diagram of the learning loop for a E-A architecture for a sequential experiment with $D$ steps. The structure is the same as for the simple case but concatenating $D$ experimenters instead of a single one.\relax }{figure.caption.23}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}E-A for sequential experiments}{34}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Example}{35}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}The experiment}{35}{subsection.6.3.1}\protected@file@percent }
-\newlabel{displacement}{{6.2}{35}{The experiment}{equation.6.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Diagram explaining the physical environment. The canon shoots a bullet of mass $m$ with velocity $v$. When it collides inelastically with the box of mass $M$, the box displaces. Due to the friction force it stops in one of the four zones $A, B, C$ or $D$.\relax }}{36}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:Box}{{6.2}{36}{Diagram explaining the physical environment. The canon shoots a bullet of mass $m$ with velocity $v$. When it collides inelastically with the box of mass $M$, the box displaces. Due to the friction force it stops in one of the four zones $A, B, C$ or $D$.\relax }{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Mathematical characterization of the experiment}{37}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Technical details of the agents}{38}{subsection.6.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagram of the learning loop for the experiment.\relax }}{38}{figure.caption.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Experimenter 1}{38}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Experimenter 2}{38}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Analyzer}{39}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.4}Results and discussion}{39}{subsection.6.3.4}\protected@file@percent }
-\newlabel{Actions1-TSS}{{6.4a}{39}{Action 1 by zone \\ (moving average)\relax }{figure.caption.29}{}}
-\newlabel{sub@Actions1-TSS}{{a}{39}{Action 1 by zone \\ (moving average)\relax }{figure.caption.29}{}}
-\newlabel{Actions2-TSS}{{6.4b}{39}{Action 2 by zone \\ (moving average)\relax }{figure.caption.29}{}}
-\newlabel{sub@Actions2-TSS}{{b}{39}{Action 2 by zone \\ (moving average)\relax }{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Summary of the training for the simple DQN agent. In (a), we can see how the first experimenter learns to take the action $0$, this is, using the LPWR sensor always. In (b) we see how the second experimenter learns the optimal strategy converging to the correct action for every zone. This implies the agent learns to interpret correctly the outcome obtained by $E_1$ and places the HPNR sensor in the corresponding zone. In (c), we observe the decrease on the relative error, that goes to nearly zero for every zone, meaning that the analyzer learns to interpret correctly the outcomes. In (d), we see the reward obtained by the agent per episode. It gets close to the maximum of one at the end of the training for all zones. Number of episodes: $N=2.5\times 10^6$\relax }}{39}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:TSS}{{6.4}{39}{Summary of the training for the simple DQN agent. In (a), we can see how the first experimenter learns to take the action $0$, this is, using the LPWR sensor always. In (b) we see how the second experimenter learns the optimal strategy converging to the correct action for every zone. This implies the agent learns to interpret correctly the outcome obtained by $E_1$ and places the HPNR sensor in the corresponding zone. In (c), we observe the decrease on the relative error, that goes to nearly zero for every zone, meaning that the analyzer learns to interpret correctly the outcomes. In (d), we see the reward obtained by the agent per episode. It gets close to the maximum of one at the end of the training for all zones. Number of episodes: $N=2.5\times 10^6$\relax }{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix ?}{41}{appendix.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Sequential experiments}{34}{section.4.1}\protected@file@percent }
+\newlabel{scalex}{{4.1.1}{35}{}{mythm.4.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Diagram of the learning loop for a E-A architecture for a sequential experiment with $D$ steps. The structure is the same as for the simple case but concatenating $D$ experimenters instead of a single one.\relax }}{36}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:SequentialEA}{{4.1}{36}{Diagram of the learning loop for a E-A architecture for a sequential experiment with $D$ steps. The structure is the same as for the simple case but concatenating $D$ experimenters instead of a single one.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}E-A for sequential experiments}{36}{section.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Example}{37}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}The experiment}{37}{subsection.4.3.1}\protected@file@percent }
+\newlabel{displacement}{{4.2}{37}{The experiment}{equation.4.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Diagram explaining the physical environment. The canon shoots a bullet of mass $m$ with velocity $v$. When it collides inelastically with the box of mass $M$, the box displaces. Due to the friction force it stops in one of the four zones $A, B, C$ or $D$.\relax }}{38}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:Box}{{4.2}{38}{Diagram explaining the physical environment. The canon shoots a bullet of mass $m$ with velocity $v$. When it collides inelastically with the box of mass $M$, the box displaces. Due to the friction force it stops in one of the four zones $A, B, C$ or $D$.\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Mathematical characterization of the experiment}{39}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Technical details of the agents}{40}{subsection.4.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagram of the learning loop for the experiment.\relax }}{40}{figure.caption.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Experimenter 1}{40}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Experimenter 2}{40}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Analyzer}{41}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Results and discussion}{41}{subsection.4.3.4}\protected@file@percent }
+\newlabel{Actions1-TSS}{{4.4a}{41}{Action 1 by zone \\ (moving average)\relax }{figure.caption.29}{}}
+\newlabel{sub@Actions1-TSS}{{a}{41}{Action 1 by zone \\ (moving average)\relax }{figure.caption.29}{}}
+\newlabel{Actions2-TSS}{{4.4b}{41}{Action 2 by zone \\ (moving average)\relax }{figure.caption.29}{}}
+\newlabel{sub@Actions2-TSS}{{b}{41}{Action 2 by zone \\ (moving average)\relax }{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Summary of the training for the simple DQN agent. In (a), we can see how the first experimenter learns to take the action $0$, this is, using the LPWR sensor always. In (b) we see how the second experimenter learns the optimal strategy converging to the correct action for every zone. This implies the agent learns to interpret correctly the outcome obtained by $E_1$ and places the HPNR sensor in the corresponding zone. In (c), we observe the decrease on the relative error, that goes to nearly zero for every zone, meaning that the analyzer learns to interpret correctly the outcomes. In (d), we see the reward obtained by the agent per episode. It gets close to the maximum of one at the end of the training for all zones. Number of episodes: $N=2.5\times 10^6$\relax }}{41}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:TSS}{{4.4}{41}{Summary of the training for the simple DQN agent. In (a), we can see how the first experimenter learns to take the action $0$, this is, using the LPWR sensor always. In (b) we see how the second experimenter learns the optimal strategy converging to the correct action for every zone. This implies the agent learns to interpret correctly the outcome obtained by $E_1$ and places the HPNR sensor in the corresponding zone. In (c), we observe the decrease on the relative error, that goes to nearly zero for every zone, meaning that the analyzer learns to interpret correctly the outcomes. In (d), we see the reward obtained by the agent per episode. It gets close to the maximum of one at the end of the training for all zones. Number of episodes: $N=2.5\times 10^6$\relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion and future work}{43}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:pgm}{{A}{41}{Appendix ?}{appendix.A}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Conclusion}{43}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Future work}{44}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Experimenters for continuous action spaces}{44}{subsection.5.2.1}\protected@file@percent }
+\citation{iten2020discovering}
+\citation{iten2020discovering}
+\citation{iten2020discovering}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Combination of the Experimenter-Analyzer architecture with SciNet}{45}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Recurrent Neural Networks for sequential experiments with constant action spaces}{45}{subsection.5.2.3}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{references}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram of a Experimenter-Analyzer structure combined with a SciNet VAE to extract the relevant physical parameters from the data collected by the experimenter. The image of the auto-encoder was taken from the original paper \cite  {iten2020discovering} with the permission of the authors.\relax }}{46}{figure.caption.30}\protected@file@percent }
+\newlabel{}{{5.1}{46}{Diagram of a Experimenter-Analyzer structure combined with a SciNet VAE to extract the relevant physical parameters from the data collected by the experimenter. The image of the auto-encoder was taken from the original paper \cite {iten2020discovering} with the permission of the authors.\relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Application of the architecture to real physical systems}{46}{subsection.5.2.4}\protected@file@percent }
 \bibcite{Alkhateeb}{{1}{}{{}}{{}}}
 \bibcite{begley2012raise}{{2}{}{{}}{{}}}
 \bibcite{BornmannRudiger}{{3}{}{{}}{{}}}
 \bibcite{Carleo_2019}{{4}{}{{}}{{}}}
 \bibcite{cybenko1989approximation}{{5}{}{{}}{{}}}
-\bibcite{Fanelli2628}{{6}{}{{}}{{}}}
-\bibcite{Sabine}{{7}{}{{}}{{}}}
-\bibcite{iten2020discovering}{{8}{}{{}}{{}}}
-\bibcite{owidlifeexpectancy}{{9}{}{{}}{{}}}
-\bibcite{Melnikov_2018}{{10}{}{{}}{{}}}
-\bibcite{nautrup2020operationally}{{11}{}{{}}{{}}}
-\bibcite{Saltelli}{{12}{}{{}}{{}}}
-\bibcite{sinatra2015century}{{13}{}{{}}{{}}}
-\bibcite{sutton2018reinforcement}{{14}{}{{}}{{}}}
-\bibcite{publications7010018}{{15}{}{{}}{{}}}
+\bibcite{PhysRevD.99.015014}{{6}{}{{}}{{}}}
+\bibcite{De_Simone_2019}{{7}{}{{}}{{}}}
+\bibcite{Fanelli2628}{{8}{}{{}}{{}}}
+\bibcite{Sabine}{{9}{}{{}}{{}}}
+\bibcite{iten2020discovering}{{10}{}{{}}{{}}}
+\bibcite{Melnikov_2018}{{11}{}{{}}{{}}}
+\bibcite{nautrup2020operationally}{{12}{}{{}}{{}}}
+\bibcite{rahaman2019learning}{{13}{}{{}}{{}}}
+\bibcite{ried2019minimal}{{14}{}{{}}{{}}}
+\bibcite{Saltelli}{{15}{}{{}}{{}}}
+\bibcite{sinatra2015century}{{16}{}{{}}{{}}}
+\bibcite{sutton2018reinforcement}{{17}{}{{}}{{}}}
+\bibcite{publications7010018}{{18}{}{{}}{{}}}
+\bibcite{Wu_2019}{{19}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

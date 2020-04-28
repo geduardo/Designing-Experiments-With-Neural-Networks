@@ -1,29 +1,36 @@
 \babel@toc {USenglish}{}
 \babel@toc {USenglish}{}
 \babel@toc {USenglish}{}
-\contentsline {chapter}{\numberline {1}Preface}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Minimal model for science}{5}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Machine Learning theory}{6}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Experimenter-analyzer model}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}General elements and definitions}{10}{section.4.1}%
-\contentsline {chapter}{\numberline {5}E-A architecture in different scenarios}{16}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Scenario 1: Modified multi-armed bandit}{16}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}General multi-armed bandit problem}{16}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Simple Reinforcement Learning algorithm for non-stationary multi-armed bandit}{18}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Modified multi-armed bandit problem}{20}{subsection.5.1.3}%
-\contentsline {subsubsection}{Modified multi-armed bandit I}{22}{section*.9}%
-\contentsline {subsubsection}{Modified multi-armed bandit II}{27}{section*.17}%
-\contentsline {subsubsection}{Modified multi-armed bandit III}{29}{section*.19}%
-\contentsline {subsection}{\numberline {5.1.4}Summary of the multi-armed bandit}{30}{subsection.5.1.4}%
-\contentsline {chapter}{\numberline {6}E-A architecture for sequential experiments}{32}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Sequential experiments}{32}{section.6.1}%
-\contentsline {section}{\numberline {6.2}E-A for sequential experiments}{34}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Example}{35}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}The experiment}{35}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Mathematical characterization of the experiment}{37}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Technical details of the agents}{38}{subsection.6.3.3}%
-\contentsline {subsubsection}{Experimenter 1}{38}{section*.26}%
-\contentsline {subsubsection}{Experimenter 2}{38}{section*.27}%
-\contentsline {subsubsection}{Analyzer}{39}{section*.28}%
-\contentsline {subsection}{\numberline {6.3.4}Results and discussion}{39}{subsection.6.3.4}%
-\contentsline {chapter}{\numberline {A}Appendix ?}{41}{appendix.A}%
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Towards the automation of science}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}The scientific method to train agents}{5}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Structure of the thesis}{6}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Experimenter-analyzer model}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}General elements and definitions}{12}{section.2.1}%
+\contentsline {chapter}{\numberline {3}E-A architecture in different scenarios}{18}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Scenario 1: Modified multi-armed bandit}{18}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}General multi-armed bandit problem}{18}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Simple reinforcement learning algorithm for non-stationary multi-armed bandits}{20}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Modified multi-armed bandit problem}{22}{subsection.3.1.3}%
+\contentsline {subsubsection}{Modified multi-armed bandit I}{24}{section*.10}%
+\contentsline {subsubsection}{Modified multi-armed bandit II}{29}{section*.17}%
+\contentsline {subsubsection}{Modified multi-armed bandit III}{30}{section*.19}%
+\contentsline {subsection}{\numberline {3.1.4}Summary of the multi-armed bandit}{33}{subsection.3.1.4}%
+\contentsline {chapter}{\numberline {4}E-A architecture for sequential experiments}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Sequential experiments}{34}{section.4.1}%
+\contentsline {section}{\numberline {4.2}E-A for sequential experiments}{36}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Example}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The experiment}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Mathematical characterization of the experiment}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Technical details of the agents}{40}{subsection.4.3.3}%
+\contentsline {subsubsection}{Experimenter 1}{40}{section*.26}%
+\contentsline {subsubsection}{Experimenter 2}{40}{section*.27}%
+\contentsline {subsubsection}{Analyzer}{41}{section*.28}%
+\contentsline {subsection}{\numberline {4.3.4}Results and discussion}{41}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusion}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future work}{44}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Experimenters for continuous action spaces}{44}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Combination of the Experimenter-Analyzer architecture with SciNet}{45}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Recurrent Neural Networks for sequential experiments with constant action spaces}{45}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Application of the architecture to real physical systems}{46}{subsection.5.2.4}%

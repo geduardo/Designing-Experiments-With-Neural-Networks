@@ -4,47 +4,46 @@ The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--empty year in Alkhateeb
-Warning--empty year in Sabine
 Warning--empty publisher in sutton2018reinforcement
-You've used 15 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            594 strings with 6666 characters,
-and the built_in function-call counts, 4913 in all, are:
-= -- 457
-> -- 291
+            618 strings with 7319 characters,
+and the built_in function-call counts, 6094 in all, are:
+= -- 561
+> -- 368
 < -- 0
-+ -- 117
-- -- 100
-* -- 382
-:= -- 871
-add.period$ -- 46
-call.type$ -- 15
-change.case$ -- 94
++ -- 147
+- -- 126
+* -- 469
+:= -- 1076
+add.period$ -- 55
+call.type$ -- 19
+change.case$ -- 119
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 156
-empty$ -- 340
-format.name$ -- 100
-if$ -- 968
+cite$ -- 21
+duplicate$ -- 191
+empty$ -- 428
+format.name$ -- 126
+if$ -- 1207
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 15
-newline$ -- 79
-num.names$ -- 30
-pop$ -- 87
+int.to.str$ -- 19
+missing$ -- 17
+newline$ -- 96
+num.names$ -- 38
+pop$ -- 115
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 101
 quote$ -- 0
-skip$ -- 110
+skip$ -- 145
 stack$ -- 0
-substring$ -- 246
-swap$ -- 15
+substring$ -- 284
+swap$ -- 19
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
-warning$ -- 3
-while$ -- 41
-width$ -- 17
-write$ -- 161
-(There were 3 warnings)
+type$ -- 74
+warning$ -- 2
+while$ -- 50
+width$ -- 21
+write$ -- 199
+(There were 2 warnings)

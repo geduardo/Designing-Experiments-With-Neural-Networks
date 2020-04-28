@@ -29,6 +29,16 @@ George Cybenko.
 \newblock {\em Mathematics of control, signals and systems}, 2(4):303--314,
   1989.
 
+\bibitem{PhysRevD.99.015014}
+Raffaele~Tito D'Agnolo and Andrea Wulzer.
+\newblock Learning new physics from a machine.
+\newblock {\em Phys. Rev. D}, 99:015014, Jan 2019.
+
+\bibitem{De_Simone_2019}
+Andrea De~Simone and Thomas Jacques.
+\newblock Guiding new physics searches with unsupervised learning.
+\newblock {\em The European Physical Journal C}, 79(4), Mar 2019.
+
 \bibitem{Fanelli2628}
 Daniele Fanelli.
 \newblock Opinion: Is science really facing a reproducibility crisis, and do we
@@ -39,18 +49,12 @@ Daniele Fanelli.
 \bibitem{Sabine}
 Sabine Hossenfelder.
 \newblock The crisis in physics is not only about physics.
-\newblock {\em BackReAction}.
+\newblock {\em BackReAction}, 2019.
 
 \bibitem{iten2020discovering}
 Raban Iten, Tony Metger, Henrik Wilming, L{\'\i}dia Del~Rio, and Renato Renner.
 \newblock Discovering physical concepts with neural networks.
 \newblock {\em Physical Review Letters}, 124(1):010508, 2020.
-
-\bibitem{owidlifeexpectancy}
-Esteban Ortiz-Ospina Max~Roser and Hannah Ritchie.
-\newblock Life expectancy.
-\newblock {\em Our World in Data}, 2020.
-\newblock https://ourworldindata.org/life-expectancy.
 
 \bibitem{Melnikov_2018}
 Alexey~A. Melnikov, Hendrik Poulsen~Nautrup, Mario Krenn, Vedran Dunjko, Markus
@@ -64,6 +68,15 @@ Hendrik~Poulsen Nautrup, Tony Metger, Raban Iten, Sofiene Jerbi, Lea~M.
   Trenkwalder, Henrik Wilming, Hans~J. Briegel, and Renato Renner.
 \newblock Operationally meaningful representations of physical systems in
   neural networks, 2020.
+
+\bibitem{rahaman2019learning}
+Nasim Rahaman, Steffen Wolf, Anirudh Goyal, Roman Remme, and Yoshua Bengio.
+\newblock Learning the arrow of time, 2019.
+
+\bibitem{ried2019minimal}
+Katja Ried, Benjamin Eva, Thomas Müller, and Hans~J. Briegel.
+\newblock How a minimal learning agent can infer the existence of unobserved
+  variables in a complex environment, 2019.
 
 \bibitem{Saltelli}
 Andrea Saltelli and Silvio Funtowicz.
@@ -87,5 +100,11 @@ Carol Tenopir, Lisa Christian, and Jordan Kaufman.
 \newblock Seeking, reading, and use of scholarly articles: An international
   study of perceptions and behavior of researchers.
 \newblock {\em Publications}, 7(1), 2019.
+
+\bibitem{Wu_2019}
+Tailin Wu and Max Tegmark.
+\newblock Toward an artificial intelligence physicist for unsupervised
+  learning.
+\newblock {\em Physical Review E}, 100(3), Sep 2019.
 
 \end{thebibliography}
