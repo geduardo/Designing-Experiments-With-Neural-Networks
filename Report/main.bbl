@@ -63,6 +63,13 @@ Alexey~A. Melnikov, Hendrik Poulsen~Nautrup, Mario Krenn, Vedran Dunjko, Markus
 \newblock {\em Proceedings of the National Academy of Sciences}, 115(6), Jan
   2018.
 
+\bibitem{mnih2015human}
+Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Andrei~A Rusu, Joel Veness,
+  Marc~G Bellemare, Alex Graves, Martin Riedmiller, Andreas~K Fidjeland, Georg
+  Ostrovski, et~al.
+\newblock Human-level control through deep reinforcement learning.
+\newblock {\em Nature}, 518(7540):529--533, 2015.
+
 \bibitem{nautrup2020operationally}
 Hendrik~Poulsen Nautrup, Tony Metger, Raban Iten, Sofiene Jerbi, Lea~M.
   Trenkwalder, Henrik Wilming, Hans~J. Briegel, and Renato Renner.
