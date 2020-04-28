@@ -1,49 +1,49 @@
 This is BibTeX, Version 0.99d (MiKTeX 2.9.7350 64-bit)
 Capacity: max_strings=4000, hash_size=5000, hash_prime=4253
 The top-level auxiliary file: main.aux
-The style file: plain.bst
+The style file: unsrt.bst
 Database file #1: references.bib
 Warning--empty year in Alkhateeb
 Warning--empty publisher in sutton2018reinforcement
-You've used 20 entries,
-            2118 wiz_defined-function locations,
-            624 strings with 7613 characters,
-and the built_in function-call counts, 6703 in all, are:
-= -- 614
-> -- 426
-< -- 0
-+ -- 170
-- -- 148
-* -- 531
-:= -- 1185
-add.period$ -- 58
-call.type$ -- 20
-change.case$ -- 132
+You've used 22 entries,
+            1791 wiz_defined-function locations,
+            587 strings with 7374 characters,
+and the built_in function-call counts, 4844 in all, are:
+= -- 390
+> -- 274
+< -- 1
++ -- 100
+- -- 78
+* -- 357
+:= -- 805
+add.period$ -- 64
+call.type$ -- 22
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 202
-empty$ -- 455
-format.name$ -- 148
-if$ -- 1320
+cite$ -- 24
+duplicate$ -- 194
+empty$ -- 456
+format.name$ -- 78
+if$ -- 1045
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 18
-newline$ -- 101
-num.names$ -- 40
-pop$ -- 126
+int.to.str$ -- 22
+missing$ -- 20
+newline$ -- 111
+num.names$ -- 22
+pop$ -- 56
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 0
 quote$ -- 0
-skip$ -- 153
+skip$ -- 97
 stack$ -- 0
-substring$ -- 314
-swap$ -- 20
-text.length$ -- 0
+substring$ -- 273
+swap$ -- 34
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 78
+type$ -- 0
 warning$ -- 2
-while$ -- 54
-width$ -- 22
-write$ -- 210
+while$ -- 40
+width$ -- 24
+write$ -- 232
 (There were 2 warnings)
