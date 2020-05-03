@@ -47,9 +47,8 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
 ## TODO (Thesis Report)
 
 - [ ] Trancribe the handwritten notes of Machine Learning and Reinforcement Learning to LaTeX.
-- [ ] Transcribe all notebooks to LaTeX.
-- [ ] Finish Minimal model for science (Unlikely) or add a section explaining the Scientific Method less abstractly. 
-- [ ] Review Theory section and refactor.
-- [ ] Write Conclusion section and for further work.
-- [ ] Review, abstract, preface and add Thesis structure.
-- [ ] Add more experiments if there's time.
+- [X] Finish Minimal model for science (Unlikely) or add a section explaining the Scientific Method less abstractly. 
+- [X] Review Theory section and refactor.
+- [X] Write Conclusion section and for further work.
+- [X] Review, abstract, preface and add Thesis structure.
+- [X] Add more experiments if there's time.
