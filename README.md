@@ -20,8 +20,6 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
   functioning principle of the architecture.
   - **Multi-Armed bandit**: abstract generalization of the pendulum example to 
   an arbitrary number of actions and arbitrary relation.
-  - **Spring Bullet**: similar structure than pendulum, but with several
-  inputs to the Analyzer.
   - **Two Sensors (Simple)**: a more complex experiment where the experimenter
   needs to develop a dynamical strategy for the experiment.
   - **Two Sensors (Double)**: same environment but with a more sophisticated
