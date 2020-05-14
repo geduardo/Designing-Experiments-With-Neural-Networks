@@ -20,8 +20,6 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
   functioning principle of the architecture.
   - **Multi-Armed bandit**: abstract generalization of the pendulum example to 
   an arbitrary number of actions and arbitrary relation.
-  - **Spring Bullet**: similar structure than pendulum, but with several
-  inputs to the Analyzer.
   - **Two Sensors (Simple)**: a more complex experiment where the experimenter
   needs to develop a dynamical strategy for the experiment.
   - **Two Sensors (Double)**: same environment but with a more sophisticated
@@ -34,7 +32,7 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
 
 ## TODO
 
-- [ ] Fix paths for modules and inserted images in the notebooks
+- [X] Fix paths for modules and inserted images in the notebooks
 - [ ] Organize and label correctly the `*.csv` files.
 - [ ] Add link to the Online Documentation when ready.
 - [ ] Add description to Pendulum notebook.
@@ -43,6 +41,7 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
 - [ ] Finish notebook for the Continous version and add Actor-Critic agents to the module.
 - [ ] Add all agents and environments to the modules and more analyzers
 - [ ] Review code to adapt to the oficial styleguide and correct for errors.
+- [X] Change name of modules from the source files and the notebooks
 
 ## TODO (Thesis Report)
 
