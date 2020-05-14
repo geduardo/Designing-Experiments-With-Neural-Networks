@@ -43,7 +43,7 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
 - [ ] Finish notebook for the Continous version and add Actor-Critic agents to the module.
 - [ ] Add all agents and environments to the modules and more analyzers
 - [ ] Review code to adapt to the oficial styleguide and correct for errors.
-- [ ] Change name of modules from the source files and the notebooks
+- [X] Change name of modules from the source files and the notebooks
 
 ## TODO (Thesis Report)
 
