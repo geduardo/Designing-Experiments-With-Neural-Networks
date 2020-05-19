@@ -19,10 +19,6 @@ class Simple_Experimenter(object):
         :type iterations: int
         :param output_size: Number of actions available for the agent.
         :type output_size: int
-        :param discount: Discount factor. If it's 0 only cares about 
-                         immediate reward. The closer to one the more 
-                         it values future rewards, defaults to 0
-        :type discount: int, optional
         :param exploration_rate: Initial exploration rate for the epsilon-greedy
                                  decision algorithm, defaults to 1
         :type exploration_rate: int, optional
