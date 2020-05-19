@@ -9,7 +9,7 @@ from keras.optimizers import Adam
 from keras.utils import to_categorical
 from keras import layers
 from keras.models import load_model
-class Two_Layers_single_output(object):
+class Two_Neuron(object):
     def __init__(self, input_size, learning_rate=0.001):
         """ This class is just a two-layer Keras neural network to process the
         data taken by the experimenter to produce a single output.

@@ -10,6 +10,42 @@ from keras.utils import to_categorical
 from keras import layers
 from keras.models import load_model
 
+class Simple_Experimenter(object):
+    def __init__(self, iterations, output_size, exploration_rate=1):
+        """Reinforcement learning agent that uses the argmax over the cumulative rewards to decide the action. 
+        :param iterations: Number of iterations for the training. This parameter
+                           is used to calculate the decrease on the exploration 
+                           rate.
+        :type iterations: int
+        :param output_size: Number of actions available for the agent.
+        :type output_size: int
+        :param discount: Discount factor. If it's 0 only cares about 
+                         immediate reward. The closer to one the more 
+                         it values future rewards, defaults to 0
+        :type discount: int, optional
+        :param exploration_rate: Initial exploration rate for the epsilon-greedy
+                                 decision algorithm, defaults to 1
+        :type exploration_rate: int, optional
+        """
+        self.iterations = iterations
+        self.output_size = output_size
+        self.Q = output_size*[0]
+        self.exploration_rate = exploration_rate
+        self.exploration_delta = 1/self.iterations
+        self.q = []
+        self.marker = 0
+    def greedy_action(self):
+        return np.argmax(self.Q)
+    def random_action(self):
+        return 0 if random.random()<0.5 else 1
+    def get_next_action(self):
+        return self.greedy_action() if random.random()>self.exploration_rate else self.random_action()
+    def train(self, action, reward):
+        self.Q[action] += reward
+        if self.exploration_rate > 0:
+            self.exploration_rate-=1.3*self.exploration_delta
+            self.marker += 1
+
 class Q_Learning(object):
     def __init__(self, iterations, output_size, learning_rate=0.01, discount=0,
     exploration_rate=1):

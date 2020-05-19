@@ -4,6 +4,61 @@ import random
 import pandas as pd
 import numpy as np
 
+class Pendulum(object):
+    def __init__(self, g=9.8, L_min=0.1, L_max=1, M_min=0.1, M_max=1, max_reward=1):
+        self.max_reward = max_reward
+        self.g = g
+        self.M_min = M_min
+        self.M_max = M_max
+        self.L_min = L_min
+        self.L_max = L_max
+        self.M = random.uniform(self.M_min, self.M_max)
+        self.L = random.uniform(self.L_min, self.L_max)
+        self.T = 2*np.pi*np.sqrt(self.L/self.g)
+        self.total_reward = 0
+        reward = 0
+    def restart_values(self):
+        self.M = random.uniform(self.M_min, self.M_max)
+        self.L = random.uniform(self.L_min, self.L_max)
+        self.T = 2*np.pi*np.sqrt(self.L/self.g)
+    def take_action(self, action):
+        return self.M if action==0 else self.L
+    # def test(self):
+    #     test_pre = random.uniform(self.x_min,self.x_max)
+    #     test_post = test_pre*self.x_arms[self.target_arm]
+    #     return test_pre, test_post
+
+    def give_reward(self, prediction, observed, sigma=0.05):
+        x = (observed-prediction)/observed
+        reward = self.max_reward*np.exp(-0.5*(x/sigma)**2)
+        self.total_reward = self.total_reward + reward
+        return reward
+    def reshape_for_analyzer(self, measurements, target):
+        """ Reshapes the measurements and the target value in a suitable
+        format for a Keras analyzer
+        
+        :param measurements: Measurements to give the Analyzer to make the 
+                             prediction
+        :type measurements: numpy array
+        :param target: Target value to fit.
+        :type target: float
+        :return: X_train (inputs to the Analyzer), y_train (Target value to fit)
+        :rtype: pandas DataFrame, pandas DataFrame
+        """        
+        X_train = pd.DataFrame(measurements.reshape(-1,len(measurements)))
+        y_train = pd.DataFrame(target*np.ones((1,1)))
+        return X_train, y_train
+    def get_measurements(self, outcome):
+        """ Transforms the actions and the environmental elements into an array
+        to feed the Analyzer.
+        
+        :param outcome: Outcome obtained by the experimenter
+        :type outcome: float
+        :return: Numpy array containing all the arguments
+        :rtype: numpy array
+        """        
+        return np.array([outcome])
+
 class Two_Sensors(object):
     def __init__(self, mu=0.1, m=2.5, g =9.8,v=1, max_reward = 1):
         """ This class contains the environment for the experiment II.
