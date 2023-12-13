@@ -43,11 +43,3 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
 - [ ] Review code to adapt to the oficial styleguide and correct for errors.
 - [X] Change name of modules from the source files and the notebooks
 
-## TODO (Thesis Report)
-
-- [ ] Trancribe the handwritten notes of Machine Learning and Reinforcement Learning to LaTeX.
-- [X] Finish Minimal model for science (Unlikely) or add a section explaining the Scientific Method less abstractly. 
-- [X] Review Theory section and refactor.
-- [X] Write Conclusion section and for further work.
-- [X] Review, abstract, preface and add Thesis structure.
-- [X] Add more experiments if there's time.
