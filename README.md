@@ -6,10 +6,8 @@ This is the repository for the project of my Master Thesis at ETH Zürich.
 
 - In `modules/` you can find the `*.py` files that contains the source code
 for the different environments, the Experimenter agents, and the Analyzers. 
-  **(Ongoing)**
 - In `report/` you can find the LaTeX files and the figures of the report, as
-well as the PDF of the thesis.   **(Ongoing)**
-
+well as the PDF of the thesis.
 - In `figures/` you can find all the figures used in this project.
 
 - In the rest of the folders you can find each of the individual experiments 
@@ -30,16 +28,5 @@ orchestration and the files generated from a run of all cells.   **(Ongoing)**
   of actions is continuous. This experiment is a toy example to try different
   parameter based RL agents like Actor-Critic.
 
-## TODO
 
-- [X] Fix paths for modules and inserted images in the notebooks
-- [ ] Organize and label correctly the `*.csv` files.
-- [ ] Add link to the Online Documentation when ready.
-- [ ] Add description to Pendulum notebook.
-- [ ] Refactor Multiarm Bandit notebook to a clean version.
-- [ ] Upload notebook for Spring-Bullet.
-- [ ] Finish notebook for the Continous version and add Actor-Critic agents to the module.
-- [ ] Add all agents and environments to the modules and more analyzers
-- [ ] Review code to adapt to the oficial styleguide and correct for errors.
-- [X] Change name of modules from the source files and the notebooks
 
